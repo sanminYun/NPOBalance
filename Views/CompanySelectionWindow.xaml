@@ -1,0 +1,48 @@
+﻿<Window x:Class="NPOBalance.Views.CompanySelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="회사 선택" Height="250" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" 
+                   Text="회사를 선택하세요" 
+                   FontSize="16" 
+                   FontWeight="Bold"
+                   Margin="0,0,0,15"/>
+
+        <TextBlock Grid.Row="1" 
+                   Text="회사:" 
+                   VerticalAlignment="Center"
+                   Margin="0,0,0,10"/>
+
+        <ComboBox Grid.Row="2"
+                  ItemsSource="{Binding Companies}"
+                  SelectedItem="{Binding SelectedCompany}"
+                  DisplayMemberPath="Name"
+                  Height="30"
+                  VerticalAlignment="Top"
+                  Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="새 회사 추가"
+                    Command="{Binding AddCompanyCommand}"
+                    Width="120"
+                    Height="35"
+                    Margin="0,0,10,0"/>
+            <Button Content="확인"
+                    Command="{Binding ConfirmCommand}"
+                    Width="100"
+                    Height="35"/>
+        </StackPanel>
+    </Grid>
+</Window>
