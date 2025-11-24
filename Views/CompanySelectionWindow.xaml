@@ -4,11 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="회사 선택" Height="250" Width="400"
+        Title="회사 선택" Height="600" Width="1000"
         WindowStartupLocation="CenterScreen">
     <Grid Margin="20">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
@@ -20,20 +19,43 @@
                    FontWeight="Bold"
                    Margin="0,0,0,15"/>
 
-        <TextBlock Grid.Row="1" 
-                   Text="회사:" 
-                   VerticalAlignment="Center"
-                   Margin="0,0,0,10"/>
-
-        <ComboBox Grid.Row="2"
+        <DataGrid Grid.Row="1"
+                  x:Name="CompaniesDataGrid"
                   ItemsSource="{Binding Companies}"
                   SelectedItem="{Binding SelectedCompany}"
-                  DisplayMemberPath="Name"
-                  Height="30"
-                  VerticalAlignment="Top"
-                  Margin="0,0,0,20"/>
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  CanUserResizeRows="False"
+                  HeadersVisibility="Column"
+                  GridLinesVisibility="All"
+                  AlternatingRowBackground="#F5F5F5"
+                  RowHeight="35"
+                  Margin="0,0,0,20">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="회사코드" Binding="{Binding CompanyCode}" Width="100"/>
+                <DataGridTextColumn Header="회사명" Binding="{Binding Name}" Width="*" MinWidth="150"/>
+                <DataGridTextColumn Header="사업자등록번호" Binding="{Binding BusinessNumber}" Width="150"/>
+                <DataGridTextColumn Header="구분" Binding="{Binding CompanyType}" Width="100"/>
+                <DataGridTextColumn Header="원천" Binding="{Binding TaxSource}" Width="100"/>
+                <DataGridTextColumn Header="대표자명" Binding="{Binding RepresentativeName}" Width="120"/>
+                <DataGridTemplateColumn Header="회계연도" Width="200">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <Run Text="{Binding FiscalYearStart, StringFormat='{}{0:yyyy-MM-dd}'}"/>
+                                <Run Text=" ~ "/>
+                                <Run Text="{Binding FiscalYearEnd, StringFormat='{}{0:yyyy-MM-dd}'}"/>
+                            </TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
 
-        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Content="새 회사 추가"
                     Command="{Binding AddCompanyCommand}"
                     Width="120"

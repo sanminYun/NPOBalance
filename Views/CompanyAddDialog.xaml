@@ -4,10 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="새 회사 추가" Height="220" Width="400"
-        WindowStartupLocation="CenterOwner">
+        Title="회사 등록" Height="500" Width="500"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
     <Grid Margin="20">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -15,34 +21,55 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" 
-                   Text="회사명 *" 
-                   Margin="0,0,0,5"/>
-        <TextBox Grid.Row="1" 
-                 x:Name="CompanyNameTextBox"
-                 Height="30"
-                 Margin="0,0,0,15"/>
+        <!-- 회사명 -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="회사명:" VerticalAlignment="Center" Margin="0,0,10,10"/>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="CompanyNameTextBox" Margin="0,0,0,10" Height="25"/>
 
-        <TextBlock Grid.Row="2" 
-                   Text="사업자번호" 
-                   Margin="0,0,0,5"/>
-        <TextBox Grid.Row="3" 
-                 x:Name="BusinessNumberTextBox"
-                 Height="30"
-                 Margin="0,0,0,15"/>
+        <!-- 회계연도 시작일 -->
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="회계연도 시작일:" VerticalAlignment="Center" Margin="0,0,10,10"/>
+        <DatePicker Grid.Row="1" Grid.Column="1" x:Name="FiscalYearStartDatePicker" Margin="0,0,0,10" Height="25"/>
 
-        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="취소"
-                    Click="CancelButton_Click"
-                    Width="80"
-                    Height="35"
-                    Margin="0,0,10,0"/>
-            <Button Content="저장"
-                    Click="SaveButton_Click"
-                    Width="80"
-                    Height="35"
-                    IsDefault="True"/>
+        <!-- 회계연도 종료일 -->
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="회계연도 종료일:" VerticalAlignment="Center" Margin="0,0,10,10"/>
+        <DatePicker Grid.Row="2" Grid.Column="1" x:Name="FiscalYearEndDatePicker" Margin="0,0,0,10" Height="25"/>
+
+        <!-- 사업자등록번호 -->
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="사업자등록번호:" VerticalAlignment="Center" Margin="0,0,10,10"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="BusinessNumberTextBox" Margin="0,0,0,10" Height="25"/>
+
+        <!-- 법인등록번호 -->
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="법인등록번호:" VerticalAlignment="Center" Margin="0,0,10,10"/>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="CorporateRegistrationNumberTextBox" Margin="0,0,0,10" Height="25"/>
+
+        <!-- 대표자명 -->
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="대표자명:" VerticalAlignment="Center" Margin="0,0,10,10"/>
+        <TextBox Grid.Row="5" Grid.Column="1" x:Name="RepresentativeNameTextBox" Margin="0,0,0,10" Height="25"/>
+
+        <!-- 구분 -->
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="구분:" VerticalAlignment="Center" Margin="0,0,10,10"/>
+        <ComboBox Grid.Row="6" Grid.Column="1" x:Name="CompanyTypeComboBox" Margin="0,0,0,10" Height="25">
+            <ComboBoxItem Content="법인" IsSelected="True"/>
+            <ComboBoxItem Content="개인사업자"/>
+            <ComboBoxItem Content="비영리"/>
+        </ComboBox> 
+
+        <!-- 원천 -->
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="원천:" VerticalAlignment="Center" Margin="0,0,10,10"/>
+        <ComboBox Grid.Row="7" Grid.Column="1" x:Name="TaxSourceComboBox" Margin="0,0,0,10" Height="25">
+            <ComboBoxItem Content="반기" IsSelected="True"/>
+            <ComboBoxItem Content="월별"/>
+        </ComboBox>
+
+        <!-- 버튼 -->
+        <StackPanel Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" 
+                    Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button x:Name="OkButton" Content="확인" Width="80" Height="30" Margin="0,0,10,0" Click="OkButton_Click"/>
+            <Button x:Name="CancelButton" Content="취소" Width="80" Height="30" Click="CancelButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>

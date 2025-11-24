@@ -23,8 +23,16 @@ public class AccountingDbContext : DbContext
         modelBuilder.Entity<Company>(entity =>
         {
             entity.HasKey(e => e.Id);
+            entity.Property(e => e.CompanyCode).IsRequired().HasMaxLength(20);
             entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
+            entity.Property(e => e.FiscalYearStart).IsRequired();
+            entity.Property(e => e.FiscalYearEnd).IsRequired();
             entity.Property(e => e.BusinessNumber).HasMaxLength(30);
+            entity.Property(e => e.CorporateRegistrationNumber).HasMaxLength(30);
+            entity.Property(e => e.RepresentativeName).HasMaxLength(100);
+            entity.Property(e => e.CompanyType).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.TaxSource).IsRequired().HasMaxLength(50);
+            entity.HasIndex(e => e.CompanyCode).IsUnique();
         });
 
         // Employee

@@ -1,14 +1,64 @@
-﻿using System.Configuration;
-using System.Data;
-using System.Windows;
+﻿using System.Windows;
+using NPOBalance.Data;
+using NPOBalance.Views;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Threading.Tasks;
 
 namespace NPOBalance
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : Application
     {
-    }
+        private async void Application_Startup(object sender, StartupEventArgs e)
+        {
+            try
+            {
+                await InitializeDatabaseAsync();
+            }
+            catch (Microsoft.Data.Sqlite.SqliteException ex) when (ex.SqliteErrorCode == 1)
+            {
+                MessageBox.Show(
+                    "데이터베이스 마이그레이션 중 오류가 발생했습니다.\n" +
+                    "기존 데이터베이스 파일과 충돌이 발생했습니다.\n\n" +
+                    $"오류: {ex.Message}",
+                    "데이터베이스 오류",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+                Shutdown();
+                return;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"초기화 오류: {ex.Message}\n\n{ex.StackTrace}", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+                Shutdown();
+                return;
+            }
 
+            var mainWindow = new MainWindow();
+            MainWindow = mainWindow;
+            mainWindow.Show();
+
+            var companySelectionWindow = new CompanySelectionWindow
+            {
+                Owner = mainWindow
+            };
+
+            var dialogResult = companySelectionWindow.ShowDialog();
+
+            if (dialogResult == true && companySelectionWindow.SelectedCompany != null)
+            {
+                mainWindow.InitializeCompany(companySelectionWindow.SelectedCompany);
+            }
+            else
+            {
+                Shutdown();
+            }
+        }
+
+        private async Task InitializeDatabaseAsync()
+        {
+            using var context = new AccountingDbContext();
+            await context.Database.EnsureCreatedAsync();
+        }
+    }
 }

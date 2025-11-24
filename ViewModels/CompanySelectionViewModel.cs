@@ -13,6 +13,7 @@ namespace NPOBalance.ViewModels;
 public class CompanySelectionViewModel : INotifyPropertyChanged
 {
     private readonly AccountingDbContext _context;
+    private readonly Window _window;
     private Company? _selectedCompany;
 
     public ObservableCollection<Company> Companies { get; set; }
@@ -30,8 +31,9 @@ public class CompanySelectionViewModel : INotifyPropertyChanged
     public ICommand ConfirmCommand { get; }
     public ICommand AddCompanyCommand { get; }
 
-    public CompanySelectionViewModel()
+    public CompanySelectionViewModel(Window window)
     {
+        _window = window;
         _context = new AccountingDbContext();
         Companies = new ObservableCollection<Company>();
         ConfirmCommand = new RelayCommand(ExecuteConfirm, CanExecuteConfirm);
@@ -41,14 +43,22 @@ public class CompanySelectionViewModel : INotifyPropertyChanged
 
     private async void LoadCompanies()
     {
-        var activeCompanies = await _context.Companies
-            .Where(c => c.IsActive)
-            .ToListAsync();
-
-        Companies.Clear();
-        foreach (var company in activeCompanies)
+        try
         {
-            Companies.Add(company);
+            var activeCompanies = await _context.Companies
+                .Where(c => c.IsActive)
+                .OrderBy(c => c.CompanyCode)
+                .ToListAsync();
+
+            Companies.Clear();
+            foreach (var company in activeCompanies)
+            {
+                Companies.Add(company);
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"회사 목록을 불러오는 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 
@@ -59,9 +69,17 @@ public class CompanySelectionViewModel : INotifyPropertyChanged
 
     private void ExecuteConfirm(object? parameter)
     {
+        //MessageBox.Show($"ExecuteConfirm 호출됨. SelectedCompany: {SelectedCompany?.Name ?? "null"}", "디버그");
+        
         if (SelectedCompany != null)
         {
-            // Hook to open main window later
+            //MessageBox.Show($"DialogResult를 true로 설정합니다.", "디버그");
+            _window.DialogResult = true;
+            _window.Close();
+        }
+        else
+        {
+            //MessageBox.Show("회사가 선택되지 않았습니다.", "디버그");
         }
     }
 
@@ -70,18 +88,47 @@ public class CompanySelectionViewModel : INotifyPropertyChanged
         var dialog = new CompanyAddDialog();
         if (dialog.ShowDialog() == true)
         {
-            var newCompany = new Company
+            try
             {
-                Name = dialog.CompanyName,
-                BusinessNumber = dialog.BusinessNumber,
-                IsActive = true
-            };
+                // 자동으로 회사코드 생성 (0000001 형식)
+                var maxCompany = await _context.Companies
+                    .OrderByDescending(c => c.CompanyCode)
+                    .FirstOrDefaultAsync();
 
-            _context.Companies.Add(newCompany);
-            await _context.SaveChangesAsync();
+                int nextNumber = 1;
+                if (maxCompany != null && int.TryParse(maxCompany.CompanyCode, out int currentMax))
+                {
+                    nextNumber = currentMax + 1;
+                }
 
-            Companies.Add(newCompany);
-            SelectedCompany = newCompany;
+                string newCompanyCode = nextNumber.ToString("D7"); // 7자리 숫자로 포맷 (0000001)
+
+                var newCompany = new Company
+                {
+                    CompanyCode = newCompanyCode,
+                    Name = dialog.CompanyName,
+                    FiscalYearStart = dialog.FiscalYearStart,
+                    FiscalYearEnd = dialog.FiscalYearEnd,
+                    BusinessNumber = dialog.BusinessNumber,
+                    CorporateRegistrationNumber = dialog.CorporateRegistrationNumber,
+                    RepresentativeName = dialog.RepresentativeName,
+                    CompanyType = dialog.CompanyType,
+                    TaxSource = dialog.TaxSource,
+                    IsActive = true
+                };
+
+                _context.Companies.Add(newCompany);
+                await _context.SaveChangesAsync();
+
+                Companies.Add(newCompany);
+                SelectedCompany = newCompany;
+
+                MessageBox.Show($"회사가 성공적으로 등록되었습니다.\n회사코드: {newCompanyCode}", "등록 완료", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"회사 등록 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 

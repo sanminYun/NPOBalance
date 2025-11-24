@@ -1,12 +1,20 @@
 ﻿<Window x:Class="NPOBalance.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:NPOBalance"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        xmlns:views="clr-namespace:NPOBalance.Views"
+        Title="NPO 급여관리"
+        WindowState="Maximized">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="회사">
+                <MenuItem Header="회사 다시 선택" Click="ReSelectCompany_Click"/>
+            </MenuItem>
+            <MenuItem Header="사원 정보" Click="EmployeeManagement_Click"/>
+            <MenuItem Header="급여입력" Click="PayrollEntry_Click"/>
+            <MenuItem Header="설정" Click="Settings_Click"/>
+        </Menu>
+        <Border Margin="10" Background="#FAFAFA" BorderBrush="#DDD" BorderThickness="1" CornerRadius="4">
+            <ContentControl x:Name="ContentHost"/>
+        </Border>
+    </DockPanel>
 </Window>
