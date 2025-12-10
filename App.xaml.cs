@@ -20,6 +20,7 @@ namespace NPOBalance
                 MessageBox.Show(
                     "데이터베이스 마이그레이션 중 오류가 발생했습니다.\n" +
                     "기존 데이터베이스 파일과 충돌이 발생했습니다.\n\n" +
+                    "개발자에게 문의하시거나, 데이터베이스 파일을 삭제 후 다시 시도하세요.\n\n" +
                     $"오류: {ex.Message}",
                     "데이터베이스 오류",
                     MessageBoxButton.OK,
@@ -47,7 +48,8 @@ namespace NPOBalance
 
             if (dialogResult == true && companySelectionWindow.SelectedCompany != null)
             {
-                mainWindow.InitializeCompany(companySelectionWindow.SelectedCompany);
+                // await를 사용하여 InitializeCompany가 완료될 때까지 기다립니다.
+                await mainWindow.InitializeCompany(companySelectionWindow.SelectedCompany);
             }
             else
             {
@@ -58,7 +60,8 @@ namespace NPOBalance
         private async Task InitializeDatabaseAsync()
         {
             using var context = new AccountingDbContext();
-            await context.Database.EnsureCreatedAsync();
+            //await context.Database.EnsureCreatedAsync();
+            await context.Database.MigrateAsync();
         }
     }
 }

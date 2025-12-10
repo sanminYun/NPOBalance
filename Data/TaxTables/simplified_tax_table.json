@@ -1,0 +1,16 @@
+[
+  { "minMonthlyIncome": 0,       "maxMonthlyIncome": 2000000,  "withholdingTax": 0 },
+  { "minMonthlyIncome": 2000000, "maxMonthlyIncome": 2500000,  "withholdingTax": 4500 },
+  { "minMonthlyIncome": 2500000, "maxMonthlyIncome": 3000000,  "withholdingTax": 9000 },
+  { "minMonthlyIncome": 3000000, "maxMonthlyIncome": 3500000,  "withholdingTax": 15000 },
+  { "minMonthlyIncome": 3500000, "maxMonthlyIncome": 4000000,  "withholdingTax": 24000 },
+  { "minMonthlyIncome": 4000000, "maxMonthlyIncome": 4500000,  "withholdingTax": 36000 },
+  { "minMonthlyIncome": 4500000, "maxMonthlyIncome": 5000000,  "withholdingTax": 52000 },
+  { "minMonthlyIncome": 5000000, "maxMonthlyIncome": 6000000,  "withholdingTax": 70000 },
+  { "minMonthlyIncome": 6000000, "maxMonthlyIncome": 7000000,  "withholdingTax": 92000 },
+  { "minMonthlyIncome": 7000000, "maxMonthlyIncome": 8000000,  "withholdingTax": 118000 },
+  { "minMonthlyIncome": 8000000, "maxMonthlyIncome": 10000000, "withholdingTax": 150000 },
+  { "minMonthlyIncome": 10000000,"maxMonthlyIncome": 12000000, "withholdingTax": 195000 },
+  { "minMonthlyIncome": 12000000,"maxMonthlyIncome": 15000000, "withholdingTax": 260000 },
+  { "minMonthlyIncome": 15000000,"maxMonthlyIncome": 999999999,"withholdingTax": 350000 }
+]

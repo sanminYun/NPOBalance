@@ -20,4 +20,10 @@
     </PackageReference>    
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="Data\TaxTables\simplified_tax_table.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

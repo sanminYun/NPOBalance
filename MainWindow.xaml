@@ -9,9 +9,15 @@
             <MenuItem Header="회사">
                 <MenuItem Header="회사 다시 선택" Click="ReSelectCompany_Click"/>
             </MenuItem>
-            <MenuItem Header="사원 정보" Click="EmployeeManagement_Click"/>
-            <MenuItem Header="급여입력" Click="PayrollEntry_Click"/>
-            <MenuItem Header="설정" Click="Settings_Click"/>
+            <MenuItem x:Name="EmployeeManagementMenuItem"
+                      Header="사원 정보"
+                      Click="EmployeeManagement_Click"/>
+            <MenuItem x:Name="PayrollEntryMenuItem"
+                      Header="급여입력"
+                      Click="PayrollEntry_Click"/>
+            <MenuItem x:Name="SettingsMenuItem"
+                      Header="설정"
+                      Click="Settings_Click"/>
         </Menu>
         <Border Margin="10" Background="#FAFAFA" BorderBrush="#DDD" BorderThickness="1" CornerRadius="4">
             <ContentControl x:Name="ContentHost"/>

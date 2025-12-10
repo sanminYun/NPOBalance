@@ -34,17 +34,62 @@
                   AlternatingRowBackground="#F5F5F5"
                   RowHeight="35"
                   Margin="0,0,0,20">
+            <DataGrid.Resources>
+                <Style x:Key="CenteredCellTextStyle" TargetType="TextBlock">
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                    <Setter Property="Padding" Value="8,0,8,0"/>
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.InputBindings>
+                <MouseBinding MouseAction="LeftDoubleClick"
+                              Command="{Binding ConfirmCommand}"/>
+            </DataGrid.InputBindings>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="회사코드" Binding="{Binding CompanyCode}" Width="100"/>
-                <DataGridTextColumn Header="회사명" Binding="{Binding Name}" Width="*" MinWidth="150"/>
-                <DataGridTextColumn Header="사업자등록번호" Binding="{Binding BusinessNumber}" Width="150"/>
-                <DataGridTextColumn Header="구분" Binding="{Binding CompanyType}" Width="100"/>
-                <DataGridTextColumn Header="원천" Binding="{Binding TaxSource}" Width="100"/>
-                <DataGridTextColumn Header="대표자명" Binding="{Binding RepresentativeName}" Width="120"/>
+                <DataGridTextColumn Header="회사코드"
+                                    Binding="{Binding CompanyCode}"
+                                    Width="100"
+                                    ElementStyle="{StaticResource CenteredCellTextStyle}"
+                                    EditingElementStyle="{StaticResource CenteredCellTextStyle}"/>
+                <DataGridTextColumn Header="회사명"
+                                    Binding="{Binding Name}"
+                                    Width="*"
+                                    MinWidth="150"
+                                    ElementStyle="{StaticResource CenteredCellTextStyle}"
+                                    EditingElementStyle="{StaticResource CenteredCellTextStyle}"/>
+                <DataGridTextColumn Header="사업자등록번호"
+                                    Binding="{Binding BusinessNumber}"
+                                    Width="150"
+                                    ElementStyle="{StaticResource CenteredCellTextStyle}"
+                                    EditingElementStyle="{StaticResource CenteredCellTextStyle}"/>
+                <DataGridTextColumn Header="구분"
+                                    Binding="{Binding CompanyType}"
+                                    Width="100"
+                                    ElementStyle="{StaticResource CenteredCellTextStyle}"
+                                    EditingElementStyle="{StaticResource CenteredCellTextStyle}"/>
+                <DataGridTextColumn Header="원천"
+                                    Binding="{Binding TaxSource}"
+                                    Width="100"
+                                    ElementStyle="{StaticResource CenteredCellTextStyle}"
+                                    EditingElementStyle="{StaticResource CenteredCellTextStyle}"/>
+                <DataGridTextColumn Header="대표자명"
+                                    Binding="{Binding RepresentativeName}"
+                                    Width="120"
+                                    ElementStyle="{StaticResource CenteredCellTextStyle}"
+                                    EditingElementStyle="{StaticResource CenteredCellTextStyle}"/>
                 <DataGridTemplateColumn Header="회계연도" Width="200">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock>
+                            <TextBlock VerticalAlignment="Center">
                                 <Run Text="{Binding FiscalYearStart, StringFormat='{}{0:yyyy-MM-dd}'}"/>
                                 <Run Text=" ~ "/>
                                 <Run Text="{Binding FiscalYearEnd, StringFormat='{}{0:yyyy-MM-dd}'}"/>

@@ -19,4 +19,5 @@ public class Company
     public ICollection<PayItemType> PayItemTypes { get; set; } = new List<PayItemType>();
     public ICollection<PayrollHeader> PayrollHeaders { get; set; } = new List<PayrollHeader>();
     public ICollection<InsuranceRateSetting> InsuranceRateSettings { get; set; } = new List<InsuranceRateSetting>();
+    public ICollection<PayrollEntryDraft> PayrollEntryDrafts { get; set; } = new List<PayrollEntryDraft>();
 }

@@ -11,6 +11,7 @@ public class AccountingDbContext : DbContext
     public DbSet<PayrollHeader> PayrollHeaders { get; set; }
     public DbSet<PayrollLine> PayrollLines { get; set; }
     public DbSet<InsuranceRateSetting> InsuranceRateSettings { get; set; }
+    public DbSet<PayrollEntryDraft> PayrollEntryDrafts { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -99,6 +100,25 @@ public class AccountingDbContext : DbContext
                 .WithMany(p => p.PayrollLines)
                 .HasForeignKey(e => e.PayItemTypeId)
                 .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        // PayrollEntryDraft
+        modelBuilder.Entity<PayrollEntryDraft>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.UpdatedAt).IsRequired();
+
+            entity.HasOne(e => e.Company)
+                .WithMany(c => c.PayrollEntryDrafts)
+                .HasForeignKey(e => e.CompanyId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(e => e.Employee)
+                .WithMany(emp => emp.PayrollEntryDrafts)
+                .HasForeignKey(e => e.EmployeeId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasIndex(e => new { e.CompanyId, e.EmployeeId }).IsUnique();
         });
 
         // InsuranceRateSetting
