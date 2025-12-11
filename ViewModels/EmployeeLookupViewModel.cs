@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
@@ -14,10 +15,11 @@ public class EmployeeLookupViewModel : ObservableObject
     private readonly AccountingDbContext _context;
     private readonly Window _window;
     private readonly int _companyId;
+    private readonly HashSet<int> _registeredEmployeeIds;
     private string? _searchKeyword;
-    private Employee? _selectedEmployee;
+    private EmployeeDisplayItem? _selectedEmployee;
 
-    public ObservableCollection<Employee> Employees { get; } = new();
+    public ObservableCollection<EmployeeDisplayItem> Employees { get; } = new();
 
     public string? SearchKeyword
     {
@@ -25,7 +27,7 @@ public class EmployeeLookupViewModel : ObservableObject
         set => SetProperty(ref _searchKeyword, value);
     }
 
-    public Employee? SelectedEmployee
+    public EmployeeDisplayItem? SelectedEmployee
     {
         get => _selectedEmployee;
         set
@@ -41,9 +43,10 @@ public class EmployeeLookupViewModel : ObservableObject
     public ICommand SearchCommand { get; }
     public ICommand ClearSearchCommand { get; }
 
-    public EmployeeLookupViewModel(int companyId, Window window)
+    public EmployeeLookupViewModel(int companyId, IEnumerable<int> registeredEmployeeIds, Window window)
     {
         _companyId = companyId;
+        _registeredEmployeeIds = new HashSet<int>(registeredEmployeeIds);
         _window = window;
         _context = new AccountingDbContext();
 
@@ -81,7 +84,8 @@ public class EmployeeLookupViewModel : ObservableObject
             Employees.Clear();
             foreach (var employee in employees)
             {
-                Employees.Add(employee);
+                var isRegistered = _registeredEmployeeIds.Contains(employee.Id);
+                Employees.Add(new EmployeeDisplayItem(employee, isRegistered));
             }
         }
         catch (Exception ex)
@@ -94,11 +98,32 @@ public class EmployeeLookupViewModel : ObservableObject
     {
         if (SelectedEmployee == null)
         {
-            MessageBox.Show("사원을 선택하세요.", "알림", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("사원을 선택하세요.", "안내", MessageBoxButton.OK, MessageBoxImage.Information);
             return;
         }
 
         _window.DialogResult = true;
         _window.Close();
+    }
+}
+
+public class EmployeeDisplayItem
+{
+    public Employee Employee { get; }
+    public bool IsRegistered { get; }
+    
+    public int Id => Employee.Id;
+    public string EmployeeCode => Employee.EmployeeCode;
+    public string Name => Employee.Name;
+    public string? Department => Employee.Department;
+    public string? Position => Employee.Position;
+    public string? Address1 => Employee.Address1;
+    public decimal? EstimatedTotalSalary => Employee.EstimatedTotalSalary;
+    public string DisplayName => IsRegistered ? $"? {Employee.Name}" : Employee.Name;
+
+    public EmployeeDisplayItem(Employee employee, bool isRegistered)
+    {
+        Employee = employee;
+        IsRegistered = isRegistered;
     }
 }

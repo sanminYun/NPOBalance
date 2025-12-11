@@ -5,6 +5,29 @@
         Height="600"
         Width="900"
         WindowStartupLocation="CenterOwner">
+    <Window.Resources>
+        <Style x:Key="CenteredCellStyle" TargetType="DataGridCell">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DataGridCell">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style x:Key="RegisteredEmployeeStyle" TargetType="DataGridRow">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsRegistered}" Value="True">
+                    <Setter Property="Background" Value="#FFF9E6"/>
+                    <Setter Property="Foreground" Value="#856404"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -41,8 +64,10 @@
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
                   IsReadOnly="True"
-                  RowHeight="32"
+                  RowHeight="36"
                   SelectionMode="Single"
+                  RowStyle="{StaticResource RegisteredEmployeeStyle}"
+                  CellStyle="{StaticResource CenteredCellStyle}"
                   Margin="0,0,0,10">
             <DataGrid.InputBindings>
                 <MouseBinding MouseAction="LeftDoubleClick"
@@ -50,7 +75,7 @@
             </DataGrid.InputBindings>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="사번" Binding="{Binding EmployeeCode}" Width="100"/>
-                <DataGridTextColumn Header="성명" Binding="{Binding Name}" Width="140"/>
+                <DataGridTextColumn Header="성명" Binding="{Binding DisplayName}" Width="140"/>
                 <DataGridTextColumn Header="부서" Binding="{Binding Department}" Width="120"/>
                 <DataGridTextColumn Header="직위" Binding="{Binding Position}" Width="120"/>
                 <DataGridTextColumn Header="연락처" Binding="{Binding Address1}" Width="*"/>
@@ -59,6 +84,11 @@
         </DataGrid>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock Text="✓ 표시: 이미 등록된 사원"
+                       VerticalAlignment="Center"
+                       Margin="0,0,20,0"
+                       Foreground="#856404"
+                       FontSize="12"/>
             <Button Content="확인"
                     Width="100"
                     Margin="0,0,10,0"

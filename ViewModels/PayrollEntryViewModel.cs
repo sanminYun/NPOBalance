@@ -128,34 +128,37 @@ public class PayrollEntryViewModel : ObservableObject
     {
         if (_company == null)
         {
-            MessageBox.Show("회사를 먼저 선택하세요.", "알림", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("회사를 먼저 선택하세요.", "안내", MessageBoxButton.OK, MessageBoxImage.Information);
             return false;
         }
 
-        if (SelectedRow == null)
-        {
-            MessageBox.Show("사원을 배치할 행을 먼저 선택하세요.", "알림", MessageBoxButton.OK, MessageBoxImage.Information);
-            return false;
-        }
-
-        if (PayrollRows.Any(r => r != SelectedRow && r.EmployeeId == employee.Id))
+        if (PayrollRows.Any(r => r.EmployeeId == employee.Id))
         {
             MessageBox.Show($"'{employee.Name}' 사원은 이미 목록에 있습니다.", "중복 사원", MessageBoxButton.OK, MessageBoxImage.Warning);
+            return false;
+        }
+
+        var targetRow = GetNextAssignableRow();
+        if (targetRow == null)
+        {
+            MessageBox.Show("사원을 배치할 행을 추가할 수 없습니다.", "안내", MessageBoxButton.OK, MessageBoxImage.Information);
             return false;
         }
 
         BeginSuppressDirty();
         try
         {
-            SelectedRow.Detail.Reset();
-            SelectedRow.AssignEmployee(employee);
+            targetRow.Detail.Reset();
+            targetRow.AssignEmployee(employee);
         }
         finally
         {
             EndSuppressDirty();
         }
 
-        var loadedFromStore = TryLoadDraftForRow(SelectedRow);
+        SelectedRow = targetRow;
+
+        var loadedFromStore = TryLoadDraftForRow(targetRow);
         if (!loadedFromStore)
         {
             MarkDirty();
@@ -189,6 +192,18 @@ public class PayrollEntryViewModel : ObservableObject
         }
 
         RefreshSequences();
+    }
+
+    private PayrollEntryRowViewModel? GetNextAssignableRow()
+    {
+        var row = PayrollRows.FirstOrDefault(r => !r.HasEmployee);
+        if (row != null)
+        {
+            return row;
+        }
+
+        AddBlankRows(5);
+        return PayrollRows.FirstOrDefault(r => !r.HasEmployee);
     }
 
     private void AttachRowHandlers(PayrollEntryRowViewModel row)
@@ -247,7 +262,7 @@ public class PayrollEntryViewModel : ObservableObject
     {
         if (_company == null)
         {
-            MessageBox.Show("회사를 먼저 선택하세요.", "알림", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("회사를 먼저 선택하세요.", "안내", MessageBoxButton.OK, MessageBoxImage.Information);
             return;
         }
 
@@ -292,7 +307,7 @@ public class PayrollEntryViewModel : ObservableObject
 
             await db.SaveChangesAsync();
             ResetDirtyFlag();
-            MessageBox.Show("급여 입력 항목이 저장되었습니다.", "저장 완료", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("급여 입력 초안이 저장되었습니다.", "저장 완료", MessageBoxButton.OK, MessageBoxImage.Information);
         }
         catch (Exception ex)
         {
