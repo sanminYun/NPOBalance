@@ -24,6 +24,9 @@
     <Content Include="Data\TaxTables\simplified_tax_table.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\TaxTables\withholding_table_full.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

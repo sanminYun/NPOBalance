@@ -30,15 +30,18 @@
         </Style>
         <Style x:Key="PayrollGridRowStyle" TargetType="DataGridRow">
             <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Focusable" Value="{Binding HasEmployee}"/>
+            <Setter Property="IsEnabled" Value="{Binding HasEmployee}"/>
             <Style.Triggers>
                 <DataTrigger Binding="{Binding HasEmployee}" Value="False">
-                    <Setter Property="IsEnabled" Value="False"/>
-                    <Setter Property="Focusable" Value="False"/>
+                    <Setter Property="Foreground" Value="#9CA3AF"/>
                 </DataTrigger>
             </Style.Triggers>
         </Style>
         <Style x:Key="PayrollGridCellStyle" TargetType="DataGridCell">
             <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Focusable" Value="{Binding HasEmployee}"/>
+            <Setter Property="IsEnabled" Value="{Binding HasEmployee}"/>
         </Style>
         <Style x:Key="PayrollGridTextStyle" TargetType="TextBlock">
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -53,10 +56,11 @@
 
         <!-- Left panel -->
         <DockPanel Grid.Column="0" Margin="0,0,5,0">
-            <TextBlock DockPanel.Dock="Top"
-                       Text="F2 키를 눌러 위쪽부터 순차로 사원을 배치하세요."
-                       Margin="0,0,0,10"
-                       Foreground="#4B5563"/>
+            <StackPanel DockPanel.Dock="Top" Margin="0,0,0,10">
+                <TextBlock Text="F2 키를 눌러 위쪽부터 순차로 사원을 배치하세요."
+                           Margin="0,0,0,5"
+                           Foreground="#4B5563"/>
+            </StackPanel>
 
             <StackPanel DockPanel.Dock="Bottom"
                         Orientation="Horizontal"
@@ -112,7 +116,7 @@
                       HorizontalAlignment="Right"
                       Background="#D1D5DB"/>
 
-        <!-- Right panel - 내용 동일 -->
+        <!-- Right panel -->
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -136,21 +140,42 @@
                         </Style.Triggers>
                     </Style>
                 </Border.Style>
-                <StackPanel Orientation="Vertical" DataContext="{Binding SelectedRow}">
-                    <TextBlock Text="{Binding EmployeeName, TargetNullValue='사원 미지정'}"
-                               FontSize="20"
-                               FontWeight="Bold"/>
-                    <TextBlock Margin="0,4,0,0">
-                        <Run Text="사번: "/>
-                        <Run Text="{Binding EmployeeCode, Mode=OneWay, TargetNullValue='-'}"/>
-                        <Run Text="    부서: "/>
-                        <Run Text="{Binding Department, Mode=OneWay, TargetNullValue='-'}"/>
-                    </TextBlock>
-                    <TextBlock>
-                        <Run Text="예상 총 급여: "/>
-                        <Run Text="{Binding Detail.EstimatedAnnualSalary, Mode=OneWay, StringFormat={}{0:N0} 원}"/>
-                    </TextBlock>
-                </StackPanel>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <StackPanel Grid.Row="0" Orientation="Vertical" DataContext="{Binding SelectedRow}">
+                        <TextBlock Text="{Binding EmployeeName, TargetNullValue='사원 미지정'}"
+                                   FontSize="20"
+                                   FontWeight="Bold"/>
+                        <TextBlock Margin="0,4,0,0">
+                            <Run Text="사번: "/>
+                            <Run Text="{Binding EmployeeCode, Mode=OneWay, TargetNullValue='-'}"/>
+                            <Run Text="    부서: "/>
+                            <Run Text="{Binding Department, Mode=OneWay, TargetNullValue='-'}"/>
+                        </TextBlock>
+                        <TextBlock>
+                            <Run Text="예상 총 급여: "/>
+                            <Run Text="{Binding Detail.EstimatedAnnualSalary, Mode=OneWay, StringFormat={}{0:N0} 원}"/>
+                        </TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1" 
+                                Orientation="Horizontal" 
+                                Margin="0,12,0,0"
+                                DataContext="{Binding}">
+                        <TextBlock Text="재원:" 
+                                   VerticalAlignment="Center"
+                                   Margin="0,0,8,0"
+                                   FontWeight="SemiBold"/>
+                        <ComboBox x:Name="FundingSourceComboBox"
+                                  ItemsSource="{Binding FundingSources}"
+                                  SelectedItem="{Binding SelectedFundingSource, Mode=TwoWay}"
+                                  Width="200"/>
+                    </StackPanel>
+                </Grid>
             </Border>
 
             <Border Grid.Row="1"
@@ -196,46 +221,12 @@
                         <GroupBox Header="[과세급상여]"
                                   Margin="0,0,12,0"
                                   Width="460">
-                            <Grid Margin="0,5,0,0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="200"/>
-                                    <ColumnDefinition Width="250"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-                                <TextBlock Grid.Row="0" Grid.Column="0" Text="기본급" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding BaseSalary, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="1" Grid.Column="0" Text="명절수당" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding HolidayAllowance, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="3" Grid.Column="0" Text="소계 (A)" Style="{StaticResource FormLabelStyle}" Margin="0,12,0,0"/>
-                                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,12,0,0" Text="{Binding TaxableEarningsSubtotal, Mode=OneWay, StringFormat={}{0:N0}}"/>
-                            </Grid>
+                            <StackPanel x:Name="TaxableEarningsPanel" Margin="0,5,0,0"/>
                         </GroupBox>
 
                         <GroupBox Header="[비과세급상여]"
                                   Width="460">
-                            <Grid Margin="0,5,0,0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="200"/>
-                                    <ColumnDefinition Width="250"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-                                <TextBlock Grid.Row="0" Grid.Column="0" Text="식대" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding MealAllowance, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="1" Grid.Column="0" Text="출산휴가지원" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding MaternitySupport, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="3" Grid.Column="0" Text="소계 (B)" Style="{StaticResource FormLabelStyle}" Margin="0,12,0,0"/>
-                                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,12,0,0" Text="{Binding NonTaxableEarningsSubtotal, Mode=OneWay, StringFormat={}{0:N0}}"/>
-                            </Grid>
+                            <StackPanel x:Name="NonTaxableEarningsPanel" Margin="0,5,0,0"/>
                         </GroupBox>
                     </StackPanel>
 
@@ -255,11 +246,6 @@
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
                                 <TextBlock Grid.Row="0" Grid.Column="0" Text="국민연금" Style="{StaticResource FormLabelStyle}"/>
                                 <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding EmployeeNationalPension, Mode=OneWay, StringFormat={}{0:N0}}"/>
@@ -269,16 +255,8 @@
                                 <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding EmployeeLongTermCare, Mode=OneWay, StringFormat={}{0:N0}}"/>
                                 <TextBlock Grid.Row="3" Grid.Column="0" Text="고용보험" Style="{StaticResource FormLabelStyle}"/>
                                 <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding EmployeeEmploymentInsurance, Mode=OneWay, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="4" Grid.Column="0" Text="국민연금정산" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding NationalPensionSettlement, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="5" Grid.Column="0" Text="건강보험정산" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding HealthInsuranceSettlement, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="6" Grid.Column="0" Text="장기요양정산" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="6" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding LongTermCareSettlement, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="7" Grid.Column="0" Text="고용보험정산" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="7" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding EmploymentInsuranceSettlement, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="9" Grid.Column="0" Text="소계 (C)" Style="{StaticResource FormLabelStyle}" Margin="0,12,0,0"/>
-                                <TextBox Grid.Row="9" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,12,0,0" Text="{Binding InsuranceDeductionSubtotal, Mode=OneWay, StringFormat={}{0:N0}}"/>
+                                <TextBlock Grid.Row="4" Grid.Column="0" Text="소계 (C)" Style="{StaticResource FormLabelStyle}" Margin="0,12,0,0"/>
+                                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,12,0,0" Text="{Binding InsuranceDeductionSubtotal, Mode=OneWay, StringFormat={}{0:N0}}"/>
                             </Grid>
                         </GroupBox>
 
@@ -294,28 +272,15 @@
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
                                 <TextBlock Grid.Row="0" Grid.Column="0" Text="소득세" Style="{StaticResource FormLabelStyle}"/>
                                 <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding IncomeTax, Mode=OneWay, StringFormat={}{0:N0}}"/>
                                 <TextBlock Grid.Row="1" Grid.Column="0" Text="지방소득세" Style="{StaticResource FormLabelStyle}"/>
                                 <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding LocalIncomeTax, Mode=OneWay, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="2" Grid.Column="0" Text="중도퇴사 정산 소득세" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding MidtermIncomeTaxAdjustment, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="3" Grid.Column="0" Text="중도퇴사 정산 지방소득세" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding MidtermLocalTaxAdjustment, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="4" Grid.Column="0" Text="연말정산 소득세" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding YearEndIncomeTaxAdjustment, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="5" Grid.Column="0" Text="연말정산 지방소득세" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding YearEndLocalTaxAdjustment, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="7" Grid.Column="0" Text="소계 (D)" Style="{StaticResource FormLabelStyle}" Margin="0,12,0,0"/>
-                                <TextBox Grid.Row="7" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,12,0,0" Text="{Binding IncomeTaxSubtotal, Mode=OneWay, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="8" Grid.Column="0" Text="차인지급액 (E)" Style="{StaticResource FormLabelStyle}" Margin="0,6,0,0"/>
-                                <TextBox Grid.Row="8" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,6,0,0" Text="{Binding NetPay, Mode=OneWay, StringFormat={}{0:N0}}"/>
+                                <TextBlock Grid.Row="2" Grid.Column="0" Text="소계 (D)" Style="{StaticResource FormLabelStyle}" Margin="0,12,0,0"/>
+                                <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,12,0,0" Text="{Binding IncomeTaxSubtotal, Mode=OneWay, StringFormat={}{0:N0}}"/>
+                                <TextBlock Grid.Row="3" Grid.Column="0" Text="차인지급액 (E)" Style="{StaticResource FormLabelStyle}" Margin="0,6,0,0"/>
+                                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,6,0,0" Text="{Binding NetPay, Mode=OneWay, StringFormat={}{0:N0}}"/>
                             </Grid>
                         </GroupBox>
                     </StackPanel>
@@ -336,11 +301,6 @@
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
                                 <TextBlock Grid.Row="0" Grid.Column="0" Text="국민연금" Style="{StaticResource FormLabelStyle}"/>
                                 <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding EmployerNationalPension, Mode=OneWay, StringFormat={}{0:N0}}"/>
@@ -350,44 +310,32 @@
                                 <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding EmployerLongTermCare, Mode=OneWay, StringFormat={}{0:N0}}"/>
                                 <TextBlock Grid.Row="3" Grid.Column="0" Text="고용보험" Style="{StaticResource FormLabelStyle}"/>
                                 <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding EmployerEmploymentInsurance, Mode=OneWay, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="4" Grid.Column="0" Text="국민연금정산" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding EmployerNationalPensionSettlement, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="5" Grid.Column="0" Text="건강보험정산" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding EmployerHealthInsuranceSettlement, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="6" Grid.Column="0" Text="장기요양정산" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="6" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding EmployerLongTermCareSettlement, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="7" Grid.Column="0" Text="고용보험정산" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="7" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding EmployerEmploymentInsuranceSettlement, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="8" Grid.Column="0" Text="산재보험" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="8" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding IndustrialAccidentInsurance, Mode=OneWay, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="10" Grid.Column="0" Text="소계 (F)" Style="{StaticResource FormLabelStyle}" Margin="0,12,0,0"/>
-                                <TextBox Grid.Row="10" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,12,0,0" Text="{Binding EmployerInsuranceSubtotal, Mode=OneWay, StringFormat={}{0:N0}}"/>
+                                <TextBlock Grid.Row="4" Grid.Column="0" Text="산재보험" Style="{StaticResource FormLabelStyle}"/>
+                                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding IndustrialAccidentInsurance, Mode=OneWay, StringFormat={}{0:N0}}"/>
+                                <TextBlock Grid.Row="5" Grid.Column="0" Text="소계 (F)" Style="{StaticResource FormLabelStyle}" Margin="0,12,0,0"/>
+                                <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,12,0,0" Text="{Binding EmployerInsuranceSubtotal, Mode=OneWay, StringFormat={}{0:N0}}"/>
                             </Grid>
                         </GroupBox>
 
                         <GroupBox Header="[퇴직적립금]"
                                   Width="460">
-                            <Grid Margin="0,5,0,0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="200"/>
-                                    <ColumnDefinition Width="250"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-                                <TextBlock Grid.Row="0" Grid.Column="0" Text="퇴직적립금 - DC형" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding RetirementDc, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="1" Grid.Column="0" Text="퇴직적립금 - DB형" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource FormInputBoxStyle}" Text="{Binding RetirementDb, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="3" Grid.Column="0" Text="소계 (G)" Style="{StaticResource FormLabelStyle}" Margin="0,12,0,0"/>
-                                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,12,0,0" Text="{Binding RetirementSubtotal, Mode=OneWay, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="4" Grid.Column="0" Text="기업부담액 (E+F+G)" Style="{StaticResource FormLabelStyle}" Margin="0,6,0,0"/>
-                                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,6,0,0" Text="{Binding EmployerTotalBurden, Mode=OneWay, StringFormat={}{0:N0}}"/>
-                            </Grid>
+                            <StackPanel Margin="0,5,0,0">
+                                <StackPanel x:Name="RetirementPanel"/>
+                                <Grid Margin="0,12,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="250"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Text="소계 (G)" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding RetirementSubtotal, Mode=OneWay, StringFormat={}{0:N0}}"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="0" Text="기업부담액 (E+F+G)" Style="{StaticResource FormLabelStyle}" Margin="0,6,0,0"/>
+                                    <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,6,0,0" Text="{Binding EmployerTotalBurden, Mode=OneWay, StringFormat={}{0:N0}}"/>
+                                </Grid>
+                            </StackPanel>
                         </GroupBox>
                     </StackPanel>
                 </StackPanel>

@@ -12,6 +12,7 @@ public class AccountingDbContext : DbContext
     public DbSet<PayrollLine> PayrollLines { get; set; }
     public DbSet<InsuranceRateSetting> InsuranceRateSettings { get; set; }
     public DbSet<PayrollEntryDraft> PayrollEntryDrafts { get; set; }
+    public DbSet<PayItemSetting> PayItemSettings { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -107,6 +108,7 @@ public class AccountingDbContext : DbContext
         {
             entity.HasKey(e => e.Id);
             entity.Property(e => e.UpdatedAt).IsRequired();
+            entity.Property(e => e.PayItemValuesJson).IsRequired();
 
             entity.HasOne(e => e.Company)
                 .WithMany(c => c.PayrollEntryDrafts)
@@ -139,6 +141,16 @@ public class AccountingDbContext : DbContext
                 .WithMany(c => c.InsuranceRateSettings)
                 .HasForeignKey(e => e.CompanyId)
                 .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        // PayItemSetting
+        modelBuilder.Entity<PayItemSetting>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.SectionName).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.ItemsJson).IsRequired();
+            entity.Property(e => e.UpdatedAt).IsRequired();
+            entity.HasIndex(e => e.SectionName).IsUnique();
         });
     }
 }

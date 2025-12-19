@@ -48,8 +48,8 @@ namespace NPOBalance
 
             if (dialogResult == true && companySelectionWindow.SelectedCompany != null)
             {
-                // await를 사용하여 InitializeCompany가 완료될 때까지 기다립니다.
-                await mainWindow.InitializeCompany(companySelectionWindow.SelectedCompany);
+                // SetCompany 메서드 호출 (동기 메서드)
+                mainWindow.SetCompany(companySelectionWindow.SelectedCompany);
             }
             else
             {

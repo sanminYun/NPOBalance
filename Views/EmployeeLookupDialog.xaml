@@ -75,7 +75,7 @@
             </DataGrid.InputBindings>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="사번" Binding="{Binding EmployeeCode}" Width="100"/>
-                <DataGridTextColumn Header="성명" Binding="{Binding DisplayName}" Width="140"/>
+                <DataGridTextColumn Header="성명" Binding="{Binding Name}" Width="140"/>
                 <DataGridTextColumn Header="부서" Binding="{Binding Department}" Width="120"/>
                 <DataGridTextColumn Header="직위" Binding="{Binding Position}" Width="120"/>
                 <DataGridTextColumn Header="연락처" Binding="{Binding Address1}" Width="*"/>
@@ -84,7 +84,7 @@
         </DataGrid>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
-            <TextBlock Text="✓ 표시: 이미 등록된 사원"
+            <TextBlock Text="노란색 배경: 이미 등록된 사원"
                        VerticalAlignment="Center"
                        Margin="0,0,20,0"
                        Foreground="#856404"

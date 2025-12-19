@@ -1,0 +1,10015 @@
+[
+  {
+    "MinMonthlyIncome": 0,
+    "MaxMonthlyIncome": 1060000,
+    "WithholdingTax": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1060000,
+    "MaxMonthlyIncome": 1065000,
+    "WithholdingTax": [
+      1040,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1065000,
+    "MaxMonthlyIncome": 1070000,
+    "WithholdingTax": [
+      1110,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1070000,
+    "MaxMonthlyIncome": 1075000,
+    "WithholdingTax": [
+      1180,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1075000,
+    "MaxMonthlyIncome": 1080000,
+    "WithholdingTax": [
+      1250,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1080000,
+    "MaxMonthlyIncome": 1085000,
+    "WithholdingTax": [
+      1320,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1085000,
+    "MaxMonthlyIncome": 1090000,
+    "WithholdingTax": [
+      1390,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1090000,
+    "MaxMonthlyIncome": 1095000,
+    "WithholdingTax": [
+      1460,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1095000,
+    "MaxMonthlyIncome": 1100000,
+    "WithholdingTax": [
+      1530,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1100000,
+    "MaxMonthlyIncome": 1105000,
+    "WithholdingTax": [
+      1600,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1105000,
+    "MaxMonthlyIncome": 1110000,
+    "WithholdingTax": [
+      1670,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1110000,
+    "MaxMonthlyIncome": 1115000,
+    "WithholdingTax": [
+      1740,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1115000,
+    "MaxMonthlyIncome": 1120000,
+    "WithholdingTax": [
+      1810,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1120000,
+    "MaxMonthlyIncome": 1125000,
+    "WithholdingTax": [
+      1880,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1125000,
+    "MaxMonthlyIncome": 1130000,
+    "WithholdingTax": [
+      1950,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1130000,
+    "MaxMonthlyIncome": 1135000,
+    "WithholdingTax": [
+      2020,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1135000,
+    "MaxMonthlyIncome": 1140000,
+    "WithholdingTax": [
+      2090,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1140000,
+    "MaxMonthlyIncome": 1145000,
+    "WithholdingTax": [
+      2160,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1145000,
+    "MaxMonthlyIncome": 1150000,
+    "WithholdingTax": [
+      2230,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1150000,
+    "MaxMonthlyIncome": 1155000,
+    "WithholdingTax": [
+      2300,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1155000,
+    "MaxMonthlyIncome": 1160000,
+    "WithholdingTax": [
+      2370,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1160000,
+    "MaxMonthlyIncome": 1165000,
+    "WithholdingTax": [
+      2440,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1165000,
+    "MaxMonthlyIncome": 1170000,
+    "WithholdingTax": [
+      2500,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1170000,
+    "MaxMonthlyIncome": 1175000,
+    "WithholdingTax": [
+      2570,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1175000,
+    "MaxMonthlyIncome": 1180000,
+    "WithholdingTax": [
+      2640,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1180000,
+    "MaxMonthlyIncome": 1185000,
+    "WithholdingTax": [
+      2710,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1185000,
+    "MaxMonthlyIncome": 1190000,
+    "WithholdingTax": [
+      2780,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1190000,
+    "MaxMonthlyIncome": 1195000,
+    "WithholdingTax": [
+      2850,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1195000,
+    "MaxMonthlyIncome": 1200000,
+    "WithholdingTax": [
+      2920,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1200000,
+    "MaxMonthlyIncome": 1205000,
+    "WithholdingTax": [
+      2990,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1205000,
+    "MaxMonthlyIncome": 1210000,
+    "WithholdingTax": [
+      3060,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1210000,
+    "MaxMonthlyIncome": 1215000,
+    "WithholdingTax": [
+      3130,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1215000,
+    "MaxMonthlyIncome": 1220000,
+    "WithholdingTax": [
+      3200,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1220000,
+    "MaxMonthlyIncome": 1225000,
+    "WithholdingTax": [
+      3270,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1225000,
+    "MaxMonthlyIncome": 1230000,
+    "WithholdingTax": [
+      3340,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1230000,
+    "MaxMonthlyIncome": 1235000,
+    "WithholdingTax": [
+      3410,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1235000,
+    "MaxMonthlyIncome": 1240000,
+    "WithholdingTax": [
+      3480,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1240000,
+    "MaxMonthlyIncome": 1245000,
+    "WithholdingTax": [
+      3550,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1245000,
+    "MaxMonthlyIncome": 1250000,
+    "WithholdingTax": [
+      3620,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1250000,
+    "MaxMonthlyIncome": 1255000,
+    "WithholdingTax": [
+      3700,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1255000,
+    "MaxMonthlyIncome": 1260000,
+    "WithholdingTax": [
+      3810,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1260000,
+    "MaxMonthlyIncome": 1265000,
+    "WithholdingTax": [
+      3910,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1265000,
+    "MaxMonthlyIncome": 1270000,
+    "WithholdingTax": [
+      4010,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1270000,
+    "MaxMonthlyIncome": 1275000,
+    "WithholdingTax": [
+      4120,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1275000,
+    "MaxMonthlyIncome": 1280000,
+    "WithholdingTax": [
+      4220,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1280000,
+    "MaxMonthlyIncome": 1285000,
+    "WithholdingTax": [
+      4320,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1285000,
+    "MaxMonthlyIncome": 1290000,
+    "WithholdingTax": [
+      4430,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1290000,
+    "MaxMonthlyIncome": 1295000,
+    "WithholdingTax": [
+      4530,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1295000,
+    "MaxMonthlyIncome": 1300000,
+    "WithholdingTax": [
+      4630,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1300000,
+    "MaxMonthlyIncome": 1305000,
+    "WithholdingTax": [
+      4740,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1305000,
+    "MaxMonthlyIncome": 1310000,
+    "WithholdingTax": [
+      4840,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1310000,
+    "MaxMonthlyIncome": 1315000,
+    "WithholdingTax": [
+      4940,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1315000,
+    "MaxMonthlyIncome": 1320000,
+    "WithholdingTax": [
+      5050,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1320000,
+    "MaxMonthlyIncome": 1325000,
+    "WithholdingTax": [
+      5150,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1325000,
+    "MaxMonthlyIncome": 1330000,
+    "WithholdingTax": [
+      5250,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1330000,
+    "MaxMonthlyIncome": 1335000,
+    "WithholdingTax": [
+      5360,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1335000,
+    "MaxMonthlyIncome": 1340000,
+    "WithholdingTax": [
+      5460,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1340000,
+    "MaxMonthlyIncome": 1345000,
+    "WithholdingTax": [
+      5560,
+      1060,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1345000,
+    "MaxMonthlyIncome": 1350000,
+    "WithholdingTax": [
+      5670,
+      1170,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1350000,
+    "MaxMonthlyIncome": 1355000,
+    "WithholdingTax": [
+      5770,
+      1270,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1355000,
+    "MaxMonthlyIncome": 1360000,
+    "WithholdingTax": [
+      5870,
+      1370,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1360000,
+    "MaxMonthlyIncome": 1365000,
+    "WithholdingTax": [
+      5980,
+      1480,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1365000,
+    "MaxMonthlyIncome": 1370000,
+    "WithholdingTax": [
+      6080,
+      1580,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1370000,
+    "MaxMonthlyIncome": 1375000,
+    "WithholdingTax": [
+      6180,
+      1680,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1375000,
+    "MaxMonthlyIncome": 1380000,
+    "WithholdingTax": [
+      6290,
+      1790,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1380000,
+    "MaxMonthlyIncome": 1385000,
+    "WithholdingTax": [
+      6390,
+      1890,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1385000,
+    "MaxMonthlyIncome": 1390000,
+    "WithholdingTax": [
+      6490,
+      1990,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1390000,
+    "MaxMonthlyIncome": 1395000,
+    "WithholdingTax": [
+      6600,
+      2100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1395000,
+    "MaxMonthlyIncome": 1400000,
+    "WithholdingTax": [
+      6700,
+      2200,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1400000,
+    "MaxMonthlyIncome": 1405000,
+    "WithholdingTax": [
+      6800,
+      2300,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1405000,
+    "MaxMonthlyIncome": 1410000,
+    "WithholdingTax": [
+      6910,
+      2410,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1410000,
+    "MaxMonthlyIncome": 1415000,
+    "WithholdingTax": [
+      7010,
+      2510,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1415000,
+    "MaxMonthlyIncome": 1420000,
+    "WithholdingTax": [
+      7110,
+      2610,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1420000,
+    "MaxMonthlyIncome": 1425000,
+    "WithholdingTax": [
+      7210,
+      2710,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1425000,
+    "MaxMonthlyIncome": 1430000,
+    "WithholdingTax": [
+      7320,
+      2820,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1430000,
+    "MaxMonthlyIncome": 1435000,
+    "WithholdingTax": [
+      7420,
+      2920,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1435000,
+    "MaxMonthlyIncome": 1440000,
+    "WithholdingTax": [
+      7520,
+      3020,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1440000,
+    "MaxMonthlyIncome": 1445000,
+    "WithholdingTax": [
+      7630,
+      3130,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1445000,
+    "MaxMonthlyIncome": 1450000,
+    "WithholdingTax": [
+      7730,
+      3230,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1450000,
+    "MaxMonthlyIncome": 1455000,
+    "WithholdingTax": [
+      7830,
+      3330,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1455000,
+    "MaxMonthlyIncome": 1460000,
+    "WithholdingTax": [
+      7940,
+      3440,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1460000,
+    "MaxMonthlyIncome": 1465000,
+    "WithholdingTax": [
+      8040,
+      3540,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1465000,
+    "MaxMonthlyIncome": 1470000,
+    "WithholdingTax": [
+      8140,
+      3640,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1470000,
+    "MaxMonthlyIncome": 1475000,
+    "WithholdingTax": [
+      8250,
+      3750,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1475000,
+    "MaxMonthlyIncome": 1480000,
+    "WithholdingTax": [
+      8350,
+      3850,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1480000,
+    "MaxMonthlyIncome": 1485000,
+    "WithholdingTax": [
+      8450,
+      3950,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1485000,
+    "MaxMonthlyIncome": 1490000,
+    "WithholdingTax": [
+      8560,
+      4060,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1490000,
+    "MaxMonthlyIncome": 1495000,
+    "WithholdingTax": [
+      8660,
+      4160,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1495000,
+    "MaxMonthlyIncome": 1500000,
+    "WithholdingTax": [
+      8760,
+      4260,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1500000,
+    "MaxMonthlyIncome": 1510000,
+    "WithholdingTax": [
+      8920,
+      4420,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1510000,
+    "MaxMonthlyIncome": 1520000,
+    "WithholdingTax": [
+      9120,
+      4620,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1520000,
+    "MaxMonthlyIncome": 1530000,
+    "WithholdingTax": [
+      9330,
+      4830,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1530000,
+    "MaxMonthlyIncome": 1540000,
+    "WithholdingTax": [
+      9540,
+      5040,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1540000,
+    "MaxMonthlyIncome": 1550000,
+    "WithholdingTax": [
+      9740,
+      5240,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1550000,
+    "MaxMonthlyIncome": 1560000,
+    "WithholdingTax": [
+      9950,
+      5450,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1560000,
+    "MaxMonthlyIncome": 1570000,
+    "WithholdingTax": [
+      10160,
+      5660,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1570000,
+    "MaxMonthlyIncome": 1580000,
+    "WithholdingTax": [
+      10360,
+      5860,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1580000,
+    "MaxMonthlyIncome": 1590000,
+    "WithholdingTax": [
+      10570,
+      6070,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1590000,
+    "MaxMonthlyIncome": 1600000,
+    "WithholdingTax": [
+      10780,
+      6280,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1600000,
+    "MaxMonthlyIncome": 1610000,
+    "WithholdingTax": [
+      10980,
+      6480,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1610000,
+    "MaxMonthlyIncome": 1620000,
+    "WithholdingTax": [
+      11190,
+      6690,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1620000,
+    "MaxMonthlyIncome": 1630000,
+    "WithholdingTax": [
+      11400,
+      6900,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1630000,
+    "MaxMonthlyIncome": 1640000,
+    "WithholdingTax": [
+      11600,
+      7100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1640000,
+    "MaxMonthlyIncome": 1650000,
+    "WithholdingTax": [
+      11810,
+      7310,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1650000,
+    "MaxMonthlyIncome": 1660000,
+    "WithholdingTax": [
+      12020,
+      7520,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1660000,
+    "MaxMonthlyIncome": 1670000,
+    "WithholdingTax": [
+      12220,
+      7720,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1670000,
+    "MaxMonthlyIncome": 1680000,
+    "WithholdingTax": [
+      12430,
+      7930,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1680000,
+    "MaxMonthlyIncome": 1690000,
+    "WithholdingTax": [
+      12640,
+      8140,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1690000,
+    "MaxMonthlyIncome": 1700000,
+    "WithholdingTax": [
+      12840,
+      8340,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1700000,
+    "MaxMonthlyIncome": 1710000,
+    "WithholdingTax": [
+      13050,
+      8550,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1710000,
+    "MaxMonthlyIncome": 1720000,
+    "WithholdingTax": [
+      13260,
+      8760,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1720000,
+    "MaxMonthlyIncome": 1730000,
+    "WithholdingTax": [
+      13460,
+      8960,
+      1040,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1730000,
+    "MaxMonthlyIncome": 1740000,
+    "WithholdingTax": [
+      13670,
+      9170,
+      1240,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1740000,
+    "MaxMonthlyIncome": 1750000,
+    "WithholdingTax": [
+      13880,
+      9380,
+      1440,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1750000,
+    "MaxMonthlyIncome": 1760000,
+    "WithholdingTax": [
+      14080,
+      9580,
+      1640,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1760000,
+    "MaxMonthlyIncome": 1770000,
+    "WithholdingTax": [
+      14290,
+      9790,
+      1830,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1770000,
+    "MaxMonthlyIncome": 1780000,
+    "WithholdingTax": [
+      14500,
+      10000,
+      2030,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1780000,
+    "MaxMonthlyIncome": 1790000,
+    "WithholdingTax": [
+      14700,
+      10200,
+      2230,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1790000,
+    "MaxMonthlyIncome": 1800000,
+    "WithholdingTax": [
+      14910,
+      10410,
+      2430,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1800000,
+    "MaxMonthlyIncome": 1810000,
+    "WithholdingTax": [
+      15110,
+      10610,
+      2630,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1810000,
+    "MaxMonthlyIncome": 1820000,
+    "WithholdingTax": [
+      15320,
+      10820,
+      2830,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1820000,
+    "MaxMonthlyIncome": 1830000,
+    "WithholdingTax": [
+      15530,
+      11030,
+      3020,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1830000,
+    "MaxMonthlyIncome": 1840000,
+    "WithholdingTax": [
+      15730,
+      11230,
+      3220,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1840000,
+    "MaxMonthlyIncome": 1850000,
+    "WithholdingTax": [
+      15940,
+      11440,
+      3420,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1850000,
+    "MaxMonthlyIncome": 1860000,
+    "WithholdingTax": [
+      16150,
+      11650,
+      3620,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1860000,
+    "MaxMonthlyIncome": 1870000,
+    "WithholdingTax": [
+      16350,
+      11850,
+      3820,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1870000,
+    "MaxMonthlyIncome": 1880000,
+    "WithholdingTax": [
+      16560,
+      12060,
+      4020,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1880000,
+    "MaxMonthlyIncome": 1890000,
+    "WithholdingTax": [
+      16770,
+      12270,
+      4220,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1890000,
+    "MaxMonthlyIncome": 1900000,
+    "WithholdingTax": [
+      16970,
+      12470,
+      4410,
+      1040,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1900000,
+    "MaxMonthlyIncome": 1910000,
+    "WithholdingTax": [
+      17180,
+      12680,
+      4610,
+      1240,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1910000,
+    "MaxMonthlyIncome": 1920000,
+    "WithholdingTax": [
+      17390,
+      12890,
+      4810,
+      1440,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1920000,
+    "MaxMonthlyIncome": 1930000,
+    "WithholdingTax": [
+      17590,
+      13090,
+      5010,
+      1630,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1930000,
+    "MaxMonthlyIncome": 1940000,
+    "WithholdingTax": [
+      17800,
+      13300,
+      5210,
+      1830,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1940000,
+    "MaxMonthlyIncome": 1950000,
+    "WithholdingTax": [
+      18010,
+      13510,
+      5410,
+      2030,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1950000,
+    "MaxMonthlyIncome": 1960000,
+    "WithholdingTax": [
+      18210,
+      13710,
+      5600,
+      2230,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1960000,
+    "MaxMonthlyIncome": 1970000,
+    "WithholdingTax": [
+      18420,
+      13920,
+      5800,
+      2430,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1970000,
+    "MaxMonthlyIncome": 1980000,
+    "WithholdingTax": [
+      18630,
+      14130,
+      6000,
+      2630,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1980000,
+    "MaxMonthlyIncome": 1990000,
+    "WithholdingTax": [
+      18880,
+      14330,
+      6200,
+      2820,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 1990000,
+    "MaxMonthlyIncome": 2000000,
+    "WithholdingTax": [
+      19200,
+      14540,
+      6400,
+      3020,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2000000,
+    "MaxMonthlyIncome": 2010000,
+    "WithholdingTax": [
+      19520,
+      14750,
+      6600,
+      3220,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2010000,
+    "MaxMonthlyIncome": 2020000,
+    "WithholdingTax": [
+      19850,
+      14950,
+      6800,
+      3420,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2020000,
+    "MaxMonthlyIncome": 2030000,
+    "WithholdingTax": [
+      20170,
+      15160,
+      6990,
+      3620,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2030000,
+    "MaxMonthlyIncome": 2040000,
+    "WithholdingTax": [
+      20490,
+      15370,
+      7190,
+      3820,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2040000,
+    "MaxMonthlyIncome": 2050000,
+    "WithholdingTax": [
+      20810,
+      15570,
+      7390,
+      4020,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2050000,
+    "MaxMonthlyIncome": 2060000,
+    "WithholdingTax": [
+      21130,
+      15780,
+      7590,
+      4210,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2060000,
+    "MaxMonthlyIncome": 2070000,
+    "WithholdingTax": [
+      21450,
+      15990,
+      7790,
+      4410,
+      1040,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2070000,
+    "MaxMonthlyIncome": 2080000,
+    "WithholdingTax": [
+      21770,
+      16190,
+      7990,
+      4610,
+      1240,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2080000,
+    "MaxMonthlyIncome": 2090000,
+    "WithholdingTax": [
+      22090,
+      16400,
+      8180,
+      4810,
+      1430,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2090000,
+    "MaxMonthlyIncome": 2100000,
+    "WithholdingTax": [
+      22420,
+      16600,
+      8380,
+      5010,
+      1630,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2100000,
+    "MaxMonthlyIncome": 2110000,
+    "WithholdingTax": [
+      22740,
+      16810,
+      8580,
+      5210,
+      1830,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2110000,
+    "MaxMonthlyIncome": 2120000,
+    "WithholdingTax": [
+      23060,
+      17020,
+      8780,
+      5400,
+      2030,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2120000,
+    "MaxMonthlyIncome": 2130000,
+    "WithholdingTax": [
+      23380,
+      17220,
+      8980,
+      5600,
+      2230,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2130000,
+    "MaxMonthlyIncome": 2140000,
+    "WithholdingTax": [
+      23700,
+      17430,
+      9180,
+      5800,
+      2430,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2140000,
+    "MaxMonthlyIncome": 2150000,
+    "WithholdingTax": [
+      24020,
+      17640,
+      9380,
+      6000,
+      2630,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2150000,
+    "MaxMonthlyIncome": 2160000,
+    "WithholdingTax": [
+      24340,
+      17840,
+      9570,
+      6200,
+      2820,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2160000,
+    "MaxMonthlyIncome": 2170000,
+    "WithholdingTax": [
+      24660,
+      18050,
+      9770,
+      6400,
+      3020,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2170000,
+    "MaxMonthlyIncome": 2180000,
+    "WithholdingTax": [
+      24990,
+      18260,
+      9970,
+      6600,
+      3220,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2180000,
+    "MaxMonthlyIncome": 2190000,
+    "WithholdingTax": [
+      25310,
+      18460,
+      10170,
+      6790,
+      3420,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2190000,
+    "MaxMonthlyIncome": 2200000,
+    "WithholdingTax": [
+      25630,
+      18670,
+      10370,
+      6990,
+      3620,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2200000,
+    "MaxMonthlyIncome": 2210000,
+    "WithholdingTax": [
+      25950,
+      18950,
+      10570,
+      7190,
+      3820,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2210000,
+    "MaxMonthlyIncome": 2220000,
+    "WithholdingTax": [
+      26270,
+      19270,
+      10760,
+      7390,
+      4010,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2220000,
+    "MaxMonthlyIncome": 2230000,
+    "WithholdingTax": [
+      26590,
+      19590,
+      10960,
+      7590,
+      4210,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2230000,
+    "MaxMonthlyIncome": 2240000,
+    "WithholdingTax": [
+      26910,
+      19910,
+      11160,
+      7790,
+      4410,
+      1040,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2240000,
+    "MaxMonthlyIncome": 2250000,
+    "WithholdingTax": [
+      27240,
+      20240,
+      11360,
+      7980,
+      4610,
+      1230,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2250000,
+    "MaxMonthlyIncome": 2260000,
+    "WithholdingTax": [
+      27560,
+      20560,
+      11560,
+      8180,
+      4810,
+      1430,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2260000,
+    "MaxMonthlyIncome": 2270000,
+    "WithholdingTax": [
+      27880,
+      20880,
+      11760,
+      8380,
+      5010,
+      1630,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2270000,
+    "MaxMonthlyIncome": 2280000,
+    "WithholdingTax": [
+      28200,
+      21200,
+      11960,
+      8580,
+      5210,
+      1830,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2280000,
+    "MaxMonthlyIncome": 2290000,
+    "WithholdingTax": [
+      28520,
+      21520,
+      12150,
+      8780,
+      5400,
+      2030,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2290000,
+    "MaxMonthlyIncome": 2300000,
+    "WithholdingTax": [
+      28840,
+      21840,
+      12350,
+      8980,
+      5600,
+      2230,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2300000,
+    "MaxMonthlyIncome": 2310000,
+    "WithholdingTax": [
+      29160,
+      22160,
+      12550,
+      9180,
+      5800,
+      2430,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2310000,
+    "MaxMonthlyIncome": 2320000,
+    "WithholdingTax": [
+      29480,
+      22480,
+      12750,
+      9370,
+      6000,
+      2620,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2320000,
+    "MaxMonthlyIncome": 2330000,
+    "WithholdingTax": [
+      29810,
+      22810,
+      12950,
+      9570,
+      6200,
+      2820,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2330000,
+    "MaxMonthlyIncome": 2340000,
+    "WithholdingTax": [
+      30130,
+      23130,
+      13150,
+      9770,
+      6400,
+      3020,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2340000,
+    "MaxMonthlyIncome": 2350000,
+    "WithholdingTax": [
+      30450,
+      23450,
+      13340,
+      9970,
+      6590,
+      3220,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2350000,
+    "MaxMonthlyIncome": 2360000,
+    "WithholdingTax": [
+      30770,
+      23770,
+      13540,
+      10170,
+      6790,
+      3420,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2360000,
+    "MaxMonthlyIncome": 2370000,
+    "WithholdingTax": [
+      31090,
+      24090,
+      13740,
+      10370,
+      6990,
+      3620,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2370000,
+    "MaxMonthlyIncome": 2380000,
+    "WithholdingTax": [
+      31410,
+      24410,
+      13940,
+      10560,
+      7190,
+      3810,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2380000,
+    "MaxMonthlyIncome": 2390000,
+    "WithholdingTax": [
+      31970,
+      24730,
+      14140,
+      10760,
+      7390,
+      4010,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2390000,
+    "MaxMonthlyIncome": 2400000,
+    "WithholdingTax": [
+      32770,
+      25050,
+      14340,
+      10960,
+      7590,
+      4210,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2400000,
+    "MaxMonthlyIncome": 2410000,
+    "WithholdingTax": [
+      33570,
+      25380,
+      14530,
+      11160,
+      7780,
+      4410,
+      1030,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2410000,
+    "MaxMonthlyIncome": 2420000,
+    "WithholdingTax": [
+      34380,
+      25700,
+      14730,
+      11360,
+      7980,
+      4610,
+      1230,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2420000,
+    "MaxMonthlyIncome": 2430000,
+    "WithholdingTax": [
+      35180,
+      26020,
+      14930,
+      11560,
+      8180,
+      4810,
+      1430,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2430000,
+    "MaxMonthlyIncome": 2440000,
+    "WithholdingTax": [
+      35980,
+      26340,
+      15130,
+      11760,
+      8380,
+      5010,
+      1630,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2440000,
+    "MaxMonthlyIncome": 2450000,
+    "WithholdingTax": [
+      36790,
+      26660,
+      15330,
+      11950,
+      8580,
+      5200,
+      1830,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2450000,
+    "MaxMonthlyIncome": 2460000,
+    "WithholdingTax": [
+      37590,
+      26980,
+      15530,
+      12150,
+      8780,
+      5400,
+      2030,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2460000,
+    "MaxMonthlyIncome": 2470000,
+    "WithholdingTax": [
+      38390,
+      27300,
+      15730,
+      12350,
+      8980,
+      5600,
+      2230,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2470000,
+    "MaxMonthlyIncome": 2480000,
+    "WithholdingTax": [
+      39200,
+      27630,
+      15920,
+      12550,
+      9170,
+      5800,
+      2420,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2480000,
+    "MaxMonthlyIncome": 2490000,
+    "WithholdingTax": [
+      40000,
+      27950,
+      16120,
+      12750,
+      9370,
+      6000,
+      2620,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2490000,
+    "MaxMonthlyIncome": 2500000,
+    "WithholdingTax": [
+      40800,
+      28270,
+      16320,
+      12950,
+      9570,
+      6200,
+      2820,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2500000,
+    "MaxMonthlyIncome": 2510000,
+    "WithholdingTax": [
+      41630,
+      28600,
+      16530,
+      13150,
+      9780,
+      6400,
+      3030,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2510000,
+    "MaxMonthlyIncome": 2520000,
+    "WithholdingTax": [
+      42490,
+      28940,
+      16740,
+      13360,
+      9990,
+      6610,
+      3240,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2520000,
+    "MaxMonthlyIncome": 2530000,
+    "WithholdingTax": [
+      43340,
+      29280,
+      16950,
+      13580,
+      10200,
+      6830,
+      3450,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2530000,
+    "MaxMonthlyIncome": 2540000,
+    "WithholdingTax": [
+      44200,
+      29630,
+      17160,
+      13790,
+      10410,
+      7040,
+      3660,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2540000,
+    "MaxMonthlyIncome": 2550000,
+    "WithholdingTax": [
+      45050,
+      29970,
+      17370,
+      14000,
+      10620,
+      7250,
+      3870,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2550000,
+    "MaxMonthlyIncome": 2560000,
+    "WithholdingTax": [
+      45910,
+      30310,
+      17590,
+      14210,
+      10840,
+      7460,
+      4090,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2560000,
+    "MaxMonthlyIncome": 2570000,
+    "WithholdingTax": [
+      46770,
+      30650,
+      17800,
+      14420,
+      11050,
+      7670,
+      4300,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2570000,
+    "MaxMonthlyIncome": 2580000,
+    "WithholdingTax": [
+      47620,
+      31000,
+      18010,
+      14630,
+      11260,
+      7880,
+      4510,
+      1130,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2580000,
+    "MaxMonthlyIncome": 2590000,
+    "WithholdingTax": [
+      48480,
+      31340,
+      18220,
+      14850,
+      11470,
+      8100,
+      4720,
+      1350,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2590000,
+    "MaxMonthlyIncome": 2600000,
+    "WithholdingTax": [
+      49330,
+      31830,
+      18430,
+      15060,
+      11680,
+      8310,
+      4930,
+      1560,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2600000,
+    "MaxMonthlyIncome": 2610000,
+    "WithholdingTax": [
+      50190,
+      32690,
+      18650,
+      15270,
+      11900,
+      8520,
+      5150,
+      1770,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2610000,
+    "MaxMonthlyIncome": 2620000,
+    "WithholdingTax": [
+      51040,
+      33540,
+      18920,
+      15480,
+      12110,
+      8730,
+      5360,
+      1980,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2620000,
+    "MaxMonthlyIncome": 2630000,
+    "WithholdingTax": [
+      51900,
+      34400,
+      19250,
+      15690,
+      12320,
+      8940,
+      5570,
+      2190,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2630000,
+    "MaxMonthlyIncome": 2640000,
+    "WithholdingTax": [
+      52760,
+      35260,
+      19580,
+      15910,
+      12530,
+      9160,
+      5780,
+      2410,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2640000,
+    "MaxMonthlyIncome": 2650000,
+    "WithholdingTax": [
+      53610,
+      36110,
+      19910,
+      16120,
+      12740,
+      9370,
+      5990,
+      2620,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2650000,
+    "MaxMonthlyIncome": 2660000,
+    "WithholdingTax": [
+      54470,
+      36970,
+      20240,
+      16330,
+      12960,
+      9580,
+      6210,
+      2830,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2660000,
+    "MaxMonthlyIncome": 2670000,
+    "WithholdingTax": [
+      55320,
+      37820,
+      20570,
+      16540,
+      13170,
+      9790,
+      6420,
+      3040,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2670000,
+    "MaxMonthlyIncome": 2680000,
+    "WithholdingTax": [
+      56180,
+      38680,
+      20900,
+      16750,
+      13380,
+      10000,
+      6630,
+      3250,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2680000,
+    "MaxMonthlyIncome": 2690000,
+    "WithholdingTax": [
+      57040,
+      39540,
+      21230,
+      16970,
+      13590,
+      10220,
+      6840,
+      3470,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2690000,
+    "MaxMonthlyIncome": 2700000,
+    "WithholdingTax": [
+      57890,
+      40390,
+      21560,
+      17180,
+      13800,
+      10430,
+      7050,
+      3680,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2700000,
+    "MaxMonthlyIncome": 2710000,
+    "WithholdingTax": [
+      58750,
+      41250,
+      21890,
+      17390,
+      14020,
+      10640,
+      7270,
+      3890,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2710000,
+    "MaxMonthlyIncome": 2720000,
+    "WithholdingTax": [
+      59600,
+      42100,
+      22220,
+      17600,
+      14230,
+      10850,
+      7480,
+      4100,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2720000,
+    "MaxMonthlyIncome": 2730000,
+    "WithholdingTax": [
+      60460,
+      42960,
+      22550,
+      17810,
+      14440,
+      11060,
+      7690,
+      4310,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2730000,
+    "MaxMonthlyIncome": 2740000,
+    "WithholdingTax": [
+      61310,
+      43810,
+      22880,
+      18030,
+      14650,
+      11280,
+      7900,
+      4530,
+      1150,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2740000,
+    "MaxMonthlyIncome": 2750000,
+    "WithholdingTax": [
+      62170,
+      44670,
+      23210,
+      18240,
+      14860,
+      11490,
+      8110,
+      4740,
+      1360,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2750000,
+    "MaxMonthlyIncome": 2760000,
+    "WithholdingTax": [
+      63030,
+      45530,
+      23540,
+      18450,
+      15070,
+      11700,
+      8320,
+      4950,
+      1570,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2760000,
+    "MaxMonthlyIncome": 2770000,
+    "WithholdingTax": [
+      63880,
+      46380,
+      23870,
+      18660,
+      15290,
+      11910,
+      8540,
+      5160,
+      1790,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2770000,
+    "MaxMonthlyIncome": 2780000,
+    "WithholdingTax": [
+      64740,
+      47240,
+      24200,
+      18950,
+      15500,
+      12120,
+      8750,
+      5370,
+      2000,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2780000,
+    "MaxMonthlyIncome": 2790000,
+    "WithholdingTax": [
+      65590,
+      48090,
+      24520,
+      19270,
+      15710,
+      12340,
+      8960,
+      5590,
+      2210,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2790000,
+    "MaxMonthlyIncome": 2800000,
+    "WithholdingTax": [
+      66450,
+      48950,
+      24850,
+      19600,
+      15920,
+      12550,
+      9170,
+      5800,
+      2420,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2800000,
+    "MaxMonthlyIncome": 2810000,
+    "WithholdingTax": [
+      67300,
+      49800,
+      25180,
+      19930,
+      16130,
+      12760,
+      9380,
+      6010,
+      2630,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2810000,
+    "MaxMonthlyIncome": 2820000,
+    "WithholdingTax": [
+      68160,
+      50660,
+      25510,
+      20260,
+      16350,
+      12970,
+      9600,
+      6220,
+      2850,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2820000,
+    "MaxMonthlyIncome": 2830000,
+    "WithholdingTax": [
+      69020,
+      51520,
+      25840,
+      20590,
+      16560,
+      13180,
+      9810,
+      6430,
+      3060,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2830000,
+    "MaxMonthlyIncome": 2840000,
+    "WithholdingTax": [
+      69870,
+      52370,
+      26170,
+      20920,
+      16770,
+      13400,
+      10020,
+      6650,
+      3270,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2840000,
+    "MaxMonthlyIncome": 2850000,
+    "WithholdingTax": [
+      70730,
+      53230,
+      26500,
+      21250,
+      16980,
+      13610,
+      10230,
+      6860,
+      3480,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2850000,
+    "MaxMonthlyIncome": 2860000,
+    "WithholdingTax": [
+      71580,
+      54080,
+      26830,
+      21580,
+      17190,
+      13820,
+      10440,
+      7070,
+      3690,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2860000,
+    "MaxMonthlyIncome": 2870000,
+    "WithholdingTax": [
+      72440,
+      54940,
+      27160,
+      21910,
+      17410,
+      14030,
+      10660,
+      7280,
+      3910,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2870000,
+    "MaxMonthlyIncome": 2880000,
+    "WithholdingTax": [
+      73290,
+      55790,
+      27490,
+      22240,
+      17620,
+      14240,
+      10870,
+      7490,
+      4120,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2880000,
+    "MaxMonthlyIncome": 2890000,
+    "WithholdingTax": [
+      74150,
+      56650,
+      27820,
+      22570,
+      17830,
+      14460,
+      11080,
+      7710,
+      4330,
+      0,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2890000,
+    "MaxMonthlyIncome": 2900000,
+    "WithholdingTax": [
+      75010,
+      57510,
+      28150,
+      22900,
+      18040,
+      14670,
+      11290,
+      7920,
+      4540,
+      1170,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2900000,
+    "MaxMonthlyIncome": 2910000,
+    "WithholdingTax": [
+      75860,
+      58360,
+      28480,
+      23230,
+      18250,
+      14880,
+      11500,
+      8130,
+      4750,
+      1380,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2910000,
+    "MaxMonthlyIncome": 2920000,
+    "WithholdingTax": [
+      76720,
+      59220,
+      28810,
+      23560,
+      18470,
+      15090,
+      11720,
+      8340,
+      4970,
+      1590,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2920000,
+    "MaxMonthlyIncome": 2930000,
+    "WithholdingTax": [
+      77570,
+      60070,
+      29140,
+      23890,
+      18680,
+      15300,
+      11930,
+      8550,
+      5180,
+      1800,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2930000,
+    "MaxMonthlyIncome": 2940000,
+    "WithholdingTax": [
+      78430,
+      60930,
+      29470,
+      24220,
+      18970,
+      15510,
+      12140,
+      8760,
+      5390,
+      2010,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2940000,
+    "MaxMonthlyIncome": 2950000,
+    "WithholdingTax": [
+      79280,
+      61780,
+      29800,
+      24550,
+      19300,
+      15730,
+      12350,
+      8980,
+      5600,
+      2230,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2950000,
+    "MaxMonthlyIncome": 2960000,
+    "WithholdingTax": [
+      80140,
+      62640,
+      30130,
+      24880,
+      19630,
+      15940,
+      12560,
+      9190,
+      5810,
+      2440,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2960000,
+    "MaxMonthlyIncome": 2970000,
+    "WithholdingTax": [
+      81000,
+      63500,
+      30460,
+      25210,
+      19960,
+      16150,
+      12780,
+      9400,
+      6030,
+      2650,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2970000,
+    "MaxMonthlyIncome": 2980000,
+    "WithholdingTax": [
+      81850,
+      64350,
+      30790,
+      25540,
+      20290,
+      16360,
+      12990,
+      9610,
+      6240,
+      2860,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2980000,
+    "MaxMonthlyIncome": 2990000,
+    "WithholdingTax": [
+      82710,
+      65210,
+      31120,
+      25870,
+      20620,
+      16570,
+      13200,
+      9820,
+      6450,
+      3070,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 2990000,
+    "MaxMonthlyIncome": 3000000,
+    "WithholdingTax": [
+      83560,
+      66060,
+      31450,
+      26200,
+      20950,
+      16790,
+      13410,
+      10040,
+      6660,
+      3290,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3000000,
+    "MaxMonthlyIncome": 3020000,
+    "WithholdingTax": [
+      84850,
+      67350,
+      32490,
+      26690,
+      21440,
+      17100,
+      13730,
+      10350,
+      6980,
+      3600,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3020000,
+    "MaxMonthlyIncome": 3040000,
+    "WithholdingTax": [
+      86560,
+      69060,
+      34140,
+      27350,
+      22100,
+      17530,
+      14150,
+      10780,
+      7400,
+      4030,
+      0
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3040000,
+    "MaxMonthlyIncome": 3060000,
+    "WithholdingTax": [
+      88270,
+      70770,
+      35790,
+      28010,
+      22760,
+      17950,
+      14580,
+      11200,
+      7830,
+      4450,
+      1080
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3060000,
+    "MaxMonthlyIncome": 3080000,
+    "WithholdingTax": [
+      89980,
+      72480,
+      37440,
+      28670,
+      23420,
+      18380,
+      15000,
+      11630,
+      8250,
+      4880,
+      1500
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3080000,
+    "MaxMonthlyIncome": 3100000,
+    "WithholdingTax": [
+      91690,
+      74190,
+      39080,
+      29330,
+      24080,
+      18830,
+      15430,
+      12050,
+      8680,
+      5300,
+      1930
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3100000,
+    "MaxMonthlyIncome": 3120000,
+    "WithholdingTax": [
+      93400,
+      75900,
+      40730,
+      29990,
+      24740,
+      19490,
+      15850,
+      12470,
+      9100,
+      5720,
+      2350
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3120000,
+    "MaxMonthlyIncome": 3140000,
+    "WithholdingTax": [
+      95760,
+      77620,
+      42380,
+      30650,
+      25400,
+      20150,
+      16270,
+      12900,
+      9520,
+      6150,
+      2770
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3140000,
+    "MaxMonthlyIncome": 3160000,
+    "WithholdingTax": [
+      98210,
+      79330,
+      44030,
+      31310,
+      26060,
+      20810,
+      16700,
+      13320,
+      9950,
+      6570,
+      3200
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3160000,
+    "MaxMonthlyIncome": 3180000,
+    "WithholdingTax": [
+      100650,
+      81040,
+      45680,
+      32550,
+      26720,
+      21470,
+      17120,
+      13750,
+      10370,
+      7000,
+      3620
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3180000,
+    "MaxMonthlyIncome": 3200000,
+    "WithholdingTax": [
+      103100,
+      82750,
+      47330,
+      34200,
+      27380,
+      22130,
+      17540,
+      14170,
+      10790,
+      7420,
+      4040
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3200000,
+    "MaxMonthlyIncome": 3220000,
+    "WithholdingTax": [
+      105540,
+      84460,
+      48980,
+      35850,
+      28040,
+      22790,
+      17970,
+      14590,
+      11220,
+      7840,
+      4470
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3220000,
+    "MaxMonthlyIncome": 3240000,
+    "WithholdingTax": [
+      107990,
+      86170,
+      50620,
+      37500,
+      28700,
+      23450,
+      18390,
+      15020,
+      11640,
+      8270,
+      4890
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3240000,
+    "MaxMonthlyIncome": 3260000,
+    "WithholdingTax": [
+      110430,
+      87880,
+      52270,
+      39150,
+      29360,
+      24110,
+      18860,
+      15440,
+      12070,
+      8690,
+      5320
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3260000,
+    "MaxMonthlyIncome": 3280000,
+    "WithholdingTax": [
+      112880,
+      89600,
+      53920,
+      40800,
+      30020,
+      24770,
+      19520,
+      15870,
+      12490,
+      9120,
+      5740
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3280000,
+    "MaxMonthlyIncome": 3300000,
+    "WithholdingTax": [
+      115320,
+      91310,
+      55570,
+      42440,
+      30670,
+      25420,
+      20170,
+      16290,
+      12910,
+      9540,
+      6160
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3300000,
+    "MaxMonthlyIncome": 3320000,
+    "WithholdingTax": [
+      117770,
+      93020,
+      57220,
+      44090,
+      31330,
+      26080,
+      20830,
+      16710,
+      13340,
+      9960,
+      6590
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3320000,
+    "MaxMonthlyIncome": 3340000,
+    "WithholdingTax": [
+      120210,
+      95210,
+      58870,
+      45740,
+      32620,
+      26740,
+      21490,
+      17140,
+      13760,
+      10390,
+      7010
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3340000,
+    "MaxMonthlyIncome": 3360000,
+    "WithholdingTax": [
+      122660,
+      97660,
+      60440,
+      47320,
+      34190,
+      27370,
+      22120,
+      17540,
+      14170,
+      10790,
+      7420
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3360000,
+    "MaxMonthlyIncome": 3380000,
+    "WithholdingTax": [
+      125100,
+      100100,
+      62010,
+      48880,
+      35760,
+      28000,
+      22750,
+      17950,
+      14570,
+      11200,
+      7820
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3380000,
+    "MaxMonthlyIncome": 3400000,
+    "WithholdingTax": [
+      127550,
+      102550,
+      63570,
+      50450,
+      37320,
+      28630,
+      23380,
+      18350,
+      14970,
+      11600,
+      8220
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3400000,
+    "MaxMonthlyIncome": 3420000,
+    "WithholdingTax": [
+      129990,
+      104990,
+      65140,
+      52010,
+      38890,
+      29250,
+      24000,
+      18750,
+      15370,
+      12000,
+      8620
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3420000,
+    "MaxMonthlyIncome": 3440000,
+    "WithholdingTax": [
+      132440,
+      107440,
+      66700,
+      53580,
+      40450,
+      29880,
+      24630,
+      19380,
+      15780,
+      12400,
+      9030
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3440000,
+    "MaxMonthlyIncome": 3460000,
+    "WithholdingTax": [
+      134880,
+      109880,
+      68270,
+      55140,
+      42020,
+      30500,
+      25250,
+      20000,
+      16180,
+      12800,
+      9430
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3460000,
+    "MaxMonthlyIncome": 3480000,
+    "WithholdingTax": [
+      137330,
+      112330,
+      69830,
+      56710,
+      43580,
+      31130,
+      25880,
+      20630,
+      16580,
+      13210,
+      9830
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3480000,
+    "MaxMonthlyIncome": 3500000,
+    "WithholdingTax": [
+      139770,
+      114770,
+      71400,
+      58270,
+      45150,
+      32020,
+      26510,
+      21260,
+      16980,
+      13610,
+      10230
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3500000,
+    "MaxMonthlyIncome": 3520000,
+    "WithholdingTax": [
+      142220,
+      117220,
+      72960,
+      59840,
+      46710,
+      33590,
+      27130,
+      21880,
+      17390,
+      14010,
+      10640
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3520000,
+    "MaxMonthlyIncome": 3540000,
+    "WithholdingTax": [
+      144660,
+      119660,
+      74530,
+      61400,
+      48280,
+      35150,
+      27760,
+      22510,
+      17790,
+      14410,
+      11040
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3540000,
+    "MaxMonthlyIncome": 3560000,
+    "WithholdingTax": [
+      147110,
+      122110,
+      76090,
+      62960,
+      49840,
+      36710,
+      28380,
+      23130,
+      18190,
+      14820,
+      11440
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3560000,
+    "MaxMonthlyIncome": 3580000,
+    "WithholdingTax": [
+      149550,
+      124550,
+      77650,
+      64530,
+      51400,
+      38280,
+      29010,
+      23760,
+      18590,
+      15220,
+      11840
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3580000,
+    "MaxMonthlyIncome": 3600000,
+    "WithholdingTax": [
+      152000,
+      127000,
+      79220,
+      66090,
+      52970,
+      39840,
+      29630,
+      24380,
+      19130,
+      15620,
+      12250
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3600000,
+    "MaxMonthlyIncome": 3620000,
+    "WithholdingTax": [
+      154440,
+      129440,
+      80780,
+      67660,
+      54530,
+      41410,
+      30260,
+      25010,
+      19760,
+      16020,
+      12650
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3620000,
+    "MaxMonthlyIncome": 3640000,
+    "WithholdingTax": [
+      156890,
+      131890,
+      82350,
+      69220,
+      56100,
+      42970,
+      30890,
+      25640,
+      20390,
+      16420,
+      13050
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3640000,
+    "MaxMonthlyIncome": 3660000,
+    "WithholdingTax": [
+      159330,
+      134330,
+      83910,
+      70790,
+      57660,
+      44540,
+      31510,
+      26260,
+      21010,
+      16830,
+      13450
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3660000,
+    "MaxMonthlyIncome": 3680000,
+    "WithholdingTax": [
+      161780,
+      136780,
+      85480,
+      72350,
+      59230,
+      46100,
+      32980,
+      26890,
+      21640,
+      17230,
+      13850
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3680000,
+    "MaxMonthlyIncome": 3700000,
+    "WithholdingTax": [
+      164220,
+      139220,
+      87040,
+      73920,
+      60790,
+      47670,
+      34540,
+      27510,
+      22260,
+      17630,
+      14260
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3700000,
+    "MaxMonthlyIncome": 3720000,
+    "WithholdingTax": [
+      166670,
+      141670,
+      88610,
+      75480,
+      62360,
+      49230,
+      36110,
+      28140,
+      22890,
+      18030,
+      14660
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3720000,
+    "MaxMonthlyIncome": 3740000,
+    "WithholdingTax": [
+      169110,
+      144110,
+      90170,
+      77050,
+      63920,
+      50800,
+      37670,
+      28770,
+      23520,
+      18440,
+      15060
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3740000,
+    "MaxMonthlyIncome": 3760000,
+    "WithholdingTax": [
+      171560,
+      146560,
+      91730,
+      78610,
+      65480,
+      52360,
+      39230,
+      29390,
+      24140,
+      18890,
+      15460
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3760000,
+    "MaxMonthlyIncome": 3780000,
+    "WithholdingTax": [
+      178920,
+      151090,
+      95250,
+      81630,
+      68510,
+      55380,
+      42260,
+      30600,
+      25350,
+      20100,
+      16240
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3780000,
+    "MaxMonthlyIncome": 3800000,
+    "WithholdingTax": [
+      181590,
+      153740,
+      97700,
+      83350,
+      70220,
+      57100,
+      43970,
+      31290,
+      26040,
+      20790,
+      16680
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3800000,
+    "MaxMonthlyIncome": 3820000,
+    "WithholdingTax": [
+      184260,
+      156400,
+      100140,
+      85060,
+      71930,
+      58810,
+      45680,
+      32560,
+      26720,
+      21470,
+      17120
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3820000,
+    "MaxMonthlyIncome": 3840000,
+    "WithholdingTax": [
+      186930,
+      159050,
+      102590,
+      86770,
+      73640,
+      60520,
+      47390,
+      34270,
+      27400,
+      22150,
+      17560
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3840000,
+    "MaxMonthlyIncome": 3860000,
+    "WithholdingTax": [
+      189600,
+      161710,
+      105030,
+      88480,
+      75350,
+      62230,
+      49100,
+      35980,
+      28090,
+      22840,
+      18000
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3860000,
+    "MaxMonthlyIncome": 3880000,
+    "WithholdingTax": [
+      192270,
+      164360,
+      107480,
+      90190,
+      77070,
+      63940,
+      50820,
+      37690,
+      28770,
+      23520,
+      18440
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3880000,
+    "MaxMonthlyIncome": 3900000,
+    "WithholdingTax": [
+      194940,
+      167020,
+      109920,
+      91900,
+      78780,
+      65650,
+      52530,
+      39400,
+      29460,
+      24210,
+      18960
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3900000,
+    "MaxMonthlyIncome": 3920000,
+    "WithholdingTax": [
+      197610,
+      169670,
+      112370,
+      93620,
+      80490,
+      67360,
+      54240,
+      41110,
+      30140,
+      24890,
+      19640
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3920000,
+    "MaxMonthlyIncome": 3940000,
+    "WithholdingTax": [
+      200280,
+      172330,
+      114810,
+      96060,
+      82200,
+      69080,
+      55950,
+      42830,
+      30830,
+      25580,
+      20330
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3940000,
+    "MaxMonthlyIncome": 3960000,
+    "WithholdingTax": [
+      202950,
+      174980,
+      117260,
+      98510,
+      83910,
+      70790,
+      57660,
+      44540,
+      31510,
+      26260,
+      21010
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3960000,
+    "MaxMonthlyIncome": 3980000,
+    "WithholdingTax": [
+      205620,
+      177640,
+      119700,
+      100950,
+      85620,
+      72500,
+      59370,
+      46250,
+      33120,
+      26950,
+      21700
+    ]
+  },
+  {
+    "MinMonthlyIncome": 3980000,
+    "MaxMonthlyIncome": 4000000,
+    "WithholdingTax": [
+      208290,
+      180290,
+      122150,
+      103400,
+      87340,
+      74210,
+      61090,
+      47960,
+      34840,
+      27630,
+      22380
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4000000,
+    "MaxMonthlyIncome": 4020000,
+    "WithholdingTax": [
+      210960,
+      182950,
+      124590,
+      105840,
+      89050,
+      75920,
+      62800,
+      49670,
+      36550,
+      28320,
+      23070
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4020000,
+    "MaxMonthlyIncome": 4040000,
+    "WithholdingTax": [
+      213630,
+      185600,
+      127040,
+      108290,
+      90760,
+      77630,
+      64510,
+      51380,
+      38260,
+      29000,
+      23750
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4040000,
+    "MaxMonthlyIncome": 4060000,
+    "WithholdingTax": [
+      216300,
+      188260,
+      129480,
+      110730,
+      92470,
+      79340,
+      66220,
+      53090,
+      39970,
+      29680,
+      24430
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4060000,
+    "MaxMonthlyIncome": 4080000,
+    "WithholdingTax": [
+      218970,
+      190910,
+      131930,
+      113180,
+      94430,
+      81060,
+      67930,
+      54810,
+      41680,
+      30370,
+      25120
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4080000,
+    "MaxMonthlyIncome": 4100000,
+    "WithholdingTax": [
+      221640,
+      193570,
+      134370,
+      115620,
+      96870,
+      82770,
+      69640,
+      56520,
+      43390,
+      31050,
+      25800
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4100000,
+    "MaxMonthlyIncome": 4120000,
+    "WithholdingTax": [
+      224310,
+      196220,
+      136820,
+      118070,
+      99320,
+      84480,
+      71350,
+      58230,
+      45100,
+      31980,
+      26490
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4120000,
+    "MaxMonthlyIncome": 4140000,
+    "WithholdingTax": [
+      226980,
+      198880,
+      139260,
+      120510,
+      101760,
+      86190,
+      73070,
+      59940,
+      46820,
+      33690,
+      27170
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4140000,
+    "MaxMonthlyIncome": 4160000,
+    "WithholdingTax": [
+      229650,
+      201530,
+      141710,
+      122960,
+      104210,
+      87900,
+      74780,
+      61650,
+      48530,
+      35400,
+      27860
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4160000,
+    "MaxMonthlyIncome": 4180000,
+    "WithholdingTax": [
+      232320,
+      204190,
+      144150,
+      125400,
+      106650,
+      89610,
+      76490,
+      63360,
+      50240,
+      37110,
+      28540
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4180000,
+    "MaxMonthlyIncome": 4200000,
+    "WithholdingTax": [
+      234990,
+      206840,
+      146600,
+      127850,
+      109100,
+      91330,
+      78200,
+      65080,
+      51950,
+      38830,
+      29230
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4200000,
+    "MaxMonthlyIncome": 4220000,
+    "WithholdingTax": [
+      237660,
+      209500,
+      149040,
+      130290,
+      111540,
+      93040,
+      79910,
+      66790,
+      53660,
+      40540,
+      29910
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4220000,
+    "MaxMonthlyIncome": 4240000,
+    "WithholdingTax": [
+      240330,
+      212150,
+      151490,
+      132740,
+      113990,
+      95240,
+      81620,
+      68500,
+      55370,
+      42250,
+      30600
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4240000,
+    "MaxMonthlyIncome": 4260000,
+    "WithholdingTax": [
+      243000,
+      214810,
+      153930,
+      135180,
+      116430,
+      97680,
+      83330,
+      70210,
+      57080,
+      43960,
+      31280
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4260000,
+    "MaxMonthlyIncome": 4280000,
+    "WithholdingTax": [
+      245670,
+      217460,
+      156380,
+      137630,
+      118880,
+      100130,
+      85050,
+      71920,
+      58800,
+      45670,
+      32550
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4280000,
+    "MaxMonthlyIncome": 4300000,
+    "WithholdingTax": [
+      248340,
+      220120,
+      158820,
+      140070,
+      121320,
+      102570,
+      86760,
+      73630,
+      60510,
+      47380,
+      34260
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4300000,
+    "MaxMonthlyIncome": 4320000,
+    "WithholdingTax": [
+      251010,
+      222770,
+      161270,
+      142520,
+      123770,
+      105020,
+      88470,
+      75340,
+      62220,
+      49090,
+      35970
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4320000,
+    "MaxMonthlyIncome": 4340000,
+    "WithholdingTax": [
+      253680,
+      225430,
+      163710,
+      144960,
+      126210,
+      107460,
+      90180,
+      77060,
+      63930,
+      50810,
+      37680
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4340000,
+    "MaxMonthlyIncome": 4360000,
+    "WithholdingTax": [
+      256350,
+      228080,
+      166160,
+      147410,
+      128660,
+      109910,
+      91890,
+      78770,
+      65640,
+      52520,
+      39390
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4360000,
+    "MaxMonthlyIncome": 4380000,
+    "WithholdingTax": [
+      259020,
+      230740,
+      168600,
+      149850,
+      131100,
+      112350,
+      93600,
+      80480,
+      67350,
+      54230,
+      41100
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4380000,
+    "MaxMonthlyIncome": 4400000,
+    "WithholdingTax": [
+      261690,
+      233390,
+      171050,
+      152300,
+      133550,
+      114800,
+      96050,
+      82190,
+      69070,
+      55940,
+      42820
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4400000,
+    "MaxMonthlyIncome": 4420000,
+    "WithholdingTax": [
+      264360,
+      236050,
+      173490,
+      154740,
+      135990,
+      117240,
+      98490,
+      83900,
+      70780,
+      57650,
+      44530
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4420000,
+    "MaxMonthlyIncome": 4440000,
+    "WithholdingTax": [
+      267030,
+      238700,
+      175940,
+      157190,
+      138440,
+      119690,
+      100940,
+      85610,
+      72490,
+      59360,
+      46240
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4440000,
+    "MaxMonthlyIncome": 4460000,
+    "WithholdingTax": [
+      269700,
+      241360,
+      178380,
+      159630,
+      140880,
+      122130,
+      103380,
+      87320,
+      74200,
+      61070,
+      47950
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4460000,
+    "MaxMonthlyIncome": 4480000,
+    "WithholdingTax": [
+      272370,
+      244010,
+      180830,
+      162080,
+      143330,
+      124580,
+      105830,
+      89040,
+      75910,
+      62790,
+      49660
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4480000,
+    "MaxMonthlyIncome": 4500000,
+    "WithholdingTax": [
+      275040,
+      246670,
+      183270,
+      164520,
+      145770,
+      127020,
+      108270,
+      90750,
+      77620,
+      64500,
+      51370
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4500000,
+    "MaxMonthlyIncome": 4520000,
+    "WithholdingTax": [
+      277840,
+      249460,
+      185850,
+      167100,
+      148350,
+      129600,
+      110850,
+      92550,
+      79430,
+      66300,
+      53180
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4520000,
+    "MaxMonthlyIncome": 4540000,
+    "WithholdingTax": [
+      280650,
+      252250,
+      188430,
+      169680,
+      150930,
+      132180,
+      113430,
+      94680,
+      81230,
+      68110,
+      54980
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4540000,
+    "MaxMonthlyIncome": 4560000,
+    "WithholdingTax": [
+      283450,
+      255040,
+      191010,
+      172260,
+      153510,
+      134760,
+      116010,
+      97260,
+      83040,
+      69920,
+      56790
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4560000,
+    "MaxMonthlyIncome": 4580000,
+    "WithholdingTax": [
+      286260,
+      257830,
+      193590,
+      174840,
+      156090,
+      137340,
+      118590,
+      99840,
+      84850,
+      71720,
+      58600
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4580000,
+    "MaxMonthlyIncome": 4600000,
+    "WithholdingTax": [
+      291560,
+      263120,
+      198670,
+      179920,
+      161170,
+      142420,
+      123670,
+      104920,
+      86650,
+      73530,
+      60400
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4600000,
+    "MaxMonthlyIncome": 4620000,
+    "WithholdingTax": [
+      294370,
+      265910,
+      201250,
+      182500,
+      163750,
+      145000,
+      126250,
+      107500,
+      88750,
+      75330,
+      62210
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4620000,
+    "MaxMonthlyIncome": 4640000,
+    "WithholdingTax": [
+      297170,
+      268700,
+      203830,
+      185080,
+      166330,
+      147580,
+      128830,
+      110080,
+      91330,
+      77140,
+      64010
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4640000,
+    "MaxMonthlyIncome": 4660000,
+    "WithholdingTax": [
+      299980,
+      271490,
+      206410,
+      187660,
+      168910,
+      150160,
+      131410,
+      112660,
+      93910,
+      78950,
+      65820
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4660000,
+    "MaxMonthlyIncome": 4680000,
+    "WithholdingTax": [
+      302780,
+      274280,
+      208990,
+      190240,
+      171490,
+      152740,
+      133990,
+      115240,
+      96490,
+      80750,
+      67630
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4680000,
+    "MaxMonthlyIncome": 4700000,
+    "WithholdingTax": [
+      305590,
+      277070,
+      211570,
+      192820,
+      174070,
+      155320,
+      136570,
+      117820,
+      99070,
+      82560,
+      69430
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4700000,
+    "MaxMonthlyIncome": 4720000,
+    "WithholdingTax": [
+      308390,
+      279860,
+      214150,
+      195400,
+      176650,
+      157900,
+      139150,
+      120400,
+      101650,
+      84360,
+      71240
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4720000,
+    "MaxMonthlyIncome": 4740000,
+    "WithholdingTax": [
+      311200,
+      282650,
+      216730,
+      197980,
+      179230,
+      160480,
+      141730,
+      122980,
+      104230,
+      86170,
+      73040
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4740000,
+    "MaxMonthlyIncome": 4760000,
+    "WithholdingTax": [
+      314000,
+      285440,
+      219310,
+      200560,
+      181810,
+      163060,
+      144310,
+      125560,
+      106810,
+      88060,
+      74850
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4760000,
+    "MaxMonthlyIncome": 4780000,
+    "WithholdingTax": [
+      316810,
+      288230,
+      221890,
+      203140,
+      184390,
+      165640,
+      146890,
+      128140,
+      109390,
+      90640,
+      76660
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4780000,
+    "MaxMonthlyIncome": 4800000,
+    "WithholdingTax": [
+      319610,
+      291020,
+      224470,
+      205720,
+      186970,
+      168220,
+      149470,
+      130720,
+      111970,
+      93220,
+      78460
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4800000,
+    "MaxMonthlyIncome": 4820000,
+    "WithholdingTax": [
+      322420,
+      293810,
+      227050,
+      208300,
+      189550,
+      170800,
+      152050,
+      133300,
+      114550,
+      95800,
+      80270
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4820000,
+    "MaxMonthlyIncome": 4840000,
+    "WithholdingTax": [
+      325220,
+      296600,
+      229630,
+      210880,
+      192130,
+      173380,
+      154630,
+      135880,
+      117130,
+      98380,
+      82070
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4840000,
+    "MaxMonthlyIncome": 4860000,
+    "WithholdingTax": [
+      328030,
+      299390,
+      232210,
+      213460,
+      194710,
+      175960,
+      157210,
+      138460,
+      119710,
+      100960,
+      83880
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4860000,
+    "MaxMonthlyIncome": 4880000,
+    "WithholdingTax": [
+      330830,
+      302180,
+      234790,
+      216040,
+      197290,
+      178540,
+      159790,
+      141040,
+      122290,
+      103540,
+      85690
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4880000,
+    "MaxMonthlyIncome": 4900000,
+    "WithholdingTax": [
+      333640,
+      304970,
+      237370,
+      218620,
+      199870,
+      181120,
+      162370,
+      143620,
+      124870,
+      106120,
+      87490
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4900000,
+    "MaxMonthlyIncome": 4920000,
+    "WithholdingTax": [
+      336440,
+      307760,
+      239950,
+      221200,
+      202450,
+      183700,
+      164950,
+      146200,
+      127450,
+      108700,
+      89950
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4920000,
+    "MaxMonthlyIncome": 4940000,
+    "WithholdingTax": [
+      339250,
+      310550,
+      242530,
+      223780,
+      205030,
+      186280,
+      167530,
+      148780,
+      130030,
+      111280,
+      92530
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4940000,
+    "MaxMonthlyIncome": 4960000,
+    "WithholdingTax": [
+      342050,
+      313340,
+      245110,
+      226360,
+      207610,
+      188860,
+      170110,
+      151360,
+      132610,
+      113860,
+      95110
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4960000,
+    "MaxMonthlyIncome": 4980000,
+    "WithholdingTax": [
+      344860,
+      316130,
+      247690,
+      228940,
+      210190,
+      191440,
+      172690,
+      153940,
+      135190,
+      116440,
+      97690
+    ]
+  },
+  {
+    "MinMonthlyIncome": 4980000,
+    "MaxMonthlyIncome": 5000000,
+    "WithholdingTax": [
+      347660,
+      318920,
+      250270,
+      231520,
+      212770,
+      194020,
+      175270,
+      156520,
+      137770,
+      119020,
+      100270
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5000000,
+    "MaxMonthlyIncome": 5020000,
+    "WithholdingTax": [
+      350470,
+      321710,
+      252850,
+      234100,
+      215350,
+      196600,
+      177850,
+      159100,
+      140350,
+      121600,
+      102850
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5020000,
+    "MaxMonthlyIncome": 5040000,
+    "WithholdingTax": [
+      353270,
+      324500,
+      255430,
+      236680,
+      217930,
+      199180,
+      180430,
+      161680,
+      142930,
+      124180,
+      105430
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5040000,
+    "MaxMonthlyIncome": 5060000,
+    "WithholdingTax": [
+      356080,
+      327290,
+      258010,
+      239260,
+      220510,
+      201760,
+      183010,
+      164260,
+      145510,
+      126760,
+      108010
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5060000,
+    "MaxMonthlyIncome": 5080000,
+    "WithholdingTax": [
+      358880,
+      330080,
+      260590,
+      241840,
+      223090,
+      204340,
+      185590,
+      166840,
+      148090,
+      129340,
+      110590
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5080000,
+    "MaxMonthlyIncome": 5100000,
+    "WithholdingTax": [
+      361690,
+      332870,
+      263170,
+      244420,
+      225670,
+      206920,
+      188170,
+      169420,
+      150670,
+      131920,
+      113170
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5100000,
+    "MaxMonthlyIncome": 5120000,
+    "WithholdingTax": [
+      364490,
+      335660,
+      265750,
+      247000,
+      228250,
+      209500,
+      190750,
+      172000,
+      153250,
+      134500,
+      115750
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5120000,
+    "MaxMonthlyIncome": 5140000,
+    "WithholdingTax": [
+      367300,
+      338450,
+      268330,
+      249580,
+      230830,
+      212080,
+      193330,
+      174580,
+      155830,
+      137080,
+      118330
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5140000,
+    "MaxMonthlyIncome": 5160000,
+    "WithholdingTax": [
+      370100,
+      341240,
+      270910,
+      252160,
+      233410,
+      214660,
+      195910,
+      177160,
+      158410,
+      139660,
+      120910
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5160000,
+    "MaxMonthlyIncome": 5180000,
+    "WithholdingTax": [
+      372910,
+      344030,
+      273490,
+      254740,
+      235990,
+      217240,
+      198490,
+      179740,
+      160990,
+      142240,
+      123490
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5180000,
+    "MaxMonthlyIncome": 5200000,
+    "WithholdingTax": [
+      375710,
+      346820,
+      276070,
+      257320,
+      238570,
+      219820,
+      201070,
+      182320,
+      163570,
+      144820,
+      126070
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5200000,
+    "MaxMonthlyIncome": 5220000,
+    "WithholdingTax": [
+      378520,
+      349610,
+      278650,
+      259900,
+      241150,
+      222400,
+      203650,
+      184900,
+      166150,
+      147400,
+      128650
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5220000,
+    "MaxMonthlyIncome": 5240000,
+    "WithholdingTax": [
+      381320,
+      352400,
+      281230,
+      262480,
+      243730,
+      224980,
+      206230,
+      187480,
+      168730,
+      149980,
+      131230
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5240000,
+    "MaxMonthlyIncome": 5260000,
+    "WithholdingTax": [
+      384130,
+      355190,
+      283810,
+      265060,
+      246310,
+      227560,
+      208810,
+      190060,
+      171310,
+      152560,
+      133810
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5260000,
+    "MaxMonthlyIncome": 5280000,
+    "WithholdingTax": [
+      386930,
+      357980,
+      286390,
+      267640,
+      248890,
+      230140,
+      211390,
+      192640,
+      173890,
+      155140,
+      136390
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5280000,
+    "MaxMonthlyIncome": 5300000,
+    "WithholdingTax": [
+      389740,
+      360770,
+      288970,
+      270220,
+      251470,
+      232720,
+      213970,
+      195220,
+      176470,
+      157720,
+      138970
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5300000,
+    "MaxMonthlyIncome": 5320000,
+    "WithholdingTax": [
+      392540,
+      363560,
+      291550,
+      272800,
+      254050,
+      235300,
+      216550,
+      197800,
+      179050,
+      160300,
+      141550
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5320000,
+    "MaxMonthlyIncome": 5340000,
+    "WithholdingTax": [
+      395350,
+      366350,
+      294130,
+      275380,
+      256630,
+      237880,
+      219130,
+      200380,
+      181630,
+      162880,
+      144130
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5340000,
+    "MaxMonthlyIncome": 5360000,
+    "WithholdingTax": [
+      398150,
+      369140,
+      296710,
+      277960,
+      259210,
+      240460,
+      221710,
+      202960,
+      184210,
+      165460,
+      146710
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5360000,
+    "MaxMonthlyIncome": 5380000,
+    "WithholdingTax": [
+      400960,
+      371930,
+      299290,
+      280540,
+      261790,
+      243040,
+      224290,
+      205540,
+      186790,
+      168040,
+      149290
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5380000,
+    "MaxMonthlyIncome": 5400000,
+    "WithholdingTax": [
+      403760,
+      374720,
+      301870,
+      283120,
+      264370,
+      245620,
+      226870,
+      208120,
+      189370,
+      170620,
+      151870
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5400000,
+    "MaxMonthlyIncome": 5420000,
+    "WithholdingTax": [
+      406570,
+      377510,
+      304450,
+      285700,
+      266950,
+      248200,
+      229450,
+      210700,
+      191950,
+      173200,
+      154450
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5420000,
+    "MaxMonthlyIncome": 5440000,
+    "WithholdingTax": [
+      409370,
+      380300,
+      307030,
+      288280,
+      269530,
+      250780,
+      232030,
+      213280,
+      194530,
+      175780,
+      157030
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5440000,
+    "MaxMonthlyIncome": 5460000,
+    "WithholdingTax": [
+      412180,
+      383090,
+      309610,
+      290860,
+      272110,
+      253360,
+      234610,
+      215860,
+      197110,
+      178360,
+      159610
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5460000,
+    "MaxMonthlyIncome": 5480000,
+    "WithholdingTax": [
+      414980,
+      385880,
+      312190,
+      293440,
+      274690,
+      255940,
+      237190,
+      218440,
+      199690,
+      180940,
+      162190
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5480000,
+    "MaxMonthlyIncome": 5500000,
+    "WithholdingTax": [
+      417790,
+      388670,
+      314770,
+      296020,
+      277270,
+      258520,
+      239770,
+      221020,
+      202270,
+      183520,
+      164770
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5500000,
+    "MaxMonthlyIncome": 5520000,
+    "WithholdingTax": [
+      420590,
+      391460,
+      317350,
+      298600,
+      279850,
+      261100,
+      242350,
+      223600,
+      204850,
+      186100,
+      167350
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5520000,
+    "MaxMonthlyIncome": 5540000,
+    "WithholdingTax": [
+      423400,
+      394250,
+      319930,
+      301180,
+      282430,
+      263680,
+      244930,
+      226180,
+      207430,
+      188680,
+      169930
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5540000,
+    "MaxMonthlyIncome": 5560000,
+    "WithholdingTax": [
+      426200,
+      397040,
+      322510,
+      303760,
+      285010,
+      266260,
+      247510,
+      228760,
+      210010,
+      191260,
+      172510
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5560000,
+    "MaxMonthlyIncome": 5580000,
+    "WithholdingTax": [
+      429010,
+      399830,
+      325090,
+      306340,
+      287590,
+      268840,
+      250090,
+      231340,
+      212590,
+      193840,
+      175090
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5580000,
+    "MaxMonthlyIncome": 5600000,
+    "WithholdingTax": [
+      431810,
+      402620,
+      327670,
+      308920,
+      290170,
+      271420,
+      252670,
+      233920,
+      215170,
+      196420,
+      177670
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5600000,
+    "MaxMonthlyIncome": 5620000,
+    "WithholdingTax": [
+      435890,
+      405410,
+      330250,
+      311500,
+      292750,
+      274000,
+      255250,
+      236500,
+      217750,
+      199000,
+      180250
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5620000,
+    "MaxMonthlyIncome": 5640000,
+    "WithholdingTax": [
+      440380,
+      408200,
+      332830,
+      314080,
+      295330,
+      276580,
+      257830,
+      239080,
+      220330,
+      201580,
+      182830
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5640000,
+    "MaxMonthlyIncome": 5660000,
+    "WithholdingTax": [
+      444860,
+      410990,
+      335410,
+      316660,
+      297910,
+      279160,
+      260410,
+      241660,
+      222910,
+      204160,
+      185410
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5660000,
+    "MaxMonthlyIncome": 5680000,
+    "WithholdingTax": [
+      449350,
+      413780,
+      337990,
+      319240,
+      300490,
+      281740,
+      262990,
+      244240,
+      225490,
+      206740,
+      187990
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5680000,
+    "MaxMonthlyIncome": 5700000,
+    "WithholdingTax": [
+      453840,
+      416570,
+      340570,
+      321820,
+      303070,
+      284320,
+      265570,
+      246820,
+      228070,
+      209320,
+      190570
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5700000,
+    "MaxMonthlyIncome": 5720000,
+    "WithholdingTax": [
+      458330,
+      419360,
+      343150,
+      324400,
+      305650,
+      286900,
+      268150,
+      249400,
+      230650,
+      211900,
+      193150
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5720000,
+    "MaxMonthlyIncome": 5740000,
+    "WithholdingTax": [
+      462820,
+      422150,
+      345730,
+      326980,
+      308230,
+      289480,
+      270730,
+      251980,
+      233230,
+      214480,
+      195730
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5740000,
+    "MaxMonthlyIncome": 5760000,
+    "WithholdingTax": [
+      467300,
+      424940,
+      348310,
+      329560,
+      310810,
+      292060,
+      273310,
+      254560,
+      235810,
+      217060,
+      198310
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5760000,
+    "MaxMonthlyIncome": 5780000,
+    "WithholdingTax": [
+      471790,
+      427730,
+      350890,
+      332140,
+      313390,
+      294640,
+      275890,
+      257140,
+      238390,
+      219640,
+      200890
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5780000,
+    "MaxMonthlyIncome": 5800000,
+    "WithholdingTax": [
+      476280,
+      430520,
+      353470,
+      334720,
+      315970,
+      297220,
+      278470,
+      259720,
+      240970,
+      222220,
+      203470
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5800000,
+    "MaxMonthlyIncome": 5820000,
+    "WithholdingTax": [
+      480770,
+      433800,
+      356050,
+      337300,
+      318550,
+      299800,
+      281050,
+      262300,
+      243550,
+      224800,
+      206050
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5820000,
+    "MaxMonthlyIncome": 5840000,
+    "WithholdingTax": [
+      485260,
+      438260,
+      358630,
+      339880,
+      321130,
+      302380,
+      283630,
+      264880,
+      246130,
+      227380,
+      208630
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5840000,
+    "MaxMonthlyIncome": 5860000,
+    "WithholdingTax": [
+      512120,
+      465100,
+      387100,
+      368350,
+      349600,
+      330850,
+      312100,
+      293350,
+      274600,
+      255850,
+      237100
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5860000,
+    "MaxMonthlyIncome": 5880000,
+    "WithholdingTax": [
+      519150,
+      472110,
+      392240,
+      373490,
+      354740,
+      335990,
+      317240,
+      298490,
+      279740,
+      260990,
+      242240
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5880000,
+    "MaxMonthlyIncome": 5900000,
+    "WithholdingTax": [
+      523690,
+      476620,
+      394880,
+      376130,
+      357380,
+      338630,
+      319880,
+      301130,
+      282380,
+      263630,
+      244880
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5900000,
+    "MaxMonthlyIncome": 5920000,
+    "WithholdingTax": [
+      528220,
+      481130,
+      397520,
+      378770,
+      360020,
+      341270,
+      322520,
+      303770,
+      285020,
+      266270,
+      247520
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5920000,
+    "MaxMonthlyIncome": 5940000,
+    "WithholdingTax": [
+      532760,
+      485640,
+      400160,
+      381410,
+      362660,
+      343910,
+      325160,
+      306410,
+      287660,
+      268910,
+      250160
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5940000,
+    "MaxMonthlyIncome": 5960000,
+    "WithholdingTax": [
+      537300,
+      490160,
+      402800,
+      384050,
+      365300,
+      346550,
+      327800,
+      309050,
+      290300,
+      271550,
+      252800
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5960000,
+    "MaxMonthlyIncome": 5980000,
+    "WithholdingTax": [
+      541830,
+      494670,
+      405440,
+      386690,
+      367940,
+      349190,
+      330440,
+      311690,
+      292940,
+      274190,
+      255440
+    ]
+  },
+  {
+    "MinMonthlyIncome": 5980000,
+    "MaxMonthlyIncome": 6000000,
+    "WithholdingTax": [
+      546370,
+      499180,
+      408080,
+      389330,
+      370580,
+      351830,
+      333080,
+      314330,
+      295580,
+      276830,
+      258080
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6000000,
+    "MaxMonthlyIncome": 6020000,
+    "WithholdingTax": [
+      550900,
+      503690,
+      410720,
+      391970,
+      373220,
+      354470,
+      335720,
+      316970,
+      298220,
+      279470,
+      260720
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6020000,
+    "MaxMonthlyIncome": 6040000,
+    "WithholdingTax": [
+      555440,
+      508200,
+      413360,
+      394610,
+      375860,
+      357110,
+      338360,
+      319610,
+      300860,
+      282110,
+      263360
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6040000,
+    "MaxMonthlyIncome": 6060000,
+    "WithholdingTax": [
+      559980,
+      512720,
+      416000,
+      397250,
+      378500,
+      359750,
+      341000,
+      322250,
+      303500,
+      284750,
+      266000
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6060000,
+    "MaxMonthlyIncome": 6080000,
+    "WithholdingTax": [
+      564510,
+      517230,
+      418640,
+      399890,
+      381140,
+      362390,
+      343640,
+      324890,
+      306140,
+      287390,
+      268640
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6080000,
+    "MaxMonthlyIncome": 6100000,
+    "WithholdingTax": [
+      569050,
+      521740,
+      421280,
+      402530,
+      383780,
+      365030,
+      346280,
+      327530,
+      308780,
+      290030,
+      271280
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6100000,
+    "MaxMonthlyIncome": 6120000,
+    "WithholdingTax": [
+      573580,
+      526250,
+      423920,
+      405170,
+      386420,
+      367670,
+      348920,
+      330170,
+      311420,
+      292670,
+      273920
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6120000,
+    "MaxMonthlyIncome": 6140000,
+    "WithholdingTax": [
+      578120,
+      530760,
+      426560,
+      407810,
+      389060,
+      370310,
+      351560,
+      332810,
+      314060,
+      295310,
+      276560
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6140000,
+    "MaxMonthlyIncome": 6160000,
+    "WithholdingTax": [
+      582660,
+      535280,
+      429200,
+      410450,
+      391700,
+      372950,
+      354200,
+      335450,
+      316700,
+      297950,
+      279200
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6160000,
+    "MaxMonthlyIncome": 6180000,
+    "WithholdingTax": [
+      587190,
+      539790,
+      431840,
+      413090,
+      394340,
+      375590,
+      356840,
+      338090,
+      319340,
+      300590,
+      281840
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6180000,
+    "MaxMonthlyIncome": 6200000,
+    "WithholdingTax": [
+      591730,
+      544300,
+      434480,
+      415730,
+      396980,
+      378230,
+      359480,
+      340730,
+      321980,
+      303230,
+      284480
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6200000,
+    "MaxMonthlyIncome": 6220000,
+    "WithholdingTax": [
+      596260,
+      548810,
+      437120,
+      418370,
+      399620,
+      380870,
+      362120,
+      343370,
+      324620,
+      305870,
+      287120
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6220000,
+    "MaxMonthlyIncome": 6240000,
+    "WithholdingTax": [
+      600800,
+      553320,
+      439760,
+      421010,
+      402260,
+      383510,
+      364760,
+      346010,
+      327260,
+      308510,
+      289760
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6240000,
+    "MaxMonthlyIncome": 6260000,
+    "WithholdingTax": [
+      605340,
+      557840,
+      442400,
+      423650,
+      404900,
+      386150,
+      367400,
+      348650,
+      329900,
+      311150,
+      292400
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6260000,
+    "MaxMonthlyIncome": 6280000,
+    "WithholdingTax": [
+      609870,
+      562350,
+      446060,
+      426290,
+      407540,
+      388790,
+      370040,
+      351290,
+      332540,
+      313790,
+      295040
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6280000,
+    "MaxMonthlyIncome": 6300000,
+    "WithholdingTax": [
+      614410,
+      566860,
+      450280,
+      428930,
+      410180,
+      391430,
+      372680,
+      353930,
+      335180,
+      316430,
+      297680
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6300000,
+    "MaxMonthlyIncome": 6320000,
+    "WithholdingTax": [
+      618940,
+      571370,
+      454510,
+      431570,
+      412820,
+      394070,
+      375320,
+      356570,
+      337820,
+      319070,
+      300320
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6320000,
+    "MaxMonthlyIncome": 6340000,
+    "WithholdingTax": [
+      623480,
+      575880,
+      458730,
+      434210,
+      415460,
+      396710,
+      377960,
+      359210,
+      340460,
+      321710,
+      302960
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6340000,
+    "MaxMonthlyIncome": 6360000,
+    "WithholdingTax": [
+      628020,
+      580400,
+      462960,
+      436850,
+      418100,
+      399350,
+      380600,
+      361850,
+      343100,
+      324350,
+      305600
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6360000,
+    "MaxMonthlyIncome": 6380000,
+    "WithholdingTax": [
+      632550,
+      584910,
+      467180,
+      439490,
+      420740,
+      401990,
+      383240,
+      364490,
+      345740,
+      326990,
+      308240
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6380000,
+    "MaxMonthlyIncome": 6400000,
+    "WithholdingTax": [
+      637090,
+      589420,
+      471400,
+      442130,
+      423380,
+      404630,
+      385880,
+      367130,
+      348380,
+      329630,
+      310880
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6400000,
+    "MaxMonthlyIncome": 6420000,
+    "WithholdingTax": [
+      641620,
+      593930,
+      475630,
+      445630,
+      426020,
+      407270,
+      388520,
+      369770,
+      351020,
+      332270,
+      313520
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6420000,
+    "MaxMonthlyIncome": 6440000,
+    "WithholdingTax": [
+      646160,
+      598440,
+      479850,
+      449850,
+      428660,
+      409910,
+      391160,
+      372410,
+      353660,
+      334910,
+      316160
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6440000,
+    "MaxMonthlyIncome": 6460000,
+    "WithholdingTax": [
+      650700,
+      602960,
+      484080,
+      454080,
+      431300,
+      412550,
+      393800,
+      375050,
+      356300,
+      337550,
+      318800
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6460000,
+    "MaxMonthlyIncome": 6480000,
+    "WithholdingTax": [
+      655230,
+      607470,
+      488300,
+      458300,
+      433940,
+      415190,
+      396440,
+      377690,
+      358940,
+      340190,
+      321440
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6480000,
+    "MaxMonthlyIncome": 6500000,
+    "WithholdingTax": [
+      659770,
+      611980,
+      492520,
+      462520,
+      436580,
+      417830,
+      399080,
+      380330,
+      361580,
+      342830,
+      324080
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6500000,
+    "MaxMonthlyIncome": 6520000,
+    "WithholdingTax": [
+      664300,
+      616490,
+      496750,
+      466750,
+      439220,
+      420470,
+      401720,
+      382970,
+      364220,
+      345470,
+      326720
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6520000,
+    "MaxMonthlyIncome": 6540000,
+    "WithholdingTax": [
+      668840,
+      621000,
+      500970,
+      470970,
+      441860,
+      423110,
+      404360,
+      385610,
+      366860,
+      348110,
+      329360
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6540000,
+    "MaxMonthlyIncome": 6560000,
+    "WithholdingTax": [
+      673380,
+      625520,
+      505200,
+      475200,
+      445200,
+      425750,
+      407000,
+      388250,
+      369500,
+      350750,
+      332000
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6560000,
+    "MaxMonthlyIncome": 6580000,
+    "WithholdingTax": [
+      677910,
+      630030,
+      509420,
+      479420,
+      449420,
+      428390,
+      409640,
+      390890,
+      372140,
+      353390,
+      334640
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6580000,
+    "MaxMonthlyIncome": 6600000,
+    "WithholdingTax": [
+      682450,
+      634540,
+      513640,
+      483640,
+      453640,
+      431030,
+      412280,
+      393530,
+      374780,
+      356030,
+      337280
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6600000,
+    "MaxMonthlyIncome": 6620000,
+    "WithholdingTax": [
+      686980,
+      639050,
+      517870,
+      487870,
+      457870,
+      433670,
+      414920,
+      396170,
+      377420,
+      358670,
+      339920
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6620000,
+    "MaxMonthlyIncome": 6640000,
+    "WithholdingTax": [
+      691520,
+      643560,
+      522090,
+      492090,
+      462090,
+      436310,
+      417560,
+      398810,
+      380060,
+      361310,
+      342560
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6640000,
+    "MaxMonthlyIncome": 6660000,
+    "WithholdingTax": [
+      696060,
+      648080,
+      526320,
+      496320,
+      466320,
+      438950,
+      420200,
+      401450,
+      382700,
+      363950,
+      345200
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6660000,
+    "MaxMonthlyIncome": 6680000,
+    "WithholdingTax": [
+      700590,
+      652590,
+      530540,
+      500540,
+      470540,
+      441590,
+      422840,
+      404090,
+      385340,
+      366590,
+      347840
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6680000,
+    "MaxMonthlyIncome": 6700000,
+    "WithholdingTax": [
+      705130,
+      657100,
+      534760,
+      504760,
+      474760,
+      444760,
+      425480,
+      406730,
+      387980,
+      369230,
+      350480
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6700000,
+    "MaxMonthlyIncome": 6720000,
+    "WithholdingTax": [
+      709660,
+      661610,
+      538990,
+      508990,
+      478990,
+      448990,
+      428120,
+      409370,
+      390620,
+      371870,
+      353120
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6720000,
+    "MaxMonthlyIncome": 6740000,
+    "WithholdingTax": [
+      714200,
+      666120,
+      543210,
+      513210,
+      483210,
+      453210,
+      430760,
+      412010,
+      393260,
+      374510,
+      355760
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6740000,
+    "MaxMonthlyIncome": 6760000,
+    "WithholdingTax": [
+      718740,
+      670640,
+      547440,
+      517440,
+      487440,
+      457440,
+      433400,
+      414650,
+      395900,
+      377150,
+      358400
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6760000,
+    "MaxMonthlyIncome": 6780000,
+    "WithholdingTax": [
+      723270,
+      675150,
+      551660,
+      521660,
+      491660,
+      461660,
+      436040,
+      417290,
+      398540,
+      379790,
+      361040
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6780000,
+    "MaxMonthlyIncome": 6800000,
+    "WithholdingTax": [
+      727810,
+      679660,
+      555880,
+      525880,
+      495880,
+      465880,
+      438680,
+      419930,
+      401180,
+      382430,
+      363680
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6800000,
+    "MaxMonthlyIncome": 6820000,
+    "WithholdingTax": [
+      732340,
+      684170,
+      560110,
+      530110,
+      500110,
+      470110,
+      441320,
+      422570,
+      403820,
+      385070,
+      366320
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6820000,
+    "MaxMonthlyIncome": 6840000,
+    "WithholdingTax": [
+      736880,
+      688680,
+      564330,
+      534330,
+      504330,
+      474330,
+      444330,
+      425210,
+      406460,
+      387710,
+      368960
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6840000,
+    "MaxMonthlyIncome": 6860000,
+    "WithholdingTax": [
+      741420,
+      693200,
+      568560,
+      538560,
+      508560,
+      478560,
+      448560,
+      427850,
+      409100,
+      390350,
+      371600
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6860000,
+    "MaxMonthlyIncome": 6880000,
+    "WithholdingTax": [
+      745950,
+      697710,
+      572780,
+      542780,
+      512780,
+      482780,
+      452780,
+      430490,
+      411740,
+      392990,
+      374240
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6880000,
+    "MaxMonthlyIncome": 6900000,
+    "WithholdingTax": [
+      750490,
+      702220,
+      577000,
+      547000,
+      517000,
+      487000,
+      457000,
+      433130,
+      414380,
+      395630,
+      376880
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6900000,
+    "MaxMonthlyIncome": 6920000,
+    "WithholdingTax": [
+      755020,
+      706730,
+      581230,
+      551230,
+      521230,
+      491230,
+      461230,
+      435770,
+      417020,
+      398270,
+      379520
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6920000,
+    "MaxMonthlyIncome": 6940000,
+    "WithholdingTax": [
+      759560,
+      711240,
+      585450,
+      555450,
+      525450,
+      495450,
+      465450,
+      438410,
+      419660,
+      400910,
+      382160
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6940000,
+    "MaxMonthlyIncome": 6960000,
+    "WithholdingTax": [
+      764100,
+      715760,
+      589680,
+      559680,
+      529680,
+      499680,
+      469680,
+      441050,
+      422300,
+      403550,
+      384800
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6960000,
+    "MaxMonthlyIncome": 6980000,
+    "WithholdingTax": [
+      768630,
+      720270,
+      593900,
+      563900,
+      533900,
+      503900,
+      473900,
+      443900,
+      424940,
+      406190,
+      387440
+    ]
+  },
+  {
+    "MinMonthlyIncome": 6980000,
+    "MaxMonthlyIncome": 7000000,
+    "WithholdingTax": [
+      773170,
+      724780,
+      598120,
+      568120,
+      538120,
+      508120,
+      478120,
+      448120,
+      427580,
+      408830,
+      390080
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7000000,
+    "MaxMonthlyIncome": 7020000,
+    "WithholdingTax": [
+      777700,
+      729290,
+      602350,
+      572350,
+      542350,
+      512350,
+      482350,
+      452350,
+      430220,
+      411470,
+      392720
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7020000,
+    "MaxMonthlyIncome": 7040000,
+    "WithholdingTax": [
+      782240,
+      733800,
+      606570,
+      576570,
+      546570,
+      516570,
+      486570,
+      456570,
+      432860,
+      414110,
+      395360
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7040000,
+    "MaxMonthlyIncome": 7060000,
+    "WithholdingTax": [
+      786780,
+      738320,
+      610800,
+      580800,
+      550800,
+      520800,
+      490800,
+      460800,
+      435500,
+      416750,
+      398000
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7060000,
+    "MaxMonthlyIncome": 7080000,
+    "WithholdingTax": [
+      791310,
+      742830,
+      615020,
+      585020,
+      555020,
+      525020,
+      495020,
+      465020,
+      438140,
+      419390,
+      400640
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7080000,
+    "MaxMonthlyIncome": 7100000,
+    "WithholdingTax": [
+      795850,
+      747340,
+      619240,
+      589240,
+      559240,
+      529240,
+      499240,
+      469240,
+      440780,
+      422030,
+      403280
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7100000,
+    "MaxMonthlyIncome": 7120000,
+    "WithholdingTax": [
+      800380,
+      751850,
+      623470,
+      593470,
+      563470,
+      533470,
+      503470,
+      473470,
+      443470,
+      424670,
+      405920
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7120000,
+    "MaxMonthlyIncome": 7140000,
+    "WithholdingTax": [
+      804920,
+      756360,
+      627690,
+      597690,
+      567690,
+      537690,
+      507690,
+      477690,
+      447690,
+      427310,
+      408560
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7140000,
+    "MaxMonthlyIncome": 7160000,
+    "WithholdingTax": [
+      809460,
+      760880,
+      631920,
+      601920,
+      571920,
+      541920,
+      511920,
+      481920,
+      451920,
+      429950,
+      411200
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7160000,
+    "MaxMonthlyIncome": 7180000,
+    "WithholdingTax": [
+      813990,
+      765390,
+      636140,
+      606140,
+      576140,
+      546140,
+      516140,
+      486140,
+      456140,
+      432590,
+      413840
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7180000,
+    "MaxMonthlyIncome": 7200000,
+    "WithholdingTax": [
+      818530,
+      769900,
+      640360,
+      610360,
+      580360,
+      550360,
+      520360,
+      490360,
+      460360,
+      435230,
+      416480
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7200000,
+    "MaxMonthlyIncome": 7220000,
+    "WithholdingTax": [
+      823060,
+      774410,
+      644590,
+      614590,
+      584590,
+      554590,
+      524590,
+      494590,
+      464590,
+      437870,
+      419120
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7220000,
+    "MaxMonthlyIncome": 7240000,
+    "WithholdingTax": [
+      827600,
+      778920,
+      648810,
+      618810,
+      588810,
+      558810,
+      528810,
+      498810,
+      468810,
+      440510,
+      421760
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7240000,
+    "MaxMonthlyIncome": 7260000,
+    "WithholdingTax": [
+      832140,
+      783440,
+      653040,
+      623040,
+      593040,
+      563040,
+      533040,
+      503040,
+      473040,
+      443150,
+      424400
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7260000,
+    "MaxMonthlyIncome": 7280000,
+    "WithholdingTax": [
+      836670,
+      787950,
+      657260,
+      627260,
+      597260,
+      567260,
+      537260,
+      507260,
+      477260,
+      447260,
+      427040
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7280000,
+    "MaxMonthlyIncome": 7300000,
+    "WithholdingTax": [
+      841210,
+      792460,
+      661480,
+      631480,
+      601480,
+      571480,
+      541480,
+      511480,
+      481480,
+      451480,
+      429680
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7300000,
+    "MaxMonthlyIncome": 7320000,
+    "WithholdingTax": [
+      845740,
+      796970,
+      665710,
+      635710,
+      605710,
+      575710,
+      545710,
+      515710,
+      485710,
+      455710,
+      432320
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7320000,
+    "MaxMonthlyIncome": 7340000,
+    "WithholdingTax": [
+      850280,
+      801480,
+      669930,
+      639930,
+      609930,
+      579930,
+      549930,
+      519930,
+      489930,
+      459930,
+      434960
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7340000,
+    "MaxMonthlyIncome": 7360000,
+    "WithholdingTax": [
+      854820,
+      806000,
+      674160,
+      644160,
+      614160,
+      584160,
+      554160,
+      524160,
+      494160,
+      464160,
+      437600
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7360000,
+    "MaxMonthlyIncome": 7380000,
+    "WithholdingTax": [
+      859350,
+      810510,
+      678380,
+      648380,
+      618380,
+      588380,
+      558380,
+      528380,
+      498380,
+      468380,
+      440240
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7380000,
+    "MaxMonthlyIncome": 7400000,
+    "WithholdingTax": [
+      863890,
+      815020,
+      682600,
+      652600,
+      622600,
+      592600,
+      562600,
+      532600,
+      502600,
+      472600,
+      442880
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7400000,
+    "MaxMonthlyIncome": 7420000,
+    "WithholdingTax": [
+      868420,
+      819530,
+      686830,
+      656830,
+      626830,
+      596830,
+      566830,
+      536830,
+      506830,
+      476830,
+      446830
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7420000,
+    "MaxMonthlyIncome": 7440000,
+    "WithholdingTax": [
+      872960,
+      824040,
+      691050,
+      661050,
+      631050,
+      601050,
+      571050,
+      541050,
+      511050,
+      481050,
+      451050
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7440000,
+    "MaxMonthlyIncome": 7460000,
+    "WithholdingTax": [
+      877500,
+      828560,
+      695280,
+      665280,
+      635280,
+      605280,
+      575280,
+      545280,
+      515280,
+      485280,
+      455280
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7460000,
+    "MaxMonthlyIncome": 7480000,
+    "WithholdingTax": [
+      882030,
+      833070,
+      699500,
+      669500,
+      639500,
+      609500,
+      579500,
+      549500,
+      519500,
+      489500,
+      459500
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7480000,
+    "MaxMonthlyIncome": 7500000,
+    "WithholdingTax": [
+      886570,
+      837580,
+      703720,
+      673720,
+      643720,
+      613720,
+      583720,
+      553720,
+      523720,
+      493720,
+      463720
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7500000,
+    "MaxMonthlyIncome": 7520000,
+    "WithholdingTax": [
+      891100,
+      842090,
+      707950,
+      677950,
+      647950,
+      617950,
+      587950,
+      557950,
+      527950,
+      497950,
+      467950
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7520000,
+    "MaxMonthlyIncome": 7540000,
+    "WithholdingTax": [
+      895640,
+      846600,
+      712170,
+      682170,
+      652170,
+      622170,
+      592170,
+      562170,
+      532170,
+      502170,
+      472170
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7540000,
+    "MaxMonthlyIncome": 7560000,
+    "WithholdingTax": [
+      900180,
+      851120,
+      716400,
+      686400,
+      656400,
+      626400,
+      596400,
+      566400,
+      536400,
+      506400,
+      476400
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7560000,
+    "MaxMonthlyIncome": 7580000,
+    "WithholdingTax": [
+      904710,
+      855630,
+      720620,
+      690620,
+      660620,
+      630620,
+      600620,
+      570620,
+      540620,
+      510620,
+      480620
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7580000,
+    "MaxMonthlyIncome": 7600000,
+    "WithholdingTax": [
+      909250,
+      860140,
+      724840,
+      694840,
+      664840,
+      634840,
+      604840,
+      574840,
+      544840,
+      514840,
+      484840
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7600000,
+    "MaxMonthlyIncome": 7620000,
+    "WithholdingTax": [
+      913780,
+      864650,
+      729070,
+      699070,
+      669070,
+      639070,
+      609070,
+      579070,
+      549070,
+      519070,
+      489070
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7620000,
+    "MaxMonthlyIncome": 7640000,
+    "WithholdingTax": [
+      918320,
+      869160,
+      733290,
+      703290,
+      673290,
+      643290,
+      613290,
+      583290,
+      553290,
+      523290,
+      493290
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7640000,
+    "MaxMonthlyIncome": 7660000,
+    "WithholdingTax": [
+      922860,
+      873680,
+      737520,
+      707520,
+      677520,
+      647520,
+      617520,
+      587520,
+      557520,
+      527520,
+      497520
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7660000,
+    "MaxMonthlyIncome": 7680000,
+    "WithholdingTax": [
+      927390,
+      878190,
+      741740,
+      711740,
+      681740,
+      651740,
+      621740,
+      591740,
+      561740,
+      531740,
+      501740
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7680000,
+    "MaxMonthlyIncome": 7700000,
+    "WithholdingTax": [
+      931930,
+      882700,
+      745960,
+      715960,
+      685960,
+      655960,
+      625960,
+      595960,
+      565960,
+      535960,
+      505960
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7700000,
+    "MaxMonthlyIncome": 7720000,
+    "WithholdingTax": [
+      936460,
+      887210,
+      750190,
+      720190,
+      690190,
+      660190,
+      630190,
+      600190,
+      570190,
+      540190,
+      510190
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7720000,
+    "MaxMonthlyIncome": 7740000,
+    "WithholdingTax": [
+      941000,
+      891720,
+      754410,
+      724410,
+      694410,
+      664410,
+      634410,
+      604410,
+      574410,
+      544410,
+      514410
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7740000,
+    "MaxMonthlyIncome": 7760000,
+    "WithholdingTax": [
+      945540,
+      896240,
+      758640,
+      728640,
+      698640,
+      668640,
+      638640,
+      608640,
+      578640,
+      548640,
+      518640
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7760000,
+    "MaxMonthlyIncome": 7780000,
+    "WithholdingTax": [
+      950070,
+      900750,
+      762860,
+      732860,
+      702860,
+      672860,
+      642860,
+      612860,
+      582860,
+      552860,
+      522860
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7780000,
+    "MaxMonthlyIncome": 7800000,
+    "WithholdingTax": [
+      954610,
+      905260,
+      767080,
+      737080,
+      707080,
+      677080,
+      647080,
+      617080,
+      587080,
+      557080,
+      527080
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7800000,
+    "MaxMonthlyIncome": 7820000,
+    "WithholdingTax": [
+      959140,
+      909770,
+      771310,
+      741310,
+      711310,
+      681310,
+      651310,
+      621310,
+      591310,
+      561310,
+      531310
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7820000,
+    "MaxMonthlyIncome": 7840000,
+    "WithholdingTax": [
+      963680,
+      914280,
+      775530,
+      745530,
+      715530,
+      685530,
+      655530,
+      625530,
+      595530,
+      565530,
+      535530
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7840000,
+    "MaxMonthlyIncome": 7860000,
+    "WithholdingTax": [
+      968220,
+      918800,
+      779760,
+      749760,
+      719760,
+      689760,
+      659760,
+      629760,
+      599760,
+      569760,
+      539760
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7860000,
+    "MaxMonthlyIncome": 7880000,
+    "WithholdingTax": [
+      972750,
+      923310,
+      783980,
+      753980,
+      723980,
+      693980,
+      663980,
+      633980,
+      603980,
+      573980,
+      543980
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7880000,
+    "MaxMonthlyIncome": 7900000,
+    "WithholdingTax": [
+      977290,
+      927820,
+      788200,
+      758200,
+      728200,
+      698200,
+      668200,
+      638200,
+      608200,
+      578200,
+      548200
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7900000,
+    "MaxMonthlyIncome": 7920000,
+    "WithholdingTax": [
+      981820,
+      932330,
+      792430,
+      762430,
+      732430,
+      702430,
+      672430,
+      642430,
+      612430,
+      582430,
+      552430
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7920000,
+    "MaxMonthlyIncome": 7940000,
+    "WithholdingTax": [
+      986360,
+      936840,
+      796650,
+      766650,
+      736650,
+      706650,
+      676650,
+      646650,
+      616650,
+      586650,
+      556650
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7940000,
+    "MaxMonthlyIncome": 7960000,
+    "WithholdingTax": [
+      990900,
+      941360,
+      800880,
+      770880,
+      740880,
+      710880,
+      680880,
+      650880,
+      620880,
+      590880,
+      560880
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7960000,
+    "MaxMonthlyIncome": 7980000,
+    "WithholdingTax": [
+      995430,
+      945870,
+      805100,
+      775100,
+      745100,
+      715100,
+      685100,
+      655100,
+      625100,
+      595100,
+      565100
+    ]
+  },
+  {
+    "MinMonthlyIncome": 7980000,
+    "MaxMonthlyIncome": 8000000,
+    "WithholdingTax": [
+      999970,
+      950380,
+      809320,
+      779320,
+      749320,
+      719320,
+      689320,
+      659320,
+      629320,
+      599320,
+      569320
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8000000,
+    "MaxMonthlyIncome": 8020000,
+    "WithholdingTax": [
+      1004500,
+      954890,
+      813550,
+      783550,
+      753550,
+      723550,
+      693550,
+      663550,
+      633550,
+      603550,
+      573550
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8020000,
+    "MaxMonthlyIncome": 8040000,
+    "WithholdingTax": [
+      1009040,
+      959400,
+      817770,
+      787770,
+      757770,
+      727770,
+      697770,
+      667770,
+      637770,
+      607770,
+      577770
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8040000,
+    "MaxMonthlyIncome": 8060000,
+    "WithholdingTax": [
+      1013580,
+      963920,
+      822000,
+      792000,
+      762000,
+      732000,
+      702000,
+      672000,
+      642000,
+      612000,
+      582000
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8060000,
+    "MaxMonthlyIncome": 8080000,
+    "WithholdingTax": [
+      1018110,
+      968430,
+      826220,
+      796220,
+      766220,
+      736220,
+      706220,
+      676220,
+      646220,
+      616220,
+      586220
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8080000,
+    "MaxMonthlyIncome": 8100000,
+    "WithholdingTax": [
+      1022650,
+      972940,
+      830440,
+      800440,
+      770440,
+      740440,
+      710440,
+      680440,
+      650440,
+      620440,
+      590440
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8100000,
+    "MaxMonthlyIncome": 8120000,
+    "WithholdingTax": [
+      1027180,
+      977450,
+      834670,
+      804670,
+      774670,
+      744670,
+      714670,
+      684670,
+      654670,
+      624670,
+      594670
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8120000,
+    "MaxMonthlyIncome": 8140000,
+    "WithholdingTax": [
+      1031720,
+      981960,
+      838890,
+      808890,
+      778890,
+      748890,
+      718890,
+      688890,
+      658890,
+      628890,
+      598890
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8140000,
+    "MaxMonthlyIncome": 8160000,
+    "WithholdingTax": [
+      1036260,
+      986480,
+      843120,
+      813120,
+      783120,
+      753120,
+      723120,
+      693120,
+      663120,
+      633120,
+      603120
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8160000,
+    "MaxMonthlyIncome": 8180000,
+    "WithholdingTax": [
+      1040790,
+      990990,
+      847340,
+      817340,
+      787340,
+      757340,
+      727340,
+      697340,
+      667340,
+      637340,
+      607340
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8180000,
+    "MaxMonthlyIncome": 8200000,
+    "WithholdingTax": [
+      1045330,
+      995500,
+      851560,
+      821560,
+      791560,
+      761560,
+      731560,
+      701560,
+      671560,
+      641560,
+      611560
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8200000,
+    "MaxMonthlyIncome": 8220000,
+    "WithholdingTax": [
+      1049860,
+      1000010,
+      855790,
+      825790,
+      795790,
+      765790,
+      735790,
+      705790,
+      675790,
+      645790,
+      615790
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8220000,
+    "MaxMonthlyIncome": 8240000,
+    "WithholdingTax": [
+      1054400,
+      1004520,
+      860010,
+      830010,
+      800010,
+      770010,
+      740010,
+      710010,
+      680010,
+      650010,
+      620010
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8240000,
+    "MaxMonthlyIncome": 8260000,
+    "WithholdingTax": [
+      1058940,
+      1009040,
+      864240,
+      834240,
+      804240,
+      774240,
+      744240,
+      714240,
+      684240,
+      654240,
+      624240
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8260000,
+    "MaxMonthlyIncome": 8280000,
+    "WithholdingTax": [
+      1063470,
+      1013550,
+      868460,
+      838460,
+      808460,
+      778460,
+      748460,
+      718460,
+      688460,
+      658460,
+      628460
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8280000,
+    "MaxMonthlyIncome": 8300000,
+    "WithholdingTax": [
+      1068010,
+      1018060,
+      872680,
+      842680,
+      812680,
+      782680,
+      752680,
+      722680,
+      692680,
+      662680,
+      632680
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8300000,
+    "MaxMonthlyIncome": 8320000,
+    "WithholdingTax": [
+      1072540,
+      1022570,
+      876910,
+      846910,
+      816910,
+      786910,
+      756910,
+      726910,
+      696910,
+      666910,
+      636910
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8320000,
+    "MaxMonthlyIncome": 8340000,
+    "WithholdingTax": [
+      1077080,
+      1027080,
+      881130,
+      851130,
+      821130,
+      791130,
+      761130,
+      731130,
+      701130,
+      671130,
+      641130
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8340000,
+    "MaxMonthlyIncome": 8360000,
+    "WithholdingTax": [
+      1081740,
+      1031720,
+      885480,
+      855480,
+      825480,
+      795480,
+      765480,
+      735480,
+      705480,
+      675480,
+      645480
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8360000,
+    "MaxMonthlyIncome": 8380000,
+    "WithholdingTax": [
+      1086420,
+      1036370,
+      889840,
+      859840,
+      829840,
+      799840,
+      769840,
+      739840,
+      709840,
+      679840,
+      649840
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8380000,
+    "MaxMonthlyIncome": 8400000,
+    "WithholdingTax": [
+      1091100,
+      1041030,
+      894210,
+      864210,
+      834210,
+      804210,
+      774210,
+      744210,
+      714210,
+      684210,
+      654210
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8400000,
+    "MaxMonthlyIncome": 8420000,
+    "WithholdingTax": [
+      1095780,
+      1045680,
+      898580,
+      868580,
+      838580,
+      808580,
+      778580,
+      748580,
+      718580,
+      688580,
+      658580
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8420000,
+    "MaxMonthlyIncome": 8440000,
+    "WithholdingTax": [
+      1100460,
+      1050340,
+      902950,
+      872950,
+      842950,
+      812950,
+      782950,
+      752950,
+      722950,
+      692950,
+      662950
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8440000,
+    "MaxMonthlyIncome": 8460000,
+    "WithholdingTax": [
+      1105140,
+      1055000,
+      907320,
+      877320,
+      847320,
+      817320,
+      787320,
+      757320,
+      727320,
+      697320,
+      667320
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8460000,
+    "MaxMonthlyIncome": 8480000,
+    "WithholdingTax": [
+      1109820,
+      1059650,
+      911680,
+      881680,
+      851680,
+      821680,
+      791680,
+      761680,
+      731680,
+      701680,
+      671680
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8480000,
+    "MaxMonthlyIncome": 8500000,
+    "WithholdingTax": [
+      1114500,
+      1064310,
+      916050,
+      886050,
+      856050,
+      826050,
+      796050,
+      766050,
+      736050,
+      706050,
+      676050
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8500000,
+    "MaxMonthlyIncome": 8520000,
+    "WithholdingTax": [
+      1119180,
+      1068960,
+      920420,
+      890420,
+      860420,
+      830420,
+      800420,
+      770420,
+      740420,
+      710420,
+      680420
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8520000,
+    "MaxMonthlyIncome": 8540000,
+    "WithholdingTax": [
+      1123860,
+      1073620,
+      924790,
+      894790,
+      864790,
+      834790,
+      804790,
+      774790,
+      744790,
+      714790,
+      684790
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8540000,
+    "MaxMonthlyIncome": 8560000,
+    "WithholdingTax": [
+      1128540,
+      1078280,
+      929160,
+      899160,
+      869160,
+      839160,
+      809160,
+      779160,
+      749160,
+      719160,
+      689160
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8560000,
+    "MaxMonthlyIncome": 8580000,
+    "WithholdingTax": [
+      1133220,
+      1082930,
+      933520,
+      903520,
+      873520,
+      843520,
+      813520,
+      783520,
+      753520,
+      723520,
+      693520
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8580000,
+    "MaxMonthlyIncome": 8600000,
+    "WithholdingTax": [
+      1137900,
+      1087590,
+      937890,
+      907890,
+      877890,
+      847890,
+      817890,
+      787890,
+      757890,
+      727890,
+      697890
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8600000,
+    "MaxMonthlyIncome": 8620000,
+    "WithholdingTax": [
+      1142580,
+      1092240,
+      942260,
+      912260,
+      882260,
+      852260,
+      822260,
+      792260,
+      762260,
+      732260,
+      702260
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8620000,
+    "MaxMonthlyIncome": 8640000,
+    "WithholdingTax": [
+      1147260,
+      1096900,
+      946630,
+      916630,
+      886630,
+      856630,
+      826630,
+      796630,
+      766630,
+      736630,
+      706630
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8640000,
+    "MaxMonthlyIncome": 8660000,
+    "WithholdingTax": [
+      1151940,
+      1101560,
+      951000,
+      921000,
+      891000,
+      861000,
+      831000,
+      801000,
+      771000,
+      741000,
+      711000
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8660000,
+    "MaxMonthlyIncome": 8680000,
+    "WithholdingTax": [
+      1156620,
+      1106210,
+      955360,
+      925360,
+      895360,
+      865360,
+      835360,
+      805360,
+      775360,
+      745360,
+      715360
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8680000,
+    "MaxMonthlyIncome": 8700000,
+    "WithholdingTax": [
+      1161300,
+      1110870,
+      959730,
+      929730,
+      899730,
+      869730,
+      839730,
+      809730,
+      779730,
+      749730,
+      719730
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8700000,
+    "MaxMonthlyIncome": 8720000,
+    "WithholdingTax": [
+      1165980,
+      1115520,
+      964100,
+      934100,
+      904100,
+      874100,
+      844100,
+      814100,
+      784100,
+      754100,
+      724100
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8720000,
+    "MaxMonthlyIncome": 8740000,
+    "WithholdingTax": [
+      1170660,
+      1120180,
+      968470,
+      938470,
+      908470,
+      878470,
+      848470,
+      818470,
+      788470,
+      758470,
+      728470
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8740000,
+    "MaxMonthlyIncome": 8760000,
+    "WithholdingTax": [
+      1175340,
+      1124840,
+      972840,
+      942840,
+      912840,
+      882840,
+      852840,
+      822840,
+      792840,
+      762840,
+      732840
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8760000,
+    "MaxMonthlyIncome": 8780000,
+    "WithholdingTax": [
+      1180020,
+      1129490,
+      977200,
+      947200,
+      917200,
+      887200,
+      857200,
+      827200,
+      797200,
+      767200,
+      737200
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8780000,
+    "MaxMonthlyIncome": 8800000,
+    "WithholdingTax": [
+      1184700,
+      1134150,
+      981570,
+      951570,
+      921570,
+      891570,
+      861570,
+      831570,
+      801570,
+      771570,
+      741570
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8800000,
+    "MaxMonthlyIncome": 8820000,
+    "WithholdingTax": [
+      1189380,
+      1138800,
+      985940,
+      955940,
+      925940,
+      895940,
+      865940,
+      835940,
+      805940,
+      775940,
+      745940
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8820000,
+    "MaxMonthlyIncome": 8840000,
+    "WithholdingTax": [
+      1194060,
+      1143460,
+      990310,
+      960310,
+      930310,
+      900310,
+      870310,
+      840310,
+      810310,
+      780310,
+      750310
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8840000,
+    "MaxMonthlyIncome": 8860000,
+    "WithholdingTax": [
+      1198740,
+      1148120,
+      994680,
+      964680,
+      934680,
+      904680,
+      874680,
+      844680,
+      814680,
+      784680,
+      754680
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8860000,
+    "MaxMonthlyIncome": 8880000,
+    "WithholdingTax": [
+      1203420,
+      1152770,
+      999040,
+      969040,
+      939040,
+      909040,
+      879040,
+      849040,
+      819040,
+      789040,
+      759040
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8880000,
+    "MaxMonthlyIncome": 8900000,
+    "WithholdingTax": [
+      1208100,
+      1157430,
+      1003410,
+      973410,
+      943410,
+      913410,
+      883410,
+      853410,
+      823410,
+      793410,
+      763410
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8900000,
+    "MaxMonthlyIncome": 8920000,
+    "WithholdingTax": [
+      1212780,
+      1162080,
+      1007780,
+      977780,
+      947780,
+      917780,
+      887780,
+      857780,
+      827780,
+      797780,
+      767780
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8920000,
+    "MaxMonthlyIncome": 8940000,
+    "WithholdingTax": [
+      1217460,
+      1166740,
+      1012150,
+      982150,
+      952150,
+      922150,
+      892150,
+      862150,
+      832150,
+      802150,
+      772150
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8940000,
+    "MaxMonthlyIncome": 8960000,
+    "WithholdingTax": [
+      1222140,
+      1171400,
+      1016520,
+      986520,
+      956520,
+      926520,
+      896520,
+      866520,
+      836520,
+      806520,
+      776520
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8960000,
+    "MaxMonthlyIncome": 8980000,
+    "WithholdingTax": [
+      1226820,
+      1176050,
+      1020880,
+      990880,
+      960880,
+      930880,
+      900880,
+      870880,
+      840880,
+      810880,
+      780880
+    ]
+  },
+  {
+    "MinMonthlyIncome": 8980000,
+    "MaxMonthlyIncome": 9000000,
+    "WithholdingTax": [
+      1231500,
+      1180710,
+      1025250,
+      995250,
+      965250,
+      935250,
+      905250,
+      875250,
+      845250,
+      815250,
+      785250
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9000000,
+    "MaxMonthlyIncome": 9020000,
+    "WithholdingTax": [
+      1236180,
+      1185360,
+      1029620,
+      999620,
+      969620,
+      939620,
+      909620,
+      879620,
+      849620,
+      819620,
+      789620
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9020000,
+    "MaxMonthlyIncome": 9040000,
+    "WithholdingTax": [
+      1240860,
+      1190020,
+      1033990,
+      1003990,
+      973990,
+      943990,
+      913990,
+      883990,
+      853990,
+      823990,
+      793990
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9040000,
+    "MaxMonthlyIncome": 9060000,
+    "WithholdingTax": [
+      1245540,
+      1194680,
+      1038360,
+      1008360,
+      978360,
+      948360,
+      918360,
+      888360,
+      858360,
+      828360,
+      798360
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9060000,
+    "MaxMonthlyIncome": 9080000,
+    "WithholdingTax": [
+      1250220,
+      1199330,
+      1042720,
+      1012720,
+      982720,
+      952720,
+      922720,
+      892720,
+      862720,
+      832720,
+      802720
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9080000,
+    "MaxMonthlyIncome": 9100000,
+    "WithholdingTax": [
+      1254900,
+      1203990,
+      1047090,
+      1017090,
+      987090,
+      957090,
+      927090,
+      897090,
+      867090,
+      837090,
+      807090
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9100000,
+    "MaxMonthlyIncome": 9120000,
+    "WithholdingTax": [
+      1259580,
+      1208640,
+      1051460,
+      1021460,
+      991460,
+      961460,
+      931460,
+      901460,
+      871460,
+      841460,
+      811460
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9120000,
+    "MaxMonthlyIncome": 9140000,
+    "WithholdingTax": [
+      1264260,
+      1213300,
+      1055830,
+      1025830,
+      995830,
+      965830,
+      935830,
+      905830,
+      875830,
+      845830,
+      815830
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9140000,
+    "MaxMonthlyIncome": 9160000,
+    "WithholdingTax": [
+      1268940,
+      1217960,
+      1060200,
+      1030200,
+      1000200,
+      970200,
+      940200,
+      910200,
+      880200,
+      850200,
+      820200
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9160000,
+    "MaxMonthlyIncome": 9180000,
+    "WithholdingTax": [
+      1273620,
+      1222610,
+      1064560,
+      1034560,
+      1004560,
+      974560,
+      944560,
+      914560,
+      884560,
+      854560,
+      824560
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9180000,
+    "MaxMonthlyIncome": 9200000,
+    "WithholdingTax": [
+      1278300,
+      1227270,
+      1068930,
+      1038930,
+      1008930,
+      978930,
+      948930,
+      918930,
+      888930,
+      858930,
+      828930
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9200000,
+    "MaxMonthlyIncome": 9220000,
+    "WithholdingTax": [
+      1282980,
+      1231920,
+      1073300,
+      1043300,
+      1013300,
+      983300,
+      953300,
+      923300,
+      893300,
+      863300,
+      833300
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9220000,
+    "MaxMonthlyIncome": 9240000,
+    "WithholdingTax": [
+      1289640,
+      1236580,
+      1077670,
+      1047670,
+      1017670,
+      987670,
+      957670,
+      927670,
+      897670,
+      867670,
+      837670
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9240000,
+    "MaxMonthlyIncome": 9260000,
+    "WithholdingTax": [
+      1296470,
+      1241240,
+      1082040,
+      1052040,
+      1022040,
+      992040,
+      962040,
+      932040,
+      902040,
+      872040,
+      842040
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9260000,
+    "MaxMonthlyIncome": 9280000,
+    "WithholdingTax": [
+      1303290,
+      1245890,
+      1086400,
+      1056400,
+      1026400,
+      996400,
+      966400,
+      936400,
+      906400,
+      876400,
+      846400
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9280000,
+    "MaxMonthlyIncome": 9300000,
+    "WithholdingTax": [
+      1310120,
+      1250550,
+      1090770,
+      1060770,
+      1030770,
+      1000770,
+      970770,
+      940770,
+      910770,
+      880770,
+      850770
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9300000,
+    "MaxMonthlyIncome": 9320000,
+    "WithholdingTax": [
+      1316940,
+      1255200,
+      1095140,
+      1065140,
+      1035140,
+      1005140,
+      975140,
+      945140,
+      915140,
+      885140,
+      855140
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9320000,
+    "MaxMonthlyIncome": 9340000,
+    "WithholdingTax": [
+      1323770,
+      1259860,
+      1099510,
+      1069510,
+      1039510,
+      1009510,
+      979510,
+      949510,
+      919510,
+      889510,
+      859510
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9340000,
+    "MaxMonthlyIncome": 9360000,
+    "WithholdingTax": [
+      1330590,
+      1264520,
+      1103880,
+      1073880,
+      1043880,
+      1013880,
+      983880,
+      953880,
+      923880,
+      893880,
+      863880
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9360000,
+    "MaxMonthlyIncome": 9380000,
+    "WithholdingTax": [
+      1337420,
+      1269170,
+      1108240,
+      1078240,
+      1048240,
+      1018240,
+      988240,
+      958240,
+      928240,
+      898240,
+      868240
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9380000,
+    "MaxMonthlyIncome": 9400000,
+    "WithholdingTax": [
+      1344240,
+      1273830,
+      1112610,
+      1082610,
+      1052610,
+      1022610,
+      992610,
+      962610,
+      932610,
+      902610,
+      872610
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9400000,
+    "MaxMonthlyIncome": 9420000,
+    "WithholdingTax": [
+      1351070,
+      1278480,
+      1116980,
+      1086980,
+      1056980,
+      1026980,
+      996980,
+      966980,
+      936980,
+      906980,
+      876980
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9420000,
+    "MaxMonthlyIncome": 9440000,
+    "WithholdingTax": [
+      1357890,
+      1283140,
+      1121350,
+      1091350,
+      1061350,
+      1031350,
+      1001350,
+      971350,
+      941350,
+      911350,
+      881350
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9440000,
+    "MaxMonthlyIncome": 9460000,
+    "WithholdingTax": [
+      1364720,
+      1289840,
+      1125720,
+      1095720,
+      1065720,
+      1035720,
+      1005720,
+      975720,
+      945720,
+      915720,
+      885720
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9460000,
+    "MaxMonthlyIncome": 9480000,
+    "WithholdingTax": [
+      1371540,
+      1296630,
+      1130080,
+      1100080,
+      1070080,
+      1040080,
+      1010080,
+      980080,
+      950080,
+      920080,
+      890080
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9480000,
+    "MaxMonthlyIncome": 9500000,
+    "WithholdingTax": [
+      1378370,
+      1303420,
+      1134450,
+      1104450,
+      1074450,
+      1044450,
+      1014450,
+      984450,
+      954450,
+      924450,
+      894450
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9500000,
+    "MaxMonthlyIncome": 9520000,
+    "WithholdingTax": [
+      1385190,
+      1310210,
+      1138820,
+      1108820,
+      1078820,
+      1048820,
+      1018820,
+      988820,
+      958820,
+      928820,
+      898820
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9520000,
+    "MaxMonthlyIncome": 9540000,
+    "WithholdingTax": [
+      1392020,
+      1317000,
+      1143190,
+      1113190,
+      1083190,
+      1053190,
+      1023190,
+      993190,
+      963190,
+      933190,
+      903190
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9540000,
+    "MaxMonthlyIncome": 9560000,
+    "WithholdingTax": [
+      1398840,
+      1323790,
+      1147560,
+      1117560,
+      1087560,
+      1057560,
+      1027560,
+      997560,
+      967560,
+      937560,
+      907560
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9560000,
+    "MaxMonthlyIncome": 9580000,
+    "WithholdingTax": [
+      1405670,
+      1330580,
+      1151920,
+      1121920,
+      1091920,
+      1061920,
+      1031920,
+      1001920,
+      971920,
+      941920,
+      911920
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9580000,
+    "MaxMonthlyIncome": 9600000,
+    "WithholdingTax": [
+      1412490,
+      1337370,
+      1156290,
+      1126290,
+      1096290,
+      1066290,
+      1036290,
+      1006290,
+      976290,
+      946290,
+      916290
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9600000,
+    "MaxMonthlyIncome": 9620000,
+    "WithholdingTax": [
+      1419320,
+      1344160,
+      1160660,
+      1130660,
+      1100660,
+      1070660,
+      1040660,
+      1010660,
+      980660,
+      950660,
+      920660
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9620000,
+    "MaxMonthlyIncome": 9640000,
+    "WithholdingTax": [
+      1426140,
+      1350950,
+      1165030,
+      1135030,
+      1105030,
+      1075030,
+      1045030,
+      1015030,
+      985030,
+      955030,
+      925030
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9640000,
+    "MaxMonthlyIncome": 9660000,
+    "WithholdingTax": [
+      1432970,
+      1357740,
+      1169400,
+      1139400,
+      1109400,
+      1079400,
+      1049400,
+      1019400,
+      989400,
+      959400,
+      929400
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9660000,
+    "MaxMonthlyIncome": 9680000,
+    "WithholdingTax": [
+      1439790,
+      1364530,
+      1173760,
+      1143760,
+      1113760,
+      1083760,
+      1053760,
+      1023760,
+      993760,
+      963760,
+      933760
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9680000,
+    "MaxMonthlyIncome": 9700000,
+    "WithholdingTax": [
+      1446620,
+      1371320,
+      1178130,
+      1148130,
+      1118130,
+      1088130,
+      1058130,
+      1028130,
+      998130,
+      968130,
+      938130
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9700000,
+    "MaxMonthlyIncome": 9720000,
+    "WithholdingTax": [
+      1453440,
+      1378110,
+      1182500,
+      1152500,
+      1122500,
+      1092500,
+      1062500,
+      1032500,
+      1002500,
+      972500,
+      942500
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9720000,
+    "MaxMonthlyIncome": 9740000,
+    "WithholdingTax": [
+      1460270,
+      1384900,
+      1186870,
+      1156870,
+      1126870,
+      1096870,
+      1066870,
+      1036870,
+      1006870,
+      976870,
+      946870
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9740000,
+    "MaxMonthlyIncome": 9760000,
+    "WithholdingTax": [
+      1467090,
+      1391690,
+      1191240,
+      1161240,
+      1131240,
+      1101240,
+      1071240,
+      1041240,
+      1011240,
+      981240,
+      951240
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9760000,
+    "MaxMonthlyIncome": 9780000,
+    "WithholdingTax": [
+      1473920,
+      1398480,
+      1195600,
+      1165600,
+      1135600,
+      1105600,
+      1075600,
+      1045600,
+      1015600,
+      985600,
+      955600
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9780000,
+    "MaxMonthlyIncome": 9800000,
+    "WithholdingTax": [
+      1480740,
+      1405270,
+      1199970,
+      1169970,
+      1139970,
+      1109970,
+      1079970,
+      1049970,
+      1019970,
+      989970,
+      959970
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9800000,
+    "MaxMonthlyIncome": 9820000,
+    "WithholdingTax": [
+      1487570,
+      1412060,
+      1204340,
+      1174340,
+      1144340,
+      1114340,
+      1084340,
+      1054340,
+      1024340,
+      994340,
+      964340
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9820000,
+    "MaxMonthlyIncome": 9840000,
+    "WithholdingTax": [
+      1494390,
+      1418850,
+      1208710,
+      1178710,
+      1148710,
+      1118710,
+      1088710,
+      1058710,
+      1028710,
+      998710,
+      968710
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9840000,
+    "MaxMonthlyIncome": 9860000,
+    "WithholdingTax": [
+      1501220,
+      1425640,
+      1213080,
+      1183080,
+      1153080,
+      1123080,
+      1093080,
+      1063080,
+      1033080,
+      1003080,
+      973080
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9860000,
+    "MaxMonthlyIncome": 9880000,
+    "WithholdingTax": [
+      1508040,
+      1432430,
+      1217440,
+      1187440,
+      1157440,
+      1127440,
+      1097440,
+      1067440,
+      1037440,
+      1007440,
+      977440
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9880000,
+    "MaxMonthlyIncome": 9900000,
+    "WithholdingTax": [
+      1514870,
+      1439220,
+      1221810,
+      1191810,
+      1161810,
+      1131810,
+      1101810,
+      1071810,
+      1041810,
+      1011810,
+      981810
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9900000,
+    "MaxMonthlyIncome": 9920000,
+    "WithholdingTax": [
+      1521690,
+      1446010,
+      1226180,
+      1196180,
+      1166180,
+      1136180,
+      1106180,
+      1076180,
+      1046180,
+      1016180,
+      986180
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9920000,
+    "MaxMonthlyIncome": 9940000,
+    "WithholdingTax": [
+      1528520,
+      1452800,
+      1230550,
+      1200550,
+      1170550,
+      1140550,
+      1110550,
+      1080550,
+      1050550,
+      1020550,
+      990550
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9940000,
+    "MaxMonthlyIncome": 9960000,
+    "WithholdingTax": [
+      1535340,
+      1459590,
+      1234920,
+      1204920,
+      1174920,
+      1144920,
+      1114920,
+      1084920,
+      1054920,
+      1024920,
+      994920
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9960000,
+    "MaxMonthlyIncome": 9980000,
+    "WithholdingTax": [
+      1542170,
+      1466380,
+      1239280,
+      1209280,
+      1179280,
+      1149280,
+      1119280,
+      1089280,
+      1059280,
+      1029280,
+      999280
+    ]
+  },
+  {
+    "MinMonthlyIncome": 9980000,
+    "MaxMonthlyIncome": 10000000,
+    "WithholdingTax": [
+      1548990,
+      1473170,
+      1243650,
+      1213650,
+      1183650,
+      1153650,
+      1123650,
+      1093650,
+      1063650,
+      1033650,
+      1003650
+    ]
+  }
+]

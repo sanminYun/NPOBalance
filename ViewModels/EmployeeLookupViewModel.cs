@@ -119,7 +119,6 @@ public class EmployeeDisplayItem
     public string? Position => Employee.Position;
     public string? Address1 => Employee.Address1;
     public decimal? EstimatedTotalSalary => Employee.EstimatedTotalSalary;
-    public string DisplayName => IsRegistered ? $"? {Employee.Name}" : Employee.Name;
 
     public EmployeeDisplayItem(Employee employee, bool isRegistered)
     {

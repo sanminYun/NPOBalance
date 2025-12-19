@@ -1,131 +1,121 @@
-﻿using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using NPOBalance.Models;
-using NPOBalance.ViewModels;
+using NPOBalance.Services;
 using NPOBalance.Views;
 
-namespace NPOBalance
+namespace NPOBalance;
+
+public partial class MainWindow : Window
 {
-    public partial class MainWindow : Window
+    private Company? _currentCompany;
+    private PayrollEntryView? _cachedPayrollEntryView;
+
+    public MainWindow()
     {
-        private Company? _selectedCompany;
-        private MenuItem? _activeMenuItem;
+        InitializeComponent();
+        InitializePayItemSettings();
+    }
 
-        private readonly EmployeeManagementView _employeeView = new();
-        private readonly PayrollEntryView _payrollEntryView = new();
-        private readonly SettingsView _settingsView = new();
+    private async void InitializePayItemSettings()
+    {
+        var service = new PayItemService();
+        await service.InitializeDefaultsAsync();
+    }
 
-        public MainWindow()
+    public void SetCompany(Company company)
+    {
+        _currentCompany = company;
+        Title = $"NPO 급여관리 - {company.Name}";
+        ShowPlaceholder();
+    }
+
+    private void ShowPlaceholder()
+    {
+        ClearMenuSelection();
+        ContentHost.Content = new PlaceholderView("메뉴를 선택하세요");
+    }
+
+    private void ClearMenuSelection()
+    {
+        EmployeeManagementMenuItem.Tag = null;
+        PayrollEntryMenuItem.Tag = null;
+    }
+
+    private void SetMenuSelection(MenuItem menuItem)
+    {
+        ClearMenuSelection();
+        menuItem.Tag = "Selected";
+    }
+
+    private async void EmployeeManagement_Click(object sender, RoutedEventArgs e)
+    {
+        if (_currentCompany == null)
         {
-            InitializeComponent();
-            Title = "NPO 급여관리 - 회사 선택";
-            ContentHost.Content = new PlaceholderView("회사를 먼저 선택하세요.");
-            IsEnabled = false;
-            SetActiveMenuItem(null);
+            MessageBox.Show("회사를 먼저 선택하세요.", "안내", MessageBoxButton.OK, MessageBoxImage.Information);
+            return;
         }
 
-        public async Task InitializeCompany(Company company)
+        SetMenuSelection(EmployeeManagementMenuItem);
+
+        var view = new EmployeeManagementView();
+        ContentHost.Content = view;
+        if (view.ViewModel != null)
         {
-            _selectedCompany = company;
+            await view.ViewModel.LoadEmployeesAsync(_currentCompany);
+        }
+    }
 
-            if (_employeeView.ViewModel is EmployeeManagementViewModel employeeVm)
-            {
-                await employeeVm.LoadEmployeesAsync(_selectedCompany);
-            }
-
-            if (_payrollEntryView.ViewModel is PayrollEntryViewModel payrollVm)
-            {
-                await payrollVm.InitializeAsync(_selectedCompany);
-            }
-
-            IsEnabled = true;
-            ContentHost.Content = _employeeView;
-            UpdateTitle("사원 정보");
-            SetActiveMenuItem(EmployeeManagementMenuItem);
+    private async void PayrollEntry_Click(object sender, RoutedEventArgs e)
+    {
+        if (_currentCompany == null)
+        {
+            MessageBox.Show("회사를 먼저 선택하세요.", "안내", MessageBoxButton.OK, MessageBoxImage.Information);
+            return;
         }
 
-        private void UpdateTitle(string menuName)
+        SetMenuSelection(PayrollEntryMenuItem);
+
+        // 기존 뷰가 있으면 재사용하고 데이터만 새로고침
+        if (_cachedPayrollEntryView == null)
         {
-            if (_selectedCompany != null)
+            _cachedPayrollEntryView = new PayrollEntryView();
+            if (_cachedPayrollEntryView.ViewModel != null)
             {
-                Title = $"NPO 급여관리 - {_selectedCompany.Name} - {menuName}";
-            }
-            else
-            {
-                Title = $"NPO 급여관리 - {menuName}";
+                await _cachedPayrollEntryView.ViewModel.InitializeAsync(_currentCompany);
             }
         }
-
-        private void SetActiveMenuItem(MenuItem? menuItem)
+        else
         {
-            if (_activeMenuItem != null)
+            // 사원 정보가 변경되었을 수 있으므로 새로고침
+            if (_cachedPayrollEntryView.ViewModel != null)
             {
-                _activeMenuItem.FontWeight = FontWeights.Normal;
-            }
-
-            _activeMenuItem = menuItem;
-
-            if (_activeMenuItem != null)
-            {
-                _activeMenuItem.FontWeight = FontWeights.Bold;
+                await _cachedPayrollEntryView.ViewModel.RefreshEmployeeDataAsync();
             }
         }
 
-        private void EmployeeManagement_Click(object sender, RoutedEventArgs e)
-        {
-            ContentHost.Content = _employeeView;
-            UpdateTitle("사원 정보");
-            SetActiveMenuItem(EmployeeManagementMenuItem);
-        }
+        ContentHost.Content = _cachedPayrollEntryView;
+    }
 
-        private void PayrollEntry_Click(object sender, RoutedEventArgs e)
-        {
-            ContentHost.Content = _payrollEntryView;
-            UpdateTitle("급여입력");
-            SetActiveMenuItem(PayrollEntryMenuItem);
-        }
+    private void PayItemSetting_Click(object sender, RoutedEventArgs e)
+    {
+        ClearMenuSelection();
+        var view = new PayItemSettingView();
+        ContentHost.Content = view;
+    }
 
-        private void Settings_Click(object sender, RoutedEventArgs e)
-        {
-            ContentHost.Content = _settingsView;
-            UpdateTitle("설정");
-            SetActiveMenuItem(SettingsMenuItem);
-        }
+    private void Settings_Click(object sender, RoutedEventArgs e)
+    {
+        // 기존 설정 메뉴 클릭 핸들러 (필요시 제거 가능)
+    }
 
-        private async void ReSelectCompany_Click(object sender, RoutedEventArgs e)
+    private void ReSelectCompany_Click(object sender, RoutedEventArgs e)
+    {
+        var companyWindow = new CompanySelectionWindow();
+        if (companyWindow.ShowDialog() == true && companyWindow.SelectedCompany != null)
         {
-            UpdateTitle("회사 다시 선택");
-            var selectionWindow = new CompanySelectionWindow { Owner = this };
-            var result = selectionWindow.ShowDialog();
-
-            if (result == true && selectionWindow.SelectedCompany != null)
-            {
-                await InitializeCompany(selectionWindow.SelectedCompany);
-            }
-            else
-            {
-                if (ContentHost.Content is EmployeeManagementView)
-                {
-                    UpdateTitle("사원 정보");
-                    SetActiveMenuItem(EmployeeManagementMenuItem);
-                }
-                else if (ContentHost.Content is PayrollEntryView)
-                {
-                    UpdateTitle("급여입력");
-                    SetActiveMenuItem(PayrollEntryMenuItem);
-                }
-                else if (ContentHost.Content is SettingsView)
-                {
-                    UpdateTitle("설정");
-                    SetActiveMenuItem(SettingsMenuItem);
-                }
-                else if (_selectedCompany == null)
-                {
-                    Title = "NPO 급여관리 - 회사 선택";
-                    SetActiveMenuItem(null);
-                }
-            }
+            SetCompany(companyWindow.SelectedCompany);
+            _cachedPayrollEntryView = null; // 회사 변경 시 캐시 초기화
         }
     }
 }
