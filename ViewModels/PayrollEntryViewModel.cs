@@ -24,6 +24,7 @@ public class PayrollEntryViewModel : ObservableObject
     private bool _hasPendingChanges;
     private List<string> _fundingSources = new();
     private string _selectedFundingSource = string.Empty;
+    private DateTime _accrualMonth;
 
     public ObservableCollection<PayrollEntryRowViewModel> PayrollRows { get; }
     public List<string> FundingSources => _fundingSources;
@@ -69,7 +70,17 @@ public class PayrollEntryViewModel : ObservableObject
         }
     }
 
-    public bool HasSelectedRow => SelectedRow != null;
+    public bool HasSelectedRow => SelectedRow?.HasEmployee == true;
+
+    private void SelectedRowOnPropertyChanged(object? sender, PropertyChangedEventArgs e)
+    {
+        if (e.PropertyName == nameof(PayrollEntryRowViewModel.HasEmployee))
+        {
+            OnPropertyChanged(nameof(HasSelectedRow));
+            CommandManager.InvalidateRequerySuggested();
+        }
+    }
+
     public Company? CurrentCompany => _company;
 
     public ICommand AddRowsCommand { get; }
@@ -82,28 +93,31 @@ public class PayrollEntryViewModel : ObservableObject
         _payItemService = new PayItemService();
 
         PayrollRows = new ObservableCollection<PayrollEntryRowViewModel>();
-        AddRowsCommand = new RelayCommand(_ => AddBlankRows(5));
+        AddRowsCommand = new RelayCommand(_ =>
+        {
+            var newRows = AddBlankRows(5);
+            _ = ApplyCompanyContextToRowsAsync(newRows);
+        });
         ClearEmployeeCommand = new RelayCommand(_ => ClearSelectedRow(), _ => SelectedRow?.HasEmployee == true);
         SavePayrollCommand = new RelayCommand(async _ => await SavePayrollAsync(), _ => CanSavePayroll());
+
+        var today = DateTime.Today;
+        _accrualMonth = new DateTime(today.Year, today.Month, 1);
 
         AddBlankRows(DefaultRowCount);
         SelectedRow = PayrollRows.FirstOrDefault();
     }
 
-    private void SelectedRowOnPropertyChanged(object? sender, PropertyChangedEventArgs e)
-    {
-        if (e.PropertyName == nameof(PayrollEntryRowViewModel.HasEmployee))
-        {
-            CommandManager.InvalidateRequerySuggested();
-        }
-    }
-
     public async Task InitializeAsync(Company company)
     {
         _company = company;
+        await LoadFundingSourcesAsync().ConfigureAwait(false);
+        await ReloadDraftsAsync().ConfigureAwait(false);
+    }
 
-        // 재원 설정 로드
-        _fundingSources = await _payItemService.GetPayItemsAsync(PayItemService.FundingSource);
+    private async Task LoadFundingSourcesAsync()
+    {
+        _fundingSources = await _payItemService.GetPayItemsAsync(PayItemService.FundingSource).ConfigureAwait(false);
         OnPropertyChanged(nameof(FundingSources));
 
         if (_fundingSources.Count > 0 && string.IsNullOrEmpty(_selectedFundingSource))
@@ -111,28 +125,42 @@ public class PayrollEntryViewModel : ObservableObject
             _selectedFundingSource = _fundingSources[0];
             OnPropertyChanged(nameof(SelectedFundingSource));
         }
+    }
+
+    private async Task ReloadDraftsAsync()
+    {
+        if (_company == null)
+        {
+            return;
+        }
+
+        List<PayrollEntryDraft> drafts = new();
+
+        await ApplyCompanyContextToRowsAsync().ConfigureAwait(false);
 
         BeginSuppressDirty();
         try
         {
             foreach (var row in PayrollRows)
             {
-                await row.Detail.ResetAsync();
+                await row.Detail.ResetAsync().ConfigureAwait(false);
                 row.ResetEmployee();
             }
 
             using var db = new AccountingDbContext();
-            var drafts = await db.PayrollEntryDrafts
+            drafts = await db.PayrollEntryDrafts
                 .Include(d => d.Employee)
-                .Where(d => d.CompanyId == company.Id)
-                .Where(d => d.Employee != null)
-                .OrderBy(d => d.Employee.EmployeeCode)
-                .ToListAsync();
+                .Where(d => d.CompanyId == _company.Id)
+                .Where(d => d.AccrualYear == _accrualMonth.Year && d.AccrualMonth == _accrualMonth.Month)
+                .OrderBy(d => d.Employee!.EmployeeCode)
+                .ToListAsync()
+                .ConfigureAwait(false);
 
             var requiredRows = Math.Max(DefaultRowCount, drafts.Count + 5);
             if (PayrollRows.Count < requiredRows)
             {
-                AddBlankRows(requiredRows - PayrollRows.Count);
+                var addedRows = AddBlankRows(requiredRows - PayrollRows.Count);
+                await ApplyCompanyContextToRowsAsync(addedRows).ConfigureAwait(false);
             }
 
             for (int i = 0; i < drafts.Count; i++)
@@ -145,7 +173,7 @@ public class PayrollEntryViewModel : ObservableObject
 
                 var row = PayrollRows[i];
                 row.AssignEmployee(draft.Employee);
-                await row.Detail.LoadFromDraftAsync(draft);
+                await row.Detail.LoadFromDraftAsync(draft).ConfigureAwait(false);
 
                 if (!string.IsNullOrEmpty(draft.FundingSource))
                 {
@@ -160,7 +188,22 @@ public class PayrollEntryViewModel : ObservableObject
         }
 
         ResetDirtyFlag();
-        SelectedRow = PayrollRows.FirstOrDefault(r => r.HasEmployee) ?? PayrollRows.FirstOrDefault();
+
+        if (drafts.Count == 0)
+        {
+            var defaultFunding = _fundingSources.FirstOrDefault() ?? string.Empty;
+            if (_selectedFundingSource != defaultFunding)
+            {
+                _selectedFundingSource = defaultFunding;
+                OnPropertyChanged(nameof(SelectedFundingSource));
+            }
+
+            SelectedRow = null;
+            return;
+        }
+
+        var firstWithEmployee = PayrollRows.FirstOrDefault(r => r.HasEmployee);
+        SelectedRow = firstWithEmployee ?? null;
     }
 
     public async Task RefreshEmployeeDataAsync()
@@ -169,6 +212,8 @@ public class PayrollEntryViewModel : ObservableObject
         {
             return;
         }
+
+        await ApplyCompanyContextToRowsAsync().ConfigureAwait(false);
 
         using var db = new AccountingDbContext();
         
@@ -225,6 +270,8 @@ public class PayrollEntryViewModel : ObservableObject
             return false;
         }
 
+        EnsureCompanyContext(targetRow);
+
         BeginSuppressDirty();
         try
         {
@@ -271,14 +318,17 @@ public class PayrollEntryViewModel : ObservableObject
         SelectedRow.Detail.ResetAsync().Wait();
         SelectedRow.ResetEmployee();
 
-        // DB에서 초안 삭제
         if (_company != null && employeeId.HasValue)
         {
             try
             {
                 using var db = new AccountingDbContext();
                 var draft = db.PayrollEntryDrafts
-                    .FirstOrDefault(d => d.CompanyId == _company.Id && d.EmployeeId == employeeId.Value);
+                    .FirstOrDefault(d =>
+                        d.CompanyId == _company.Id &&
+                        d.EmployeeId == employeeId.Value &&
+                        d.AccrualYear == _accrualMonth.Year &&
+                        d.AccrualMonth == _accrualMonth.Month);
 
                 if (draft != null)
                 {
@@ -295,8 +345,14 @@ public class PayrollEntryViewModel : ObservableObject
         MarkDirty();
     }
 
-    private void AddBlankRows(int count)
+    private IReadOnlyList<PayrollEntryRowViewModel> AddBlankRows(int count)
     {
+        if (count <= 0)
+        {
+            return Array.Empty<PayrollEntryRowViewModel>();
+        }
+
+        var addedRows = new List<PayrollEntryRowViewModel>(count);
         for (int i = 0; i < count; i++)
         {
             var row = new PayrollEntryRowViewModel(_taxTableProvider, _payItemService)
@@ -306,9 +362,11 @@ public class PayrollEntryViewModel : ObservableObject
 
             AttachRowHandlers(row);
             PayrollRows.Add(row);
+            addedRows.Add(row);
         }
 
         RefreshSequences();
+        return addedRows;
     }
 
     private PayrollEntryRowViewModel? GetNextAssignableRow()
@@ -319,7 +377,8 @@ public class PayrollEntryViewModel : ObservableObject
             return row;
         }
 
-        AddBlankRows(5);
+        var newRows = AddBlankRows(5);
+        _ = ApplyCompanyContextToRowsAsync(newRows);
         return PayrollRows.FirstOrDefault(r => !r.HasEmployee);
     }
 
@@ -387,9 +446,12 @@ public class PayrollEntryViewModel : ObservableObject
         {
             using var db = new AccountingDbContext();
             var companyId = _company.Id;
+            var accrualYear = _accrualMonth.Year;
+            var accrualMonth = _accrualMonth.Month;
 
             var existingDrafts = await db.PayrollEntryDrafts
                 .Where(d => d.CompanyId == companyId)
+                .Where(d => d.AccrualYear == accrualYear && d.AccrualMonth == accrualMonth)
                 .ToListAsync();
 
             var existingMap = existingDrafts.ToDictionary(d => d.EmployeeId);
@@ -405,10 +467,17 @@ public class PayrollEntryViewModel : ObservableObject
                     draft = new PayrollEntryDraft
                     {
                         CompanyId = companyId,
-                        EmployeeId = employeeId
+                        EmployeeId = employeeId,
+                        AccrualYear = accrualYear,
+                        AccrualMonth = accrualMonth
                     };
                     db.PayrollEntryDrafts.Add(draft);
                     existingMap[employeeId] = draft;
+                }
+                else
+                {
+                    draft.AccrualYear = accrualYear;
+                    draft.AccrualMonth = accrualMonth;
                 }
 
                 await row.Detail.CopyToDraftAsync(draft);
@@ -443,12 +512,18 @@ public class PayrollEntryViewModel : ObservableObject
         using var db = new AccountingDbContext();
         var draft = db.PayrollEntryDrafts
             .AsNoTracking()
-            .FirstOrDefault(d => d.CompanyId == _company.Id && d.EmployeeId == row.EmployeeId.Value);
+            .FirstOrDefault(d =>
+                d.CompanyId == _company.Id &&
+                d.EmployeeId == row.EmployeeId.Value &&
+                d.AccrualYear == _accrualMonth.Year &&
+                d.AccrualMonth == _accrualMonth.Month);
 
         if (draft == null)
         {
             return false;
         }
+
+        EnsureCompanyContext(row);
 
         BeginSuppressDirty();
         try
@@ -461,5 +536,47 @@ public class PayrollEntryViewModel : ObservableObject
         }
 
         return true;
+    }
+
+    private Task ApplyCompanyContextToRowsAsync(IEnumerable<PayrollEntryRowViewModel>? rows = null)
+    {
+        if (_company == null)
+        {
+            return Task.CompletedTask;
+        }
+
+        var targets = rows ?? PayrollRows;
+        var tasks = targets.Select(row => row.ApplyCompanyAsync(_company)).ToArray();
+
+        return tasks.Length == 0 ? Task.CompletedTask : Task.WhenAll(tasks);
+    }
+
+    private void EnsureCompanyContext(PayrollEntryRowViewModel row)
+    {
+        if (_company == null)
+        {
+            return;
+        }
+
+        row.ApplyCompanyAsync(_company).GetAwaiter().GetResult();
+    }
+
+    public DateTime AccrualMonth
+    {
+        get => _accrualMonth;
+        set
+        {
+            var normalized = value == default
+                ? new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1)
+                : new DateTime(value.Year, value.Month, 1);
+
+            if (SetProperty(ref _accrualMonth, normalized))
+            {
+                if (_company != null)
+                {
+                    _ = ReloadDraftsAsync();
+                }
+            }
+        }
     }
 }

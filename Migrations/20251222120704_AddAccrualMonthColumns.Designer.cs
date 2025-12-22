@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NPOBalance.Data;
 
@@ -10,9 +11,11 @@ using NPOBalance.Data;
 namespace NPOBalance.Migrations
 {
     [DbContext(typeof(AccountingDbContext))]
-    partial class AccountingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251222120704_AddAccrualMonthColumns")]
+    partial class AddAccrualMonthColumns
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.11");
@@ -331,9 +334,6 @@ namespace NPOBalance.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<decimal>("EstimatedAnnualSalary")
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("FinalIncomeTax")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FundingSource")

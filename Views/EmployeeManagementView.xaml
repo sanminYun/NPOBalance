@@ -186,7 +186,14 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Label Content="예상 총 급여액" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                        <TextBox Text="{Binding SelectedEmployee.EstimatedTotalSalary, StringFormat=N0}" Grid.Column="1" Margin="5,0" HorizontalAlignment="Left" Width="200"/>
+                        <TextBox x:Name="EstimatedTotalSalaryTextBox"
+                                 Text="{Binding SelectedEmployee.EstimatedTotalSalary, StringFormat=N0, UpdateSourceTrigger=PropertyChanged}" 
+                                 Grid.Column="1" 
+                                 Margin="5,0" 
+                                 HorizontalAlignment="Left" 
+                                 Width="200"
+                                 PreviewTextInput="NumericTextBox_PreviewTextInput"
+                                 TextChanged="EstimatedSalaryTextBox_TextChanged"/>
                     </Grid>
 
                     <!-- 주소 -->

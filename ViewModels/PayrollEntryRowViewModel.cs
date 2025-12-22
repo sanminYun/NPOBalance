@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.Threading.Tasks;
 using NPOBalance.Models;
 using NPOBalance.Services;
 
@@ -98,5 +99,10 @@ public class PayrollEntryRowViewModel : ObservableObject
             OnPropertyChanged(nameof(NetPay));
             OnPropertyChanged(nameof(CompanyBurden));
         }
+    }
+
+    public Task ApplyCompanyAsync(Company company)
+    {
+        return _detail.SetCompanyAsync(company);
     }
 }

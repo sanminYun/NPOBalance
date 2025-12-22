@@ -12,6 +12,7 @@ using NPOBalance.Data;
 using NPOBalance.Models;
 using NPOBalance.Services;
 using NPOBalance.ViewModels;
+using Calendar = System.Windows.Controls.Calendar;
 
 namespace NPOBalance.Views;
 
@@ -21,6 +22,7 @@ public partial class PayrollEntryView : UserControl
     private List<string> _taxableEarningsItems = new();
     private List<string> _nonTaxableEarningsItems = new();
     private List<string> _retirementItems = new();
+    private Calendar? _accrualCalendar;
 
     public PayrollEntryViewModel? ViewModel => DataContext as PayrollEntryViewModel;
 
@@ -100,19 +102,20 @@ public partial class PayrollEntryView : UserControl
 
     private async void OpenEmployeeLookup()
     {
-        if (ViewModel?.CurrentCompany == null)
+        var currentCompany = CompanyContext.CurrentCompany ?? ViewModel?.CurrentCompany;
+        if (currentCompany == null)
         {
             MessageBox.Show("회사를 먼저 선택하세요.", "안내", MessageBoxButton.OK, MessageBoxImage.Information);
             return;
         }
 
-        // 이미 등록된 사원 ID 목록 가져오기
-        var registeredEmployeeIds = ViewModel.PayrollRows
+        // 이미 배치된 사원 ID 목록을 준비합니다.
+        var registeredEmployeeIds = ViewModel!.PayrollRows
             .Where(r => r.HasEmployee)
             .Select(r => r.EmployeeId!.Value)
             .ToList();
 
-        var dialog = new EmployeeLookupDialog(ViewModel.CurrentCompany.Id, registeredEmployeeIds)
+        var dialog = new EmployeeLookupDialog(currentCompany.Id, registeredEmployeeIds)
         {
             Owner = Window.GetWindow(this)
         };
@@ -146,18 +149,31 @@ public partial class PayrollEntryView : UserControl
             using var db = new AccountingDbContext();
             var companyId = ViewModel.CurrentCompany.Id;
             var employeeId = ViewModel.SelectedRow.EmployeeId.Value;
+            var accrualYear = ViewModel.AccrualMonth.Year;
+            var accrualMonth = ViewModel.AccrualMonth.Month;
 
             var draft = await db.PayrollEntryDrafts
-                .FirstOrDefaultAsync(d => d.CompanyId == companyId && d.EmployeeId == employeeId);
+                .FirstOrDefaultAsync(d =>
+                    d.CompanyId == companyId &&
+                    d.EmployeeId == employeeId &&
+                    d.AccrualYear == accrualYear &&
+                    d.AccrualMonth == accrualMonth);
 
             if (draft == null)
             {
                 draft = new PayrollEntryDraft
                 {
                     CompanyId = companyId,
-                    EmployeeId = employeeId
+                    EmployeeId = employeeId,
+                    AccrualYear = accrualYear,
+                    AccrualMonth = accrualMonth
                 };
                 db.PayrollEntryDrafts.Add(draft);
+            }
+            else
+            {
+                draft.AccrualYear = accrualYear;
+                draft.AccrualMonth = accrualMonth;
             }
 
             await ViewModel.SelectedRow.Detail.CopyToDraftAsync(draft);
@@ -167,7 +183,7 @@ public partial class PayrollEntryView : UserControl
         }
         catch
         {
-            // 초안 저장 실패는 무시 (사용자에게 알리지 않음)
+            // 초안 저장 실패는 무시
         }
     }
 
@@ -228,20 +244,12 @@ public partial class PayrollEntryView : UserControl
             };
 
             textBox.SetBinding(TextBox.TextProperty, binding);
-            textBox.TextChanged += (s, e) =>
-            {
-                if (s is TextBox tb && tb.Tag is SectionItemTag tag)
-                {
-                    if (decimal.TryParse(tb.Text.Replace(",", ""), out var value))
-                    {
-                        ViewModel.SelectedRow.Detail.SetValue(tag.SectionKey, tag.Index, value);
-                    }
-                    else if (string.IsNullOrWhiteSpace(tb.Text))
-                    {
-                        ViewModel.SelectedRow.Detail.SetValue(tag.SectionKey, tag.Index, 0);
-                    }
-                }
-            };
+            
+            // 숫자만 입력 가능하도록 제한
+            textBox.PreviewTextInput += NumericTextBox_PreviewTextInput;
+            
+            // 실시간 콤마 포맷팅
+            textBox.TextChanged += NumericTextBox_TextChanged;
 
             Grid.SetRow(textBox, i);
             Grid.SetColumn(textBox, 1);
@@ -287,6 +295,98 @@ public partial class PayrollEntryView : UserControl
         panel.Children.Add(grid);
     }
 
+    private void NumericTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+    {
+        // 숫자만 입력 허용
+        e.Handled = !IsTextNumeric(e.Text);
+    }
+
+    private void NumericTextBox_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        if (sender is not TextBox textBox || textBox.Tag is not SectionItemTag tag)
+        {
+            return;
+        }
+
+        // 이벤트 핸들러가 재귀적으로 호출되는 것을 방지하기 위한 플래그
+        if (textBox.GetValue(IsFormattingProperty) is bool isFormatting && isFormatting)
+        {
+            return;
+        }
+
+        // 커서 위치 저장
+        int cursorPosition = textBox.SelectionStart;
+        string originalText = textBox.Text;
+        
+        // 콤마 제거한 원본 숫자
+        string cleanText = originalText.Replace(",", "");
+
+        // 숫자로 파싱 가능한 경우에만 처리
+        if (decimal.TryParse(cleanText, out var value))
+        {
+            // ViewModel 업데이트
+            ViewModel?.SelectedRow?.Detail.SetValue(tag.SectionKey, tag.Index, value);
+            
+            // 천단위 콤마 적용된 텍스트
+            string formattedText = value.ToString("N0");
+            
+            // 텍스트가 변경된 경우에만 업데이트 (무한 루프 방지)
+            if (originalText != formattedText)
+            {
+                // 콤마 개수 차이 계산하여 커서 위치 조정
+                int commasBeforeCursor = originalText.Take(cursorPosition).Count(c => c == ',');
+                int digitsBeforeCursor = originalText.Take(cursorPosition).Count(c => char.IsDigit(c));
+                
+                // 포맷팅 플래그 설정
+                textBox.SetValue(IsFormattingProperty, true);
+                
+                // 텍스트 업데이트
+                textBox.Text = formattedText;
+                
+                // 새로운 커서 위치 계산
+                int newCursorPosition = 0;
+                int digitCount = 0;
+                
+                for (int i = 0; i < formattedText.Length; i++)
+                {
+                    if (char.IsDigit(formattedText[i]))
+                    {
+                        digitCount++;
+                        if (digitCount >= digitsBeforeCursor)
+                        {
+                            newCursorPosition = i + 1;
+                            break;
+                        }
+                    }
+                }
+                
+                // 커서 위치가 유효한 범위 내에 있는지 확인
+                textBox.SelectionStart = Math.Min(newCursorPosition, formattedText.Length);
+                
+                // 포맷팅 플래그 해제
+                textBox.SetValue(IsFormattingProperty, false);
+            }
+        }
+        else if (string.IsNullOrWhiteSpace(cleanText))
+        {
+            // 빈 문자열인 경우 0으로 설정
+            ViewModel?.SelectedRow?.Detail.SetValue(tag.SectionKey, tag.Index, 0);
+        }
+    }
+
+    private static bool IsTextNumeric(string text)
+    {
+        return text.All(char.IsDigit);
+    }
+
+    // 포맷팅 중임을 나타내는 Attached Property
+    private static readonly DependencyProperty IsFormattingProperty =
+        DependencyProperty.RegisterAttached(
+            "IsFormatting",
+            typeof(bool),
+            typeof(PayrollEntryView),
+            new PropertyMetadata(false));
+
     private class SectionItemTag
     {
         public string SectionKey { get; set; } = string.Empty;
@@ -322,5 +422,49 @@ public partial class PayrollEntryView : UserControl
 
             return 0m;
         }
+    }
+
+    private void AccrualMonthPicker_CalendarOpened(object sender, RoutedEventArgs e)
+    {
+        if (sender is not DatePicker picker)
+        {
+            return;
+        }
+
+        _accrualCalendar = picker.Template.FindName("PART_Calendar", picker) as Calendar;
+        if (_accrualCalendar == null)
+        {
+            return;
+        }
+
+        var referenceDate = ViewModel?.AccrualMonth ?? DateTime.Today;
+        _accrualCalendar.DisplayMode = CalendarMode.Year;
+        _accrualCalendar.DisplayDate = referenceDate;
+        _accrualCalendar.SelectedDate = referenceDate;
+        _accrualCalendar.DisplayModeChanged -= AccrualCalendar_DisplayModeChanged;
+        _accrualCalendar.DisplayModeChanged += AccrualCalendar_DisplayModeChanged;
+    }
+
+    private void AccrualMonthPicker_CalendarClosed(object sender, RoutedEventArgs e)
+    {
+        if (_accrualCalendar != null)
+        {
+            _accrualCalendar.DisplayModeChanged -= AccrualCalendar_DisplayModeChanged;
+            _accrualCalendar = null;
+        }
+    }
+
+    private void AccrualCalendar_DisplayModeChanged(object? sender, CalendarModeChangedEventArgs e)
+    {
+        if (sender is not Calendar calendar || AccrualMonthPicker == null || calendar.DisplayMode != CalendarMode.Month)
+        {
+            return;
+        }
+
+        var selectedMonth = new DateTime(calendar.DisplayDate.Year, calendar.DisplayDate.Month, 1);
+        calendar.SelectedDate = selectedMonth;
+        AccrualMonthPicker.SelectedDate = selectedMonth;
+        AccrualMonthPicker.IsDropDownOpen = false;
+        calendar.DisplayMode = CalendarMode.Year;
     }
 }

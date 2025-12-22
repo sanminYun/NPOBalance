@@ -69,17 +69,10 @@ public class CompanySelectionViewModel : INotifyPropertyChanged
 
     private void ExecuteConfirm(object? parameter)
     {
-        //MessageBox.Show($"ExecuteConfirm 호출됨. SelectedCompany: {SelectedCompany?.Name ?? "null"}", "디버그");
-        
         if (SelectedCompany != null)
         {
-            //MessageBox.Show($"DialogResult를 true로 설정합니다.", "디버그");
             _window.DialogResult = true;
             _window.Close();
-        }
-        else
-        {
-            //MessageBox.Show("회사가 선택되지 않았습니다.", "디버그");
         }
     }
 
@@ -101,7 +94,7 @@ public class CompanySelectionViewModel : INotifyPropertyChanged
                     nextNumber = currentMax + 1;
                 }
 
-                string newCompanyCode = nextNumber.ToString("D7"); // 7자리 숫자로 포맷 (0000001)
+                string newCompanyCode = nextNumber.ToString("D7");
 
                 var newCompany = new Company
                 {
@@ -137,33 +130,5 @@ public class CompanySelectionViewModel : INotifyPropertyChanged
     protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
-}
-
-public class RelayCommand : ICommand
-{
-    private readonly Action<object?> _execute;
-    private readonly Func<object?, bool>? _canExecute;
-
-    public RelayCommand(Action<object?> execute, Func<object?, bool>? canExecute = null)
-    {
-        _execute = execute ?? throw new ArgumentNullException(nameof(execute));
-        _canExecute = canExecute;
-    }
-
-    public bool CanExecute(object? parameter)
-    {
-        return _canExecute == null || _canExecute(parameter);
-    }
-
-    public void Execute(object? parameter)
-    {
-        _execute(parameter);
-    }
-
-    public event EventHandler? CanExecuteChanged
-    {
-        add => CommandManager.RequerySuggested += value;
-        remove => CommandManager.RequerySuggested -= value;
     }
 }

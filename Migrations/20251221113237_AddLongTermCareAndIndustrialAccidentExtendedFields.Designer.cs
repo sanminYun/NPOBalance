@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NPOBalance.Data;
 
@@ -10,9 +11,11 @@ using NPOBalance.Data;
 namespace NPOBalance.Migrations
 {
     [DbContext(typeof(AccountingDbContext))]
-    partial class AccountingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251221113237_AddLongTermCareAndIndustrialAccidentExtendedFields")]
+    partial class AddLongTermCareAndIndustrialAccidentExtendedFields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.11");
@@ -318,12 +321,6 @@ namespace NPOBalance.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("AccrualMonth")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("AccrualYear")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("CompanyId")
                         .HasColumnType("INTEGER");
 
@@ -331,9 +328,6 @@ namespace NPOBalance.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<decimal>("EstimatedAnnualSalary")
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("FinalIncomeTax")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FundingSource")
@@ -351,7 +345,7 @@ namespace NPOBalance.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.HasIndex("CompanyId", "EmployeeId", "AccrualYear", "AccrualMonth")
+                    b.HasIndex("CompanyId", "EmployeeId")
                         .IsUnique();
 
                     b.ToTable("PayrollEntryDrafts");

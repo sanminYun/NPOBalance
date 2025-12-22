@@ -26,10 +26,9 @@
                       Header="급여입력"
                       Style="{StaticResource MenuItemStyle}"
                       Click="PayrollEntry_Click"/>
-            <MenuItem x:Name="SettingsMenuItem"
-                      Header="설정">
+            <MenuItem Header="설정">
                 <MenuItem Header="계정과목 설정" Click="PayItemSetting_Click"/>
-                <MenuItem Header="요율 설정" IsEnabled="False"/>
+                <MenuItem Header="요율 설정" Click="InsuranceRateSetting_Click"/>
                 <MenuItem Header="인쇄 설정" IsEnabled="False"/>
             </MenuItem>
         </Menu>

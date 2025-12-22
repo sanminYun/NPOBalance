@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NPOBalance.Data;
 
@@ -10,9 +11,11 @@ using NPOBalance.Data;
 namespace NPOBalance.Migrations
 {
     [DbContext(typeof(AccountingDbContext))]
-    partial class AccountingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251221111718_AddInsuranceRateExtendedFields")]
+    partial class AddInsuranceRateExtendedFields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.11");
@@ -148,67 +151,37 @@ namespace NPOBalance.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("EmploymentInsuranceMinBaseAmount")
-                        .HasPrecision(18, 2)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("EmploymentInsuranceMinPremium")
-                        .HasPrecision(18, 2)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("EmploymentInsuranceRateEmployee")
-                        .HasPrecision(7, 6)
+                        .HasPrecision(5, 4)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("EmploymentInsuranceRateEmployer")
-                        .HasPrecision(7, 6)
+                        .HasPrecision(5, 4)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("HealthInsuranceMinBaseAmount")
-                        .HasPrecision(18, 2)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("HealthInsuranceMinPremium")
-                        .HasPrecision(18, 2)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("HealthInsuranceRateEmployee")
-                        .HasPrecision(7, 6)
+                        .HasPrecision(5, 4)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("HealthInsuranceRateEmployer")
-                        .HasPrecision(7, 6)
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("IndustrialAccidentMinBaseAmount")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("IndustrialAccidentMinPremium")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("IndustrialAccidentRateEmployee")
-                        .HasPrecision(7, 6)
+                        .HasPrecision(5, 4)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("IndustrialAccidentRateEmployer")
-                        .HasPrecision(7, 6)
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("LongTermCareMinBaseAmount")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("LongTermCareMinPremium")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("LongTermCareRateEmployee")
-                        .HasPrecision(7, 6)
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("LongTermCareRateEmployer")
-                        .HasPrecision(7, 6)
+                    b.Property<decimal>("LongTermCareRate")
                         .HasColumnType("TEXT");
 
                     b.Property<decimal?>("MonthlyIncomeMax")
@@ -220,19 +193,17 @@ namespace NPOBalance.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("NationalPensionMinBaseAmount")
-                        .HasPrecision(18, 2)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("NationalPensionMinPremium")
-                        .HasPrecision(18, 2)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("NationalPensionRateEmployee")
-                        .HasPrecision(7, 6)
+                        .HasPrecision(5, 4)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("NationalPensionRateEmployer")
-                        .HasPrecision(7, 6)
+                        .HasPrecision(5, 4)
                         .HasColumnType("TEXT");
 
                     b.Property<int>("RoundingDigit")
@@ -318,12 +289,6 @@ namespace NPOBalance.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("AccrualMonth")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("AccrualYear")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("CompanyId")
                         .HasColumnType("INTEGER");
 
@@ -331,9 +296,6 @@ namespace NPOBalance.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<decimal>("EstimatedAnnualSalary")
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("FinalIncomeTax")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FundingSource")
@@ -351,7 +313,7 @@ namespace NPOBalance.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.HasIndex("CompanyId", "EmployeeId", "AccrualYear", "AccrualMonth")
+                    b.HasIndex("CompanyId", "EmployeeId")
                         .IsUnique();
 
                     b.ToTable("PayrollEntryDrafts");

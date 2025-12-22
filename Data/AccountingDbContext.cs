@@ -109,6 +109,8 @@ public class AccountingDbContext : DbContext
             entity.HasKey(e => e.Id);
             entity.Property(e => e.UpdatedAt).IsRequired();
             entity.Property(e => e.PayItemValuesJson).IsRequired();
+            entity.Property(e => e.AccrualYear).IsRequired();
+            entity.Property(e => e.AccrualMonth).IsRequired();
 
             entity.HasOne(e => e.Company)
                 .WithMany(c => c.PayrollEntryDrafts)
@@ -120,19 +122,40 @@ public class AccountingDbContext : DbContext
                 .HasForeignKey(e => e.EmployeeId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            entity.HasIndex(e => new { e.CompanyId, e.EmployeeId }).IsUnique();
+            entity.HasIndex(e => new { e.CompanyId, e.EmployeeId, e.AccrualYear, e.AccrualMonth }).IsUnique();
         });
 
-        // InsuranceRateSetting
+        // InsuranceRateSetting - 모든 필드 포함
         modelBuilder.Entity<InsuranceRateSetting>(entity =>
         {
             entity.HasKey(e => e.Id);
-            entity.Property(e => e.NationalPensionRateEmployee).HasPrecision(5, 4);
-            entity.Property(e => e.NationalPensionRateEmployer).HasPrecision(5, 4);
-            entity.Property(e => e.HealthInsuranceRateEmployee).HasPrecision(5, 4);
-            entity.Property(e => e.HealthInsuranceRateEmployer).HasPrecision(5, 4);
-            entity.Property(e => e.EmploymentInsuranceRateEmployee).HasPrecision(5, 4);
-            entity.Property(e => e.EmploymentInsuranceRateEmployer).HasPrecision(5, 4);
+            
+            // 요율 필드
+            entity.Property(e => e.NationalPensionRateEmployee).HasPrecision(7, 6);
+            entity.Property(e => e.NationalPensionRateEmployer).HasPrecision(7, 6);
+            entity.Property(e => e.HealthInsuranceRateEmployee).HasPrecision(7, 6);
+            entity.Property(e => e.HealthInsuranceRateEmployer).HasPrecision(7, 6);
+            entity.Property(e => e.LongTermCareRateEmployee).HasPrecision(7, 6);
+            entity.Property(e => e.LongTermCareRateEmployer).HasPrecision(7, 6);
+            entity.Property(e => e.EmploymentInsuranceRateEmployee).HasPrecision(7, 6);
+            entity.Property(e => e.EmploymentInsuranceRateEmployer).HasPrecision(7, 6);
+            entity.Property(e => e.IndustrialAccidentRateEmployee).HasPrecision(7, 6);
+            entity.Property(e => e.IndustrialAccidentRateEmployer).HasPrecision(7, 6);
+            
+            // 최저한도 - 기준금액
+            entity.Property(e => e.NationalPensionMinBaseAmount).HasPrecision(18, 2);
+            entity.Property(e => e.HealthInsuranceMinBaseAmount).HasPrecision(18, 2);
+            entity.Property(e => e.LongTermCareMinBaseAmount).HasPrecision(18, 2);
+            entity.Property(e => e.EmploymentInsuranceMinBaseAmount).HasPrecision(18, 2);
+            entity.Property(e => e.IndustrialAccidentMinBaseAmount).HasPrecision(18, 2);
+            
+            // 최저한도 - 보험료
+            entity.Property(e => e.NationalPensionMinPremium).HasPrecision(18, 2);
+            entity.Property(e => e.HealthInsuranceMinPremium).HasPrecision(18, 2);
+            entity.Property(e => e.LongTermCareMinPremium).HasPrecision(18, 2);
+            entity.Property(e => e.EmploymentInsuranceMinPremium).HasPrecision(18, 2);
+            entity.Property(e => e.IndustrialAccidentMinPremium).HasPrecision(18, 2);
+            
             entity.Property(e => e.RoundingRule).IsRequired().HasMaxLength(20);
             entity.Property(e => e.MonthlyIncomeMin).HasPrecision(18, 2);
             entity.Property(e => e.MonthlyIncomeMax).HasPrecision(18, 2);

@@ -26,6 +26,8 @@ public partial class MainWindow : Window
     public void SetCompany(Company company)
     {
         _currentCompany = company;
+        CompanyContext.SetCompany(company);
+        _cachedPayrollEntryView = null;
         Title = $"NPO 급여관리 - {company.Name}";
         ShowPlaceholder();
     }
@@ -76,7 +78,6 @@ public partial class MainWindow : Window
 
         SetMenuSelection(PayrollEntryMenuItem);
 
-        // 기존 뷰가 있으면 재사용하고 데이터만 새로고침
         if (_cachedPayrollEntryView == null)
         {
             _cachedPayrollEntryView = new PayrollEntryView();
@@ -85,10 +86,13 @@ public partial class MainWindow : Window
                 await _cachedPayrollEntryView.ViewModel.InitializeAsync(_currentCompany);
             }
         }
-        else
+        else if (_cachedPayrollEntryView.ViewModel != null)
         {
-            // 사원 정보가 변경되었을 수 있으므로 새로고침
-            if (_cachedPayrollEntryView.ViewModel != null)
+            if (_cachedPayrollEntryView.ViewModel.CurrentCompany?.Id != _currentCompany.Id)
+            {
+                await _cachedPayrollEntryView.ViewModel.InitializeAsync(_currentCompany);
+            }
+            else
             {
                 await _cachedPayrollEntryView.ViewModel.RefreshEmployeeDataAsync();
             }
@@ -104,9 +108,20 @@ public partial class MainWindow : Window
         ContentHost.Content = view;
     }
 
-    private void Settings_Click(object sender, RoutedEventArgs e)
+    private async void InsuranceRateSetting_Click(object sender, RoutedEventArgs e)
     {
-        // 기존 설정 메뉴 클릭 핸들러 (필요시 제거 가능)
+        if (_currentCompany == null)
+        {
+            MessageBox.Show("회사를 먼저 선택하세요.", "안내", MessageBoxButton.OK, MessageBoxImage.Information);
+            return;
+        }
+
+        ClearMenuSelection();
+        
+        var view = new InsuranceRateSettingView();
+        ContentHost.Content = view;
+        
+        await view.LoadAsync(_currentCompany);
     }
 
     private void ReSelectCompany_Click(object sender, RoutedEventArgs e)
@@ -115,7 +130,7 @@ public partial class MainWindow : Window
         if (companyWindow.ShowDialog() == true && companyWindow.SelectedCompany != null)
         {
             SetCompany(companyWindow.SelectedCompany);
-            _cachedPayrollEntryView = null; // 회사 변경 시 캐시 초기화
+            _cachedPayrollEntryView = null;
         }
     }
 }

@@ -162,11 +162,11 @@
                         </TextBlock>
                     </StackPanel>
 
-                    <StackPanel Grid.Row="1" 
-                                Orientation="Horizontal" 
+                    <StackPanel Grid.Row="1"
+                                Orientation="Horizontal"
                                 Margin="0,12,0,0"
                                 DataContext="{Binding}">
-                        <TextBlock Text="재원:" 
+                        <TextBlock Text="재원:"
                                    VerticalAlignment="Center"
                                    Margin="0,0,8,0"
                                    FontWeight="SemiBold"/>
@@ -174,6 +174,32 @@
                                   ItemsSource="{Binding FundingSources}"
                                   SelectedItem="{Binding SelectedFundingSource, Mode=TwoWay}"
                                   Width="200"/>
+                        <TextBlock Text="귀속년월:"
+                                   VerticalAlignment="Center"
+                                   Margin="20,0,8,0"
+                                   FontWeight="SemiBold"/>
+                        <DatePicker x:Name="AccrualMonthPicker"
+                                    Width="140"
+                                    SelectedDate="{Binding AccrualMonth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                    DisplayDate="{Binding AccrualMonth}"
+                                    SelectedDateFormat="Short"
+                                    CalendarOpened="AccrualMonthPicker_CalendarOpened"
+                                    CalendarClosed="AccrualMonthPicker_CalendarClosed">
+                            <DatePicker.Resources>
+                                <Style TargetType="DatePickerTextBox">
+                                    <Setter Property="Control.Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="DatePickerTextBox">
+                                                <TextBox x:Name="PART_TextBox"
+                                                         Text="{Binding Path=SelectedDate, RelativeSource={RelativeSource AncestorType=DatePicker}, StringFormat='yyyy-MM'}"
+                                                         HorizontalContentAlignment="Center"
+                                                         VerticalContentAlignment="Center"/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </DatePicker.Resources>
+                        </DatePicker>
                     </StackPanel>
                 </Grid>
             </Border>
@@ -272,15 +298,27 @@
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
-                                <TextBlock Grid.Row="0" Grid.Column="0" Text="소득세" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding IncomeTax, Mode=OneWay, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="1" Grid.Column="0" Text="지방소득세" Style="{StaticResource FormLabelStyle}"/>
-                                <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding LocalIncomeTax, Mode=OneWay, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="2" Grid.Column="0" Text="소계 (D)" Style="{StaticResource FormLabelStyle}" Margin="0,12,0,0"/>
-                                <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,12,0,0" Text="{Binding IncomeTaxSubtotal, Mode=OneWay, StringFormat={}{0:N0}}"/>
-                                <TextBlock Grid.Row="3" Grid.Column="0" Text="차인지급액 (E)" Style="{StaticResource FormLabelStyle}" Margin="0,6,0,0"/>
-                                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,6,0,0" Text="{Binding NetPay, Mode=OneWay, StringFormat={}{0:N0}}"/>
+                                <TextBlock Grid.Row="0" Grid.Column="0" Text="소득세(예상 총 급여)" Style="{StaticResource FormLabelStyle}"/>
+                                <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding IncomeTaxEstimated, Mode=OneWay, StringFormat={}{0:N0}}"/>
+                                <TextBlock Grid.Row="1" Grid.Column="0" Text="소득세(과세급상여)" Style="{StaticResource FormLabelStyle}"/>
+                                <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding IncomeTaxTaxable, Mode=OneWay, StringFormat={}{0:N0}}"/>
+                                <TextBlock Grid.Row="2" Grid.Column="0" Text="소득세(최종)" Style="{StaticResource FormLabelStyle}" Margin="0,12,0,4"/>
+                                <TextBox Grid.Row="2" Grid.Column="1" 
+                                         x:Name="FinalIncomeTaxTextBox"
+                                         Style="{StaticResource FormInputBoxStyle}" 
+                                         Margin="0,12,0,0" 
+                                         Text="{Binding FinalIncomeTax, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:N0}}"
+                                         PreviewTextInput="NumericTextBox_PreviewTextInput"/>
+                                <TextBlock Grid.Row="3" Grid.Column="0" Text="지방소득세" Style="{StaticResource FormLabelStyle}"/>
+                                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Text="{Binding LocalIncomeTax, Mode=OneWay, StringFormat={}{0:N0}}"/>
+                                <TextBlock Grid.Row="4" Grid.Column="0" Text="소계 (D)" Style="{StaticResource FormLabelStyle}" Margin="0,12,0,0"/>
+                                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,12,0,0" Text="{Binding IncomeTaxSubtotal, Mode=OneWay, StringFormat={}{0:N0}}"/>
+                                <TextBlock Grid.Row="5" Grid.Column="0" Text="차인지급액 (E)" Style="{StaticResource FormLabelStyle}" Margin="0,6,0,0"/>
+                                <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource ReadonlyBox}" Margin="0,6,0,0" Text="{Binding NetPay, Mode=OneWay, StringFormat={}{0:N0}}"/>
                             </Grid>
                         </GroupBox>
                     </StackPanel>
