@@ -200,6 +200,14 @@
                                 </Style>
                             </DatePicker.Resources>
                         </DatePicker>
+                        <TextBlock Text="지급일자:"
+                                   VerticalAlignment="Center"
+                                   Margin="20,0,8,0"
+                                   FontWeight="SemiBold"/>
+                        <DatePicker x:Name="PaymentDatePicker"
+                                    Width="140"
+                                    SelectedDate="{Binding PaymentDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                    SelectedDateFormat="Short"/>
                     </StackPanel>
                 </Grid>
             </Border>
@@ -383,6 +391,21 @@
                         Orientation="Horizontal"
                         HorizontalAlignment="Right"
                         Margin="0,12,0,0">
+                <Button Content="PDF 출력"
+                        Width="120"
+                        Margin="0,0,10,0"
+                        Click="ExportPdf_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="IsEnabled" Value="False"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding HasSelectedRow}" Value="True">
+                                    <Setter Property="IsEnabled" Value="True"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
                 <Button Content="저장"
                         Width="120"
                         Command="{Binding SavePayrollCommand}"/>

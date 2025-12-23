@@ -25,6 +25,7 @@ public class PayrollEntryViewModel : ObservableObject
     private List<string> _fundingSources = new();
     private string _selectedFundingSource = string.Empty;
     private DateTime _accrualMonth;
+    private DateTime _paymentDate;
 
     public ObservableCollection<PayrollEntryRowViewModel> PayrollRows { get; }
     public List<string> FundingSources => _fundingSources;
@@ -35,6 +36,18 @@ public class PayrollEntryViewModel : ObservableObject
         set
         {
             if (SetProperty(ref _selectedFundingSource, value))
+            {
+                MarkDirty();
+            }
+        }
+    }
+
+    public DateTime PaymentDate
+    {
+        get => _paymentDate;
+        set
+        {
+            if (SetProperty(ref _paymentDate, value))
             {
                 MarkDirty();
             }
@@ -103,6 +116,7 @@ public class PayrollEntryViewModel : ObservableObject
 
         var today = DateTime.Today;
         _accrualMonth = new DateTime(today.Year, today.Month, 1);
+        _paymentDate = today; // 이 줄 추가
 
         AddBlankRows(DefaultRowCount);
         SelectedRow = PayrollRows.FirstOrDefault();
@@ -259,14 +273,14 @@ public class PayrollEntryViewModel : ObservableObject
 
         if (PayrollRows.Any(r => r.EmployeeId == employee.Id))
         {
-            MessageBox.Show($"'{employee.Name}' 사원은 이미 목록에 있습니다.", "중복 사원", MessageBoxButton.OK, MessageBoxImage.Warning);
+            MessageBox.Show($"'{employee.Name}' 사원은 이미 등록되어 있습니다.", "중복 경고", MessageBoxButton.OK, MessageBoxImage.Warning);
             return false;
         }
 
         var targetRow = GetNextAssignableRow();
         if (targetRow == null)
         {
-            MessageBox.Show("사원을 배치할 행을 추가할 수 없습니다.", "안내", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("사원을 배치할 빈 행이 추가될 수 없습니다.", "안내", MessageBoxButton.OK, MessageBoxImage.Information);
             return false;
         }
 
@@ -303,8 +317,8 @@ public class PayrollEntryViewModel : ObservableObject
 
         var employeeName = SelectedRow.EmployeeName ?? "선택된 사원";
         var result = MessageBox.Show(
-            $"'{employeeName}' 사원의 급여 데이터를 삭제하시겠습니까?",
-            "사원 해제 확인",
+            $"'{employeeName}' 사원의 급여 데이터를 제거하시겠습니까?",
+            "제거 확인",
             MessageBoxButton.YesNo,
             MessageBoxImage.Warning);
 
@@ -338,7 +352,7 @@ public class PayrollEntryViewModel : ObservableObject
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"데이터 삭제 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"초안을 제거 중 오류가 발생했습니다: {ex.Message}", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

@@ -467,4 +467,58 @@ public partial class PayrollEntryView : UserControl
         AccrualMonthPicker.IsDropDownOpen = false;
         calendar.DisplayMode = CalendarMode.Year;
     }
+
+    private async void ExportPdf_Click(object sender, RoutedEventArgs e)
+    {
+        if (ViewModel?.SelectedRow == null || !ViewModel.SelectedRow.HasEmployee)
+        {
+            MessageBox.Show("PDF로 출력할 사원을 선택하세요.", "안내", MessageBoxButton.OK, MessageBoxImage.Information);
+            return;
+        }
+
+        if (ViewModel.CurrentCompany == null)
+        {
+            MessageBox.Show("회사 정보를 찾을 수 없습니다.", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+            return;
+        }
+
+        try
+        {
+            using var db = new AccountingDbContext();
+            var employee = await db.Employees
+                .FirstOrDefaultAsync(e => e.Id == ViewModel.SelectedRow.EmployeeId);
+
+            if (employee == null)
+            {
+                MessageBox.Show("사원 정보를 찾을 수 없습니다.", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            var pdfService = new PayrollPdfService();
+            var pdfBytes = pdfService.GeneratePayrollSlip(
+                ViewModel.CurrentCompany,
+                employee,
+                ViewModel.SelectedRow.Detail,
+                ViewModel.AccrualMonth,
+                ViewModel.PaymentDate,
+                ViewModel.SelectedFundingSource,
+                _taxableEarningsItems,
+                _nonTaxableEarningsItems,
+                _retirementItems);
+
+            var defaultFileName = $"{ViewModel.AccrualMonth:yyyy-MM}_{employee.Name}_급여명세서.pdf";
+
+            // 미리보기 창 열기
+            var previewWindow = new PdfPreviewWindow(pdfBytes, defaultFileName)
+            {
+                Owner = Window.GetWindow(this)
+            };
+
+            previewWindow.ShowDialog();
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"PDF 생성 중 오류가 발생했습니다:\n{ex.Message}", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+    }
 }

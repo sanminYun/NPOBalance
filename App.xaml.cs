@@ -4,6 +4,7 @@ using NPOBalance.Views;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
+using QuestPDF.Infrastructure;
 
 namespace NPOBalance
 {
@@ -11,6 +12,9 @@ namespace NPOBalance
     {
         private async void Application_Startup(object sender, StartupEventArgs e)
         {
+            // QuestPDF 라이선스 설정 (Community 라이선스 - 무료)
+            QuestPDF.Settings.License = LicenseType.Community;
+
             try
             {
                 await InitializeDatabaseAsync();
